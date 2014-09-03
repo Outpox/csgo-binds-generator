@@ -57,7 +57,7 @@ ul.img-list {
 }
 ul.img-list li {
     display: inline-block;
-    height: 150px;
+    height: 112.5px;
     margin: 0 1em 1em 0;
     position: relative;
     width: 150px;
@@ -67,7 +67,7 @@ span.text-content {
     color: white;
     cursor: pointer;
     display: table;
-    height: 150px;
+    height: 112.5px;
     left: 0;
     position: absolute;
     top: 0;
@@ -94,10 +94,14 @@ ul.img-list li img {
 #rifles {
     border: 1px solid black;
     border-radius: 3px;
-    margin: 1%;
+    margin-right: 1%;
+    margin-left: 1%;
 }
 .selected {
     opacity: 1;
+}
+#rifles input[type=radio] {  
+    display: none;  
 }
 /*End weapons list*/
 
