@@ -78,7 +78,7 @@
 
 	<div id="menu">
 	    <p id="pselect" >Selected key : <text id="selectedkey"></text></p>
-	    <p>Primary weapons :</p>
+	    <p>Primary weapons : <button id="primwepbut">Show/Hide</button></p>
 	    <form>
 		<div id="rifles">
 		    <ul class='img-list'>
