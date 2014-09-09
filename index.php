@@ -79,6 +79,7 @@
 
         <div id="menu">
             <p id="pselect" >Selected key : <text id="selectedkey"></text></p>
+            <hr></hr>
             <p>Primary weapons : <button id="primwepbut">Show/Hide</button></p>
             <form>
                 <div id="rifles">
@@ -142,28 +143,28 @@
                                 <!--<span class="text-content"><span>AUG</span></span>-->
                             </label>
                         </li>
-                        <li>
-                            <input id="scout" type="radio" name='primary'/>
-                            <label for="scout">
-                                <img src="img/weapon_ssg08.png"/>
-                                <!--<span class="text-content"><span>SSG 08</span></span>-->
-                            </label>
-                        </li>
-                        <li>
-                            <input id="g3sg1" type="radio" name='primary'/>
-                            <label for="g3sg1">
-                                <img src="img/weapon_g3sg1.png"/>
-                                <!--<span class="text-content"><span>G3SG1</span></span>-->
-                            </label>
-                        </li>
-                        <li>
-                            <input id="scar20" type="radio" name='primary'/>
-                            <label for="scar20">
-                                <img src="img/weapon_scar20.png"/>
-                                <!--<span class="text-content"><span>SCAR-20</span></span>-->
-                            </label>
+                            <li>
+                                <input id="scout" type="radio" name='primary'/>
+                                <label for="scout">
+                                    <img src="img/weapon_ssg08.png"/>
+                                    <!--<span class="text-content"><span>SSG 08</span></span>-->
+                                </label>
+                            </li>
+                            <li>
+                                <input id="g3sg1" type="radio" name='primary'/>
+                                <label for="g3sg1">
+                                    <img src="img/weapon_g3sg1.png"/>
+                                    <!--<span class="text-content"><span>G3SG1</span></span>-->
+                                </label>
+                            </li>
+                            <li>
+                                <input id="scar20" type="radio" name='primary'/>
+                                <label for="scar20">
+                                    <img src="img/weapon_scar20.png"/>
+                                    <!--<span class="text-content"><span>SCAR-20</span></span>-->
+                                </label>
 
-                        </li>
+                            </li>
                     </ul>
                 </div>
             </form>
