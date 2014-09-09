@@ -8,12 +8,26 @@
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
     </head>
     <body>
-        <h1>CS:GO binds generator</h1>
+        <h1>CS:GO BINDS GENERATOR</h1>
 
         <div id="container">
             <textarea id="write" rows="6" cols="60"></textarea>
             <ul id="keyboard">
-                <li class="symbol"><span class="off">`</span></li>
+                <div class="fkey">
+                <li class="letter">F1</li>
+                <li class="letter">F2</li>
+                <li class="letter">F3</li>
+                <li class="letter">F4</li>
+                <li class="letter">F5</li>
+                <li class="letter">F6</li>
+                <li class="letter">F7</li>
+                <li class="letter">F8</li>
+                <li class="letter">F9</li>
+                <li class="letter">F10</li>
+                <li class="letter">F11</li>
+                <li class="letter lastitem">F12</li>
+                </div>
+                <li class="symbol" style="clear: left"><span class="off">`</span></li>
                 <li class="symbol"><span class="off">1</span></li>
                 <li class="symbol"><span class="off">2</span></li>
                 <li class="symbol"><span class="off">3</span></li>
@@ -26,53 +40,53 @@
                 <li class="symbol"><span class="off">0</span></li>
                 <li class="symbol"><span class="off">-</span></li>
                 <li class="symbol"><span class="off">=</span></li>
-                <li class="delete lastitem">delete</li>
-                <li class="tab">tab</li>
-                <li class="letter">q</li>
-                <li class="letter">w</li>
-                <li class="letter">e</li>
-                <li class="letter">r</li>
-                <li class="letter">t</li>
-                <li class="letter">y</li>
-                <li class="letter">u</li>
-                <li class="letter">i</li>
-                <li class="letter">o</li>
-                <li class="letter">p</li>
+                <li class="delete lastitem">BACKSPACE</li>
+                <li class="tab">TAB</li>
+                <li class="letter">Q</li>
+                <li class="letter">W</li>
+                <li class="letter">E</li>
+                <li class="letter">R</li>
+                <li class="letter">T</li>
+                <li class="letter">Y</li>
+                <li class="letter">U</li>
+                <li class="letter">I</li>
+                <li class="letter">O</li>
+                <li class="letter">P</li>
                 <li class="symbol"><span class="off">[</span></li>
                 <li class="symbol"><span class="off">]</span></li>
-                <li class="symbol lastitem"><span class="off">\</span></li>
-                <li class="capslock">caps lock</li>
-                <li class="letter">a</li>
-                <li class="letter">s</li>
-                <li class="letter">d</li>
-                <li class="letter">f</li>
-                <li class="letter">g</li>
-                <li class="letter">h</li>
-                <li class="letter">j</li>
-                <li class="letter">k</li>
-                <li class="letter">l</li>
+                <li class="symbol lastitem"><span class="off">&#92;</span></li>
+                <li class="capslock">CAPSLOCK</li>
+                <li class="letter">A</li>
+                <li class="letter">S</li>
+                <li class="letter">D</li>
+                <li class="letter">F</li>
+                <li class="letter">G</li>
+                <li class="letter">H</li>
+                <li class="letter">J</li>
+                <li class="letter">K</li>
+                <li class="letter">L</li>
                 <li class="symbol"><span class="off">;</span></li>
                 <li class="symbol"><span class="off">'</span></li>
-                <li class="return lastitem">return</li>
-                <li class="left-shift">shift</li>
-                <li class="letter">z</li>
-                <li class="letter">x</li>
-                <li class="letter">c</li>
-                <li class="letter">v</li>
-                <li class="letter">b</li>
-                <li class="letter">n</li>
-                <li class="letter">m</li>
+                <li class="return lastitem">ENTER</li>
+                <li class="left-shift">SHIFT</li>
+                <li class="letter">Z</li>
+                <li class="letter">X</li>
+                <li class="letter">C</li>
+                <li class="letter">V</li>
+                <li class="letter">B</li>
+                <li class="letter">N</li>
+                <li class="letter">M</li>
                 <li class="symbol"><span class="off">,</span></li>
                 <li class="symbol"><span class="off">.</span></li>
                 <li class="symbol"><span class="off">/</span></li>
-                <li class="right-shift lastitem">shift</li>
-                <li class="ctrl-left">ctrl</li>
+                <li class="right-shift lastitem">SHIFT</li>
+                <li class="ctrl-left">CTRL</li>
                 <li class="ctrl">&nbsp;</li>
-                <li class="ctrl">alt</li>
-                <li class="space">space</li>
-                <li class="ctrl">alt</li>
+                <li class="ctrl">ALT</li>
+                <li class="space">SPACE</li>
+                <li class="ctrl">ALT</li>
                 <li class="ctrl">&nbsp;</li>
-                <li class="ctrl lastitem">ctrl</li>
+                <li class="ctrl lastitem">CTRL</li>
 
             </ul>
         </div>
@@ -81,14 +95,14 @@
             <p id="pselect" >Selected key : <text id="selectedkey"></text></p>
             <hr></hr>
             <p>Primary weapons : <button id="primwepbut">Show/Hide</button></p>
-            <form>
+            <form id="pwep">
                 <div id="rifles">
                     <ul class='img-list'>
                         <li>
-                            <input id="galil" type="radio" name='primary'>
+                            <input id="galil" type="radio" name='primary' value="galilar">
                                 <label for="galil">
                                     <img  src="img/weapon_galilar.png"/>
-                                    <!--<span class="text-content"><span>Galil AR</span></span>-->
+                                    <span>buy galilar; buy famas;</span>
                                 </label>
                             </input>
                         </li>
@@ -96,7 +110,7 @@
                             <input id="ak47" type="radio" name='primary'/>
                             <label for="ak47">
                                 <img src="img/weapon_ak47.png"/>
-                                <!--<span class="text-content"><span>AK-47</span></span>-->
+                                <span>buy ak47; buy m4a1;</span>
                             </label>
 
                         </li>
@@ -104,7 +118,7 @@
                             <input id="sg556" type="radio" name='primary'/>
                             <label for="sg556">
                                 <img src="img/weapon_sg556.png"/>
-                                <!--<span class="text-content"><span>SG 556</span></span>-->
+                                <span>buy sg556; buy aug;</span>
                             </label>
 
                         </li>
@@ -112,21 +126,21 @@
                             <input id="awp" type="radio" name='primary'/>
                             <label for="awp">
                                 <img src="img/weapon_awp.png"/>
-                                <!--<span class="text-content"><span>AWP</span></span>-->
+                                <span>buy awp;</span>
                             </label>
                         </li>
                         <li>
                             <input id="famas" type="radio" name='primary'/>
                             <label for="famas">
                                 <img src="img/weapon_famas.png"/>
-                                <!--<span class="text-content"><span>Famas</span></span>-->
+                                <span>buy famas; buy galilar;</span>
                             </label>
                         </li>
                         <li>
                             <input id="m4a1s" type="radio" name='primary'/>
                             <label for="m4a1s">
                                 <img src="img/weapon_m4a1_silencer.png"/>
-                                <!--<span class="text-content"><span>M4A1-S</span></span>-->
+                                <span>buy m4a1; buy ak47;</span>
                             </label>
                         </li>
                         <li>
@@ -143,28 +157,28 @@
                                 <!--<span class="text-content"><span>AUG</span></span>-->
                             </label>
                         </li>
-                            <li>
-                                <input id="scout" type="radio" name='primary'/>
-                                <label for="scout">
-                                    <img src="img/weapon_ssg08.png"/>
-                                    <!--<span class="text-content"><span>SSG 08</span></span>-->
-                                </label>
-                            </li>
-                            <li>
-                                <input id="g3sg1" type="radio" name='primary'/>
-                                <label for="g3sg1">
-                                    <img src="img/weapon_g3sg1.png"/>
-                                    <!--<span class="text-content"><span>G3SG1</span></span>-->
-                                </label>
-                            </li>
-                            <li>
-                                <input id="scar20" type="radio" name='primary'/>
-                                <label for="scar20">
-                                    <img src="img/weapon_scar20.png"/>
-                                    <!--<span class="text-content"><span>SCAR-20</span></span>-->
-                                </label>
+                        <li>
+                            <input id="scout" type="radio" name='primary'/>
+                            <label for="scout">
+                                <img src="img/weapon_ssg08.png"/>
+                                <!--<span class="text-content"><span>SSG 08</span></span>-->
+                            </label>
+                        </li>
+                        <li>
+                            <input id="g3sg1" type="radio" name='primary'/>
+                            <label for="g3sg1">
+                                <img src="img/weapon_g3sg1.png"/>
+                                <!--<span class="text-content"><span>G3SG1</span></span>-->
+                            </label>
+                        </li>
+                        <li>
+                            <input id="scar20" type="radio" name='primary'/>
+                            <label for="scar20">
+                                <img src="img/weapon_scar20.png"/>
+                                <!--<span class="text-content"><span>SCAR-20</span></span>-->
+                            </label>
 
-                            </li>
+                        </li>
                     </ul>
                 </div>
             </form>
