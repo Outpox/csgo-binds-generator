@@ -27,19 +27,19 @@
                 <li class="letter">F11</li>
                 <li class="letter lastitem">F12</li>
                 </div>
-                <li class="symbol" style="clear: left"><span class="off">`</span></li>
-                <li class="symbol"><span class="off">1</span></li>
-                <li class="symbol"><span class="off">2</span></li>
-                <li class="symbol"><span class="off">3</span></li>
-                <li class="symbol"><span class="off">4</span></li>
-                <li class="symbol"><span class="off">5</span></li>
-                <li class="symbol"><span class="off">6</span></li>
-                <li class="symbol"><span class="off">7</span></li>
-                <li class="symbol"><span class="off">8</span></li>
-                <li class="symbol"><span class="off">9</span></li>
-                <li class="symbol"><span class="off">0</span></li>
-                <li class="symbol"><span class="off">-</span></li>
-                <li class="symbol"><span class="off">=</span></li>
+                <li class="symbol" style="clear: left">`</li>
+                <li class="symbol">1</li>
+                <li class="symbol">2</li>
+                <li class="symbol">3</li>
+                <li class="symbol">4</li>
+                <li class="symbol">5</li>
+                <li class="symbol">6</li>
+                <li class="symbol">7</li>
+                <li class="symbol">8</li>
+                <li class="symbol">9</li>
+                <li class="symbol">0</li>
+                <li class="symbol">-</li>
+                <li class="symbol">=</li>
                 <li class="delete lastitem">BACKSPACE</li>
                 <li class="tab">TAB</li>
                 <li class="letter">Q</li>
@@ -52,9 +52,9 @@
                 <li class="letter">I</li>
                 <li class="letter">O</li>
                 <li class="letter">P</li>
-                <li class="symbol"><span class="off">[</span></li>
-                <li class="symbol"><span class="off">]</span></li>
-                <li class="symbol lastitem"><span class="off">&#92;</span></li>
+                <li class="symbol">[</li>
+                <li class="symbol">]</li>
+                <li class="symbol lastitem">&#92;</li>
                 <li class="capslock">CAPSLOCK</li>
                 <li class="letter">A</li>
                 <li class="letter">S</li>
@@ -65,8 +65,8 @@
                 <li class="letter">J</li>
                 <li class="letter">K</li>
                 <li class="letter">L</li>
-                <li class="symbol"><span class="off">;</span></li>
-                <li class="symbol"><span class="off">'</span></li>
+                <li class="symbol">;</li>
+                <li class="symbol">'</li>
                 <li class="return lastitem">ENTER</li>
                 <li class="left-shift">SHIFT</li>
                 <li class="letter">Z</li>
@@ -76,9 +76,9 @@
                 <li class="letter">B</li>
                 <li class="letter">N</li>
                 <li class="letter">M</li>
-                <li class="symbol"><span class="off">,</span></li>
-                <li class="symbol"><span class="off">.</span></li>
-                <li class="symbol"><span class="off">/</span></li>
+                <li class="symbol">,</li>
+                <li class="symbol">.</li>
+                <li class="symbol">/</li>
                 <li class="right-shift lastitem">SHIFT</li>
                 <li class="ctrl-left">CTRL</li>
                 <li class="ctrl">&nbsp;</li>
