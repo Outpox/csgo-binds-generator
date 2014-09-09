@@ -1,0 +1,43 @@
+.selected {
+    background-color: grey !important;
+}
+
+ul.img-list {
+    font-size: 0px;
+    margin-left: -2.5%;
+        min-width: 22.5%;
+
+}
+
+ul.img-list li {
+    display: inline-block;
+    padding: 10px;
+    padding-bottom: 0;
+    margin: 0 0 2.5% 2.5%;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    font-size: 1rem;
+    vertical-align: top;
+    box-shadow: 0 0 5px #ddd;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    cursor: pointer;
+    width: 22.5%;
+}
+
+ul.img-list li img {
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    width: 150px;
+    height: 112.5px;
+    cursor: pointer;
+}
+
+.input_hidden {
+    position: absolute;
+    left: -9999px;
+}
