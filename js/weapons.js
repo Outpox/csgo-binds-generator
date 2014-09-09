@@ -1,13 +1,14 @@
 $(function() {
     var key = $('#selectedkey');
     var write = $("#write");
-    var pwep = $('input[name=primary]:checked', '#pwep').val();
+    var pwep = '';
     function generate() {
+        pwep = $("#riflesform input[name=radiorifles]:checked");
         window.console.log("generate");
         window.console.log(key.html());
         window.console.log(pwep);
         if (key !== "") {
-            write.html("bind \"" + key.html().toLowerCase() + "\"");
+            write.html("bind \"" + key.html().toLowerCase() + "\" " + pwep);
         }
     }
     $('#menu input').click(function() {
