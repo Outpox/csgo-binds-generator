@@ -5,8 +5,7 @@
 ul.img-list {
     font-size: 0px;
     margin-left: -2.5%;
-        min-width: 22.5%;
-
+    text-align: center;
 }
 
 ul.img-list li {
@@ -26,6 +25,7 @@ ul.img-list li {
     -webkit-box-sizing: border-box;
     cursor: pointer;
     width: 22.5%;
+    position: relative;
 }
 
 ul.img-list li img {
@@ -40,4 +40,8 @@ ul.img-list li img {
 .input_hidden {
     position: absolute;
     left: -9999px;
+}
+
+#menu form li span {
+   display: none;
 }
