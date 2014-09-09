@@ -168,6 +168,59 @@
                     </ul>
                 </div>
             </form>
+            <hr></hr>
+            <p>Secondary weapons : <button id="secondwepbut">Show/Hide</button></p>
+            <form>
+                <div id="gun">
+                    <ul class='img-list'>
+                        <li>
+                            <input id="p250" type="radio" name='secondary'>
+                                <label for="p250">
+                                    <img  src="img/weapon_p250.png"/>
+                                    <!--<span class="text-content"><span>Galil AR</span></span>-->
+                                </label>
+                            </input>
+                        </li>
+                        <li>
+                            <input id="cz" type="radio" name='secondary'/>
+                            <label for="cz">
+                                <img src="img/weapon_cz75a.png"/>
+                                <!--<span class="text-content"><span>AK-47</span></span>-->
+                            </label>
+
+                        </li>
+                        <li>
+                            <input id="tec9" type="radio" name='secondary'/>
+                            <label for="tec9">
+                                <img src="img/weapon_tec9.png"/>
+                                <!--<span class="text-content"><span>AWP</span></span>-->
+                            </label>
+                        </li>
+                        <li>
+                            <input id="fiveseven" type="radio" name='secondary'/>
+                            <label for="fiveseven">
+                                <img src="img/weapon_fiveseven.png"/>
+                                <!--<span class="text-content"><span>SG 556</span></span>-->
+                            </label>
+
+                        </li>
+                        <li>
+                            <input id="dual" type="radio" name='secondary'/>
+                            <label for="dual">
+                                <img src="img/weapon_elite.png"/>
+                                <!--<span class="text-content"><span>Famas</span></span>-->
+                            </label>
+                        </li>
+                        <li>
+                            <input id="deagle" type="radio" name='secondary'/>
+                            <label for="deagle">
+                                <img src="img/weapon_deagle.png"/>
+                                <!--<span class="text-content"><span>M4A1-S</span></span>-->
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </form>
         </div>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/keyboard.js"></script>
