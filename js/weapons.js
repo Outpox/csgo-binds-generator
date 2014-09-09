@@ -15,10 +15,10 @@ $(function() {
         window.console.log($this);
     });
     $('#primwepbut').click(function() {
-        $('#rifles').toggle(50);
+        $('#rifles').toggle(100);
     });
     $('#secondwepbut').click(function() {
-        $('#gun').toggle(50);
+        $('#gun').toggle(100);
     });
     $('#menu input:radio').addClass('input_hidden');
 
