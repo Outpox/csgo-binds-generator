@@ -1,20 +1,15 @@
 $(function() {
     var key = $('#selectedkey');
     var write = $("#write");
-    var pwep = '';
     function generate() {
-        pwep = $("#riflesform input[name=radiorifles]:checked");
+        var pwep = $("#riflesform input[name=radiorifles]:checked").val();
         window.console.log("generate");
         window.console.log(key.html());
         window.console.log(pwep);
         if (key !== "") {
-            write.html("bind \"" + key.html().toLowerCase() + "\" " + pwep);
+            write.html("bind \"" + key.html().toLowerCase() + "\" \"" + pwep + "\"");
         }
     }
-    $('#menu input').click(function() {
-        var $this = $(this);
-        window.console.log($this);
-    });
     $('#primwepbut').click(function() {
         $('#rifles').toggle(100);
     });
@@ -25,6 +20,7 @@ $(function() {
 
     $('#menu li').click(function(e) {
         e.preventDefault();
+        $(this).children().prop("checked", true);
         generate();
         if ($(this).closest('li').attr('class') === 'selected') {
             window.console.log("already selected");
@@ -33,5 +29,9 @@ $(function() {
         else {
             $(this).closest('li').addClass('selected').siblings().removeClass('selected');
         }
+    });
+    $('#keyboard li').click(function() {
+        if ($("#riflesform input[name=radiorifles]:checked").val() !== undefined)
+            generate();
     });
 });
