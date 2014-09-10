@@ -99,7 +99,7 @@
                 <div id="rifles">
                     <ul class='img-list'>
                         <li>
-                            <input id="galil" type="radio" name='radiorifles' value="galilar">
+                            <input id="galil" type="radio" name='radiorifles' value="buy galilar; buy famas;">
                                 <label for="galil">
                                     <img  src="img/weapon_galilar.png"/>
                                     <span>buy galilar; buy famas;</span>
@@ -107,7 +107,7 @@
                             </input>
                         </li>
                         <li>
-                            <input id="ak47" type="radio" name='radiorifles'/>
+                            <input id="ak47" type="radio" name='radiorifles' value="buy ak47; buy m4a1;"/>
                             <label for="ak47">
                                 <img src="img/weapon_ak47.png"/>
                                 <span>buy ak47; buy m4a1;</span>
@@ -115,7 +115,7 @@
 
                         </li>
                         <li>
-                            <input id="sg556" type="radio" name='radiorifles'/>
+                            <input id="sg556" type="radio" name='radiorifles' value="buy sg556; buy aug;"/>
                             <label for="sg556">
                                 <img src="img/weapon_sg556.png"/>
                                 <span>buy sg556; buy aug;</span>
@@ -123,56 +123,56 @@
 
                         </li>
                         <li>
-                            <input id="awp" type="radio" name='radiorifles'/>
+                            <input id="awp" type="radio" name='radiorifles' value="buy awp;"/>
                             <label for="awp">
                                 <img src="img/weapon_awp.png"/>
                                 <span>buy awp;</span>
                             </label>
                         </li>
                         <li>
-                            <input id="famas" type="radio" name='radiorifles'/>
+                            <input id="famas" type="radio" name='radiorifles' value="buy famas; buy galilar;"/>
                             <label for="famas">
                                 <img src="img/weapon_famas.png"/>
                                 <span>buy famas; buy galilar;</span>
                             </label>
                         </li>
                         <li>
-                            <input id="m4a1s" type="radio" name='radiorifles'/>
+                            <input id="m4a1s" type="radio" name='radiorifles' value="buy m4a1; buy ak47;"/>
                             <label for="m4a1s">
                                 <img src="img/weapon_m4a1_silencer.png"/>
                                 <span>buy m4a1; buy ak47;</span>
                             </label>
                         </li>
                         <li>
-                            <input id="m4a4" type="radio" name='radiorifles'/>
+                            <input id="m4a4" type="radio" name='radiorifles' value="buy m4a1; buy ak47;"/>
                             <label for="m4a4">
                                 <img src="img/weapon_m4a1.png"/>
                                 <!--<span class="text-content"><span>M4A4</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="aug" type="radio" name='radiorifles'/>
+                            <input id="aug" type="radio" name='radiorifles' value="buy aug; buy sg556;"/>
                             <label for="aug">
                                 <img src="img/weapon_aug.png"/>
                                 <!--<span class="text-content"><span>AUG</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="scout" type="radio" name='radiorifles'/>
+                            <input id="scout" type="radio" name='radiorifles' value="buy ssg08;"/>
                             <label for="scout">
                                 <img src="img/weapon_ssg08.png"/>
                                 <!--<span class="text-content"><span>SSG 08</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="g3sg1" type="radio" name='radiorifles'/>
+                            <input id="g3sg1" type="radio" name='radiorifles' value="buy g3sg1; buy scar20;"/>
                             <label for="g3sg1">
                                 <img src="img/weapon_g3sg1.png"/>
                                 <!--<span class="text-content"><span>G3SG1</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="scar20" type="radio" name='radiorifles'/>
+                            <input id="scar20" type="radio" name='radiorifles' value="buy scar20; buy g3sg1;"/>
                             <label for="scar20">
                                 <img src="img/weapon_scar20.png"/>
                                 <!--<span class="text-content"><span>SCAR-20</span></span>-->
