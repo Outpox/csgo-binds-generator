@@ -152,3 +152,7 @@ h1 {
 #selected {
     background-color: black;
 }
+
+hr {
+    margin: 1% 0;
+}
