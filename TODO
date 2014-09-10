@@ -3,10 +3,13 @@ Additions :
 - Arrow keys
 - Mouse button
 - Support different layout
+- Select keys by pressing them on keyboard
+- Mac ctrl key support
 
 Changes :
 - Better design
-- - Suggested :
-    - White and black keys
-    - Red selected key
-    - Colourful background
+
+Suggested :
+ - White and black keys
+ - Red selected key
+ - Colourful background
