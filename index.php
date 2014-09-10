@@ -6,10 +6,14 @@
         <title>CS:GO binds generator</title>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/keyboard.js"></script>
+        <script type="text/javascript" src="js/weapons.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
-
+	<span id="warning_info_text">The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven.<img src="img/icons/exclamation.png" /></span>
         <div id="container">
             <textarea id="write" rows="6" cols="60"></textarea>
             <ul id="keyboard">
@@ -214,60 +218,52 @@
             </div>
             <hr></hr>
             <p>Secondary weapons : <button id="secondwepbut">Show/Hide</button></p>
-            <form id="secondaryweaponform">
+            <form id="secondaryform">
                 <div id="gun">
                     <ul class='img-list'>
                         <li>
-                            <input id="p250" type="radio" name='secondary'>
+                            <input id="p250" type="radio" name='secondary' value="buy p250;">
                                 <label for="p250">
                                     <img  src="img/weapon_p250.png"/>
-                                    <!--<span class="text-content"><span>Galil AR</span></span>-->
                                 </label>
                             </input>
                         </li>
                         <li>
-                            <input id="cz" type="radio" name='secondary'/>
+                            <input id="cz" type="radio" name='secondary' value="buy tec9; buy fiveseven;"/>
                             <label for="cz">
                                 <img src="img/weapon_cz75a.png"/>
-                                <!--<span class="text-content"><span>AK-47</span></span>-->
                             </label>
 
                         </li>
                         <li>
-                            <input id="tec9" type="radio" name='secondary'/>
+                            <input id="tec9" type="radio" name='secondary' value="buy tec9; buy fiveseven;"/>
                             <label for="tec9">
                                 <img src="img/weapon_tec9.png"/>
-                                <!--<span class="text-content"><span>AWP</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="fiveseven" type="radio" name='secondary'/>
+                            <input id="fiveseven" type="radio" name='secondary' value="buy fiveseven; buy tec9;"/>
                             <label for="fiveseven">
                                 <img src="img/weapon_fiveseven.png"/>
-                                <!--<span class="text-content"><span>SG 556</span></span>-->
                             </label>
 
                         </li>
                         <li>
-                            <input id="dual" type="radio" name='secondary'/>
+                            <input id="dual" type="radio" name='secondary' value="buy elite;"/>
                             <label for="dual">
                                 <img src="img/weapon_elite.png"/>
-                                <!--<span class="text-content"><span>Famas</span></span>-->
                             </label>
                         </li>
                         <li>
-                            <input id="deagle" type="radio" name='secondary'/>
+                            <input id="deagle" type="radio" name='secondary' value="buy deagle;"/>
                             <label for="deagle">
                                 <img src="img/weapon_deagle.png"/>
-                                <!--<span class="text-content"><span>M4A1-S</span></span>-->
                             </label>
                         </li>
                     </ul>
                 </div>
             </form>
         </div>
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-        <script type="text/javascript" src="js/keyboard.js"></script>
-        <script type="text/javascript" src="js/weapons.js"></script>
+
     </body>
 </html>
