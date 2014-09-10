@@ -2,16 +2,26 @@ $(function() {
     var key = $('#selectedkey');
     var write = $("#write");
     function generate() {
-        var pwep = $("#riflesform input[name=radiorifles]:checked").val();
-        window.console.log("generate");
-        window.console.log(key.html());
-        window.console.log(pwep);
-        if (key !== "") {
-            write.html("bind \"" + key.html().toLowerCase() + "\" \"" + pwep + "\"");
+        var pwep = $("#primaryform :checked").val();
+        window.console.log("Selected key : " + key.html());
+        window.console.log("Selected weapon : " + pwep);
+        if (key.html() !== "") {
+            if (pwep !== undefined) {
+                pwep = "\"" + pwep + "\"";
+            }
+            write.html("bind \"" + key.html().toLowerCase() + "\" " + pwep);
         }
     }
     $('#primwepbut').click(function() {
+        $('#primary').toggle(100);
+    });
+    $('#riflesbut').click(function(e) {
+        e.preventDefault();
         $('#rifles').toggle(100);
+    });
+    $('#smgsbut').click(function(e) {
+        e.preventDefault();
+        $('#smgs').toggle(100);
     });
     $('#secondwepbut').click(function() {
         $('#gun').toggle(100);
@@ -23,15 +33,15 @@ $(function() {
         $(this).children().prop("checked", true);
         generate();
         if ($(this).closest('li').attr('class') === 'selected') {
-            window.console.log("already selected");
             $(this).closest('li').removeClass('selected');
+            $(this).children().prop("checked", false);
         }
         else {
             $(this).closest('li').addClass('selected').siblings().removeClass('selected');
         }
     });
     $('#keyboard li').click(function() {
-        if ($("#riflesform input[name=radiorifles]:checked").val() !== undefined)
+        if ($(":checked").val() !== undefined)
             generate();
     });
 });
