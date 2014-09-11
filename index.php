@@ -4,6 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
         <title>CS:GO Binds Generator</title>
+	<link rel="icon" type="image/png" href="img/weapon_elite.png" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
