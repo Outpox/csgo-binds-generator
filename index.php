@@ -13,11 +13,11 @@
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
 	<div id="version">
-	    <h1 id="version_title">ALPHA</h1>
+	    <h1 id="version_title">WORK IN PROGRESS</h1>
 	    <p id="version_text">
-		This project is still in alpha, use it at your own risk.<br/>
-		There are some (known) bugs with the grenades and equipment selection as well as the rifles/smgs.<br/>
-		Last weapons are on the way.
+		This project is a work in progress, use it at your own risk.<br/>
+		There is a (known) bug with rifles/smgs/heavy selection. I'm still working on multiple equipment and multiple grenades.<br/>
+		Last weapons are on the way. Feedbacks are greatly appreciated.
 	    </p>
 	</div>
 	<div id="warning_info">
@@ -51,7 +51,7 @@
 
 
                     <li class="empty" style="clear: left"></li>
-                    <li class="symbol">&#8593;<span>arrowup</span></li>
+                    <li class="symbol">&#8593;<span>uparrow</span></li>
                     <li class="empty"></li>
                     <li class="empty"></li>
                     <li class="symbol">Insert<span>ins</span></li>
@@ -62,9 +62,9 @@
                     <li class="symbol">3<span>kp_pgdn</span></li>
                     <li class="symbol lastitem">Enter<span>kp_enter</span></li>
 
-                    <li class="symbol" style="clear: left">&#8592;<span>arrowleft</span></li>
-                    <li class="symbol">&#8595;<span>arrowdown</span></li>
-                    <li class="symbol">&#8594;<span>arrowright</span></li>
+                    <li class="symbol" style="clear: left">&#8592;<span>leftarrow</span></li>
+                    <li class="symbol">&#8595;<span>downarrow</span></li>
+                    <li class="symbol">&#8594;<span>rightarrow</span></li>
                     <li class="empty"></li>
                     <li class="symbol">Delete<span>del</span></li>
                     <li class="symbol">End<span>end</span></li>
@@ -268,6 +268,48 @@
                                 <input id="p90" type="radio" name='primaryradio' value="buy p90;"/>
                                 <label for="famas">
                                     <img src="img/weapon_p90.png"/>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <p>Heavy : <button id="heavybut">Show/Hide</button></p>
+                    <div id="heavy">
+                        <ul class='img-list'>
+			    <li>
+                                <input id="nova" type="radio" name='primaryradio' value="buy nova;"/>
+                                <label for="nova">
+                                    <img src="img/weapon_nova.png"/>
+                                </label>
+                            </li>
+			    <li>
+                                <input id="xm1014" type="radio" name='primaryradio' value="buy xm1014;"/>
+                                <label for="xm1014">
+                                    <img src="img/weapon_xm1014.png"/>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="saw" type="radio" name='primaryradio' value="buy sawedoff; buy mag7;">
+                                    <label for="saw">
+                                        <img  src="img/weapon_sawedoff.png"/>
+                                    </label>
+                                </input>
+                            </li>
+                            <li>
+                                <input id="mag7" type="radio" name='primaryradio' value="buy mag7; buy sawedoff;"/>
+                                <label for="mag7">
+                                    <img src="img/weapon_mag7.png"/>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="m249" type="radio" name='primaryradio' value="buy m249; buy negev;"/>
+                                <label for="m249">
+                                    <img src="img/weapon_m249.png" title="M249"/>
+                                </label>
+                            </li>
+                            <li>
+                                <input id="negev" type="radio" name='primaryradio' value="buy negev;buy m249;"/>
+                                <label for="negev">
+                                    <img src="img/weapon_negev.png" title="Negev"/>
                                 </label>
                             </li>
                         </ul>
