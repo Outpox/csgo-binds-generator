@@ -141,14 +141,14 @@
                 <li class="letter">,</li>
                 <li class="letter">.</li>
                 <li class="letter">/</li>
-                <li class="right-shift lastitem">SHIFT</li>
+                <li class="right-shift lastitem">rSHIFT</li>
                 <li class="ctrl-left">CTRL</li>
                 <li class="ctrl">&nbsp;</li>
                 <li class="ctrl">ALT</li>
                 <li class="space">SPACE</li>
-                <li class="ctrl">ALT</li>
+                <li class="ctrl">rALT</li>
                 <li class="ctrl">&nbsp;</li>
-                <li class="ctrl lastitem">CTRL</li>
+                <li class="ctrl lastitem">rCTRL</li>
 
             </ul>
         </div>
@@ -417,9 +417,23 @@
                 <div id="equipment">
                     <ul class='img-list'>
                         <li>
+                            <input id="kevlar" type="radio" name='other' value="buy vest;">
+                                <label for="kevlar">
+                                    <img src="img/equipment_kevlar.png"/>
+                                </label>
+                            </input>
+                        </li>
+                        <li>
+                            <input id="helmet" type="radio" name='other' value="buy vesthelm;">
+                                <label for="helmet">
+                                    <img src="img/equipment_helmet.png"/>
+                                </label>
+                            </input>
+                        </li>
+                        <li>
                             <input id="kevlarhelm" type="radio" name='other' value="buy vesthelm;buy vest;">
                                 <label for="kevlarhelm">
-                                    <img class="special" src="img/equipment_kevlarhelmet.png"/>
+                                    <img src="img/equipment_kevlarhelmet.png"/>
                                 </label>
                             </input>
                         </li>
