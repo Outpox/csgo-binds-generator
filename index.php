@@ -89,19 +89,19 @@
                     <li class="letter">F11</li>
                     <li class="letter lastitem">F12</li>
                 </div>
-                <li class="symbol" style="clear: left">`</li>
-                <li class="symbol">1</li>
-                <li class="symbol">2</li>
-                <li class="symbol">3</li>
-                <li class="symbol">4</li>
-                <li class="symbol">5</li>
-                <li class="symbol">6</li>
-                <li class="symbol">7</li>
-                <li class="symbol">8</li>
-                <li class="symbol">9</li>
-                <li class="symbol">0</li>
-                <li class="symbol">-</li>
-                <li class="symbol">=</li>
+                <li class="letter" style="clear: left">`</li>
+                <li class="letter">1</li>
+                <li class="letter">2</li>
+                <li class="letter">3</li>
+                <li class="letter">4</li>
+                <li class="letter">5</li>
+                <li class="letter">6</li>
+                <li class="letter">7</li>
+                <li class="letter">8</li>
+                <li class="letter">9</li>
+                <li class="letter">0</li>
+                <li class="letter">-</li>
+                <li class="letter">=</li>
                 <li class="delete lastitem">BACKSPACE</li>
                 <li class="tab">TAB</li>
                 <li class="letter">Q</li>
@@ -114,9 +114,9 @@
                 <li class="letter">I</li>
                 <li class="letter">O</li>
                 <li class="letter">P</li>
-                <li class="symbol">[</li>
-                <li class="symbol">]</li>
-                <li class="symbol lastitem">&#92;</li>
+                <li class="letter">[</li>
+                <li class="letter">]</li>
+                <li class="letter lastitem">&#92;</li>
                 <li class="capslock">CAPSLOCK</li>
                 <li class="letter">A</li>
                 <li class="letter">S</li>
@@ -127,8 +127,8 @@
                 <li class="letter">J</li>
                 <li class="letter">K</li>
                 <li class="letter">L</li>
-                <li class="symbol">;</li>
-                <li class="symbol">'</li>
+                <li class="letter">;</li>
+                <li class="letter">'</li>
                 <li class="return lastitem">ENTER</li>
                 <li class="left-shift">SHIFT</li>
                 <li class="letter">Z</li>
@@ -138,9 +138,9 @@
                 <li class="letter">B</li>
                 <li class="letter">N</li>
                 <li class="letter">M</li>
-                <li class="symbol">,</li>
-                <li class="symbol">.</li>
-                <li class="symbol">/</li>
+                <li class="letter">,</li>
+                <li class="letter">.</li>
+                <li class="letter">/</li>
                 <li class="right-shift lastitem">SHIFT</li>
                 <li class="ctrl-left">CTRL</li>
                 <li class="ctrl">&nbsp;</li>
@@ -327,40 +327,40 @@
                 <div id="grenades">
                     <ul class='img-list'>
                         <li>
-                            <input id="hegrenade" type="checkbox" name='grenade' value="buy hegrenade;">
+                            <input id="hegrenade" type="radio" name='grenade' value="buy hegrenade;">
                                 <label for="hegrenade">
                                     <img  src="img/weapon_hegrenade.png"/>
                                 </label>
                             </input>
                         </li>
                         <li>
-                            <input id="flash" type="checkbox" name='grenade' value="buy flashbang;"/>
+                            <input id="flash" type="radio" name='grenade' value="buy flashbang;"/>
                             <label for="flash">
                                 <img src="img/weapon_flashbang.png" title="Flashbang"/>
                             </label>
 
                         </li>
                         <li>
-                            <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
+                            <input id="smoke" type="radio" name='grenade' value="buy smokegrenade;"/>
                             <label for="smoke">
                                 <img src="img/weapon_smokegrenade.png"/>
                             </label>
                         </li>
                         <li>
-                            <input id="decoy" type="checkbox" name='grenade' value="buy decoy;"/>
+                            <input id="decoy" type="radio" name='grenade' value="buy decoy;"/>
                             <label for="decoy">
                                 <img src="img/weapon_decoy.png" title="Decoy"/>
                             </label>
 
                         </li>
                         <li>
-                            <input id="molotov" type="checkbox" name='grenade' value="buy molotov; buy incgrenade;"/>
+                            <input id="molotov" type="radio" name='grenade' value="buy molotov; buy incgrenade;"/>
                             <label for="molotov">
                                 <img src="img/weapon_molotov.png"/>
                             </label>
                         </li>
                         <li>
-                            <input id="incendiary" type="checkbox" name='grenade' value="buy incgrenade; buy molotov;"/>
+                            <input id="incendiary" type="radio" name='grenade' value="buy incgrenade; buy molotov;"/>
                             <label for="incendiary">
                                 <img src="img/weapon_incgrenade.png"/>
                             </label>
@@ -375,21 +375,21 @@
                 <div id="equipment">
                     <ul class='img-list'>
                         <li>
-                            <input id="kevlarhelm" type="checkbox" name='other' value="buy vesthelm;buy vest;">
+                            <input id="kevlarhelm" type="radio" name='other' value="buy vesthelm;buy vest;">
                                 <label for="kevlarhelm">
                                     <img class="special" src="img/equipment_kevlarhelmet.png"/>
                                 </label>
                             </input>
                         </li>
                         <li>
-                            <input id="defuse" type="checkbox" name='other' value="buy defuser;"/>
+                            <input id="defuse" type="radio" name='other' value="buy defuser;"/>
                             <label for="defuse">
                                 <img src="img/equipment_defusekit.png"/>
                             </label>
 
                         </li>
                         <li>
-                            <input id="taser" type="checkbox" name='other' value="buy taser;"/>
+                            <input id="taser" type="radio" name='other' value="buy taser;"/>
                             <label for="taser">
                                 <img src="img/weapon_taser.png"/>
                             </label>
