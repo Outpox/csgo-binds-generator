@@ -6,18 +6,63 @@
         <title>CS:GO binds generator</title>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
-	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/keyboard.js"></script>
         <script type="text/javascript" src="js/weapons.js"></script>
     </head>
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
-	<span id="warning_info_text">The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven.<img src="img/icons/exclamation.png" /></span>
+        <span id="warning_info_text">The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.<img src="img/icons/exclamation.png" /></span>
         <div id="container">
             <textarea id="write" rows="6" cols="60"></textarea>
             <ul id="keyboard">
+                <div class="arrow">
+                    <li class="kp_empty"></li>
+                    <li class="symbol">NumLock<span></span></li>
+                    <li class="symbol">/<span>kp_slash</span></li>
+                    <li class="symbol">*<span>kp_multiply</span></li>
+                    <li class="symbol lastitem">&#8722;<span>kp_minus</span></li>
+
+                    <li class="kp_empty" style="clear: left"></li>
+                    <li class="symbol">7<span>kp_home</span></li>
+                    <li class="symbol">8<span>kp_uparrow</span></li>
+                    <li class="symbol">9<span>kp_pgup</span></li>
+                    <li class="symbol lastitem">+<span>kp_plus</span></li>
+
+                    <li class="kp_empty" style="clear: left"></li>
+                    <li class="symbol">4<span>kp_leftarrow</span></li>
+                    <li class="symbol">5<span>kp_5</span></li>
+                    <li class="symbol">6<span>kp_rightarrow</span></li>
+                    <li class="symbol lastitem">&#43;<span>kp_plus</span></li>
+
+
+                    <li class="empty" style="clear: left"></li>
+                    <li class="symbol">&#8593;<span>arrowup</span></li>
+                    <li class="empty"></li>
+                    <li class="empty"></li>
+                    <li class="symbol">Insert<span>ins</span></li>
+                    <li class="symbol">Home<span>home</span></li>
+                    <li class="symbol">Pg up<span>pgup</span></li>
+                    <li id="kp_1" class="symbol">1<span>kp_end</span></li>
+                    <li class="symbol">2<span>kp_downarrow</span></li>
+                    <li class="symbol">3<span>kp_pgdn</span></li>
+                    <li class="symbol lastitem">Enter<span>kp_enter</span></li>
+
+                    <li class="symbol" style="clear: left">&#8592;<span>arrowleft</span></li>
+                    <li class="symbol">&#8595;<span>arrowdown</span></li>
+                    <li class="symbol">&#8594;<span>arrowright</span></li>
+                    <li class="empty"></li>
+                    <li class="symbol">Delete<span>del</span></li>
+                    <li class="symbol">End<span>end</span></li>
+                    <li class="symbol">Pg down<span>pgdn</span></li>
+                    <li id="kp_0" class="symbol" >0<span>kp_ins</span></li>
+                    <li class="symbol">.<span>kp_del</span></li>
+                    <li class="symbol lastitem">Enter<span>kp_enter</span></li>
+
+                </div>
+                <li class="horizontal_sep lastitem">&nbsp;</li>
                 <div class="fkey">
-                    <li class="letter">F1</li>
+                    <li class="letter" style="clear: left">F1</li>
                     <li class="letter">F2</li>
                     <li class="letter">F3</li>
                     <li class="letter">F4</li>
@@ -258,6 +303,76 @@
                             <label for="deagle">
                                 <img src="img/weapon_deagle.png"/>
                             </label>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <hr></hr>
+            <p>Grenades : <button id="grebut">Show/Hide</button></p>
+            <form id="greform">
+                <div id="grenades">
+                    <ul class='img-list'>
+                        <li>
+                            <input id="hegrenade" type="checkbox" name='grenade' value="buy hegrenade;">
+                                <label for="hegrenade">
+                                    <img  src="img/weapon_hegrenade.png"/>
+                                </label>
+                            </input>
+                        </li>
+                        <li>
+                            <input id="flash" type="checkbox" name='grenade' value="buy flashbang;"/>
+                            <label for="flash">
+                                <img src="img/weapon_flashbang.png" title="Flashbang"/>
+                            </label>
+
+                        </li>
+                        <li>
+                            <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
+                            <label for="smoke">
+                                <img src="img/weapon_smokegrenade.png"/>
+                            </label>
+                        </li>
+                        <li>
+                            <input id="decoy" type="checkbox" name='grenade' value="buy decoy;"/>
+                            <label for="decoy">
+                                <img src="img/weapon_decoy.png" title="Decoy"/>
+                            </label>
+
+                        </li>
+                        <li>
+                            <input id="molotov" type="checkbox" name='grenade' value="buy molotov; buy incgrenade;"/>
+                            <label for="molotov">
+                                <img src="img/weapon_molotov.png"/>
+                            </label>
+                        </li>
+                        <li>
+                            <input id="incendiary" type="checkbox" name='grenade' value="buy incgrenade; buy molotov;"/>
+                            <label for="incendiary">
+                                <img src="img/weapon_incgrenade.png"/>
+                            </label>
+                        </li>
+
+                    </ul>
+                </div>
+            </form>
+            <hr></hr>
+            <p>Equipment : <button id="equipbut">Show/Hide</button></p>
+            <form id="equipform">
+                <div id="equipment">
+                    <ul class='img-list'>
+                        <li>
+                            <input id="kevlarhelm" type="checkbox" name='other' value="buy vesthelm;buy vest;">
+                                <label for="kevlarhelm">
+                                    <img class="special" src="img/equipment_kevlarhelmet.png"/>
+                                </label>
+                            </input>
+                        </li>
+                        <li>
+                            <input id="defuse" type="checkbox" name='other' value="buy defuser;"/>
+                            <label for="defuse">
+                                <img src="img/equipment_defusekit.png"/>
+                            </label>
+
                         </li>
                     </ul>
                 </div>
