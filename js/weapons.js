@@ -36,6 +36,10 @@ $(function() {
         e.preventDefault();
         $('#smgs').toggle(100);
     });
+    $('#heavybut').click(function(e) {
+        e.preventDefault();
+        $('#heavy').toggle(100);
+    });
     $('#secondwepbut').click(function() {
         $('#gun').toggle(100);
     });
