@@ -1,6 +1,5 @@
 Additions : 
-- Numpad
-- Arrow keys
+- Button to copy to clipboard
 - Mouse button
 - Support different layout
 - Select keys by pressing them on keyboard
@@ -13,3 +12,7 @@ Suggested :
  - White and black keys
  - Red selected key
  - Colourful background
+
+Done :
+- Numpad
+- Arrows
