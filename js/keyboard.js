@@ -5,7 +5,7 @@ $(function() {
     var character;
     $('#keyboard li').click(function() {
 	$this = $(this);
-	if ($this.attr('class') === ('symbol' || 'symbol lastitem')) {
+	if ($this.attr('class') === ('symbol') || $this.attr('class') === ('symbol lastitem')) {
 	    character = $this.children().html();
 	} else {
 	    character = $this.html();
