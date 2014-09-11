@@ -3,16 +3,30 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <title>CS:GO binds generator</title>
+        <title>CS:GO Binds Generator</title>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
-        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/keyboard.js"></script>
         <script type="text/javascript" src="js/weapons.js"></script>
     </head>
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
-        <span id="warning_info_text">The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.<img src="img/icons/exclamation.png" /></span>
+	<div id="version">
+	    <h1 id="version_title">ALPHA</h1>
+	    <p id="version_text">
+		This project is still in alpha, use it at your own risk.<br/>
+		There are some (known) bugs with the grenades and equipment selection as well as the rifles/smgs.<br/>
+		Last weapons are on the way.
+	    </p>
+	</div>
+	<div id="warning_info">
+	    <img src="img/icons/exclamation.png" />
+	    <br/>
+	    <span>
+		The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.
+	    </span>
+	</div>
         <div id="container">
             <textarea id="write" rows="6" cols="60"></textarea>
             <ul id="keyboard">
@@ -385,6 +399,23 @@
                 </div>
             </form>
         </div>
-
     </body>
+    <footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &#149; 2014 (All right reserved at the moment)</footer>
+    <script>
+	(function(i, s, o, g, r, a, m) {
+	    i['GoogleAnalyticsObject'] = r;
+	    i[r] = i[r] || function() {
+		(i[r].q = i[r].q || []).push(arguments)
+	    }, i[r].l = 1 * new Date();
+	    a = s.createElement(o),
+		    m = s.getElementsByTagName(o)[0];
+	    a.async = 1;
+	    a.src = g;
+	    m.parentNode.insertBefore(a, m)
+	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+	ga('create', 'UA-50661645-2', 'auto');
+	ga('send', 'pageview');
+
+    </script>
 </html>
