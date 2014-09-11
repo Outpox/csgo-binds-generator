@@ -190,8 +190,30 @@ hr {
     top : 3%; 
     right: 2.7%; 
 }
+#warning_info img {
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 45%;
+}
 #warning_info_text {
     position: absolute;
     top : 3%; 
     right: 2.7%;
+}
+#version {
+    margin-top: 0;
+    margin-bottom: -2%;
+}
+#version_title {
+    margin-top: 0;
+    color: red;
+    text-decoration: underline;
+}
+#version_text {
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    margin-bottom: 1%;
 }
