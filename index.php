@@ -374,6 +374,13 @@
                             </label>
 
                         </li>
+                        <li>
+                            <input id="taser" type="checkbox" name='other' value="buy taser;"/>
+                            <label for="taser">
+                                <img src="img/weapon_taser.png"/>
+                            </label>
+
+                        </li>
                     </ul>
                 </div>
             </form>
