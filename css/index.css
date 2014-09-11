@@ -160,11 +160,11 @@ h1 {
     border: 0;
     width: 7.3% !important;
 }
-#keyboard .symbol span {
+#keyboard .arrow .symbol span {
     display: none;
 }
 
-#keyboard .kp_empty {
+#keyboard .arrow .kp_empty {
     width: 55.5% !important;
     border: 0;
 }
@@ -173,7 +173,7 @@ h1 {
     margin-left: 0.9% !important;
     width: 15% !important;
 }
-#kp_1 {
+#kp_1  {
     margin-left: 0.9% !important;
 }
 hr {
