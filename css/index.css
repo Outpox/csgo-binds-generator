@@ -153,8 +153,36 @@ h1 {
     background-color: black;
 }
 
+#keyboard .arrow li {
+    width: 7%;
+}
+#keyboard .empty {
+    border: 0;
+    width: 7.3% !important;
+}
+#keyboard .symbol span {
+    display: none;
+}
+
+#keyboard .kp_empty {
+    width: 55.5% !important;
+    border: 0;
+}
+
+#kp_0 {
+    margin-left: 0.9% !important;
+    width: 15% !important;
+}
+#kp_1 {
+    margin-left: 0.9% !important;
+}
 hr {
     margin: 1% 0;
+}
+
+.horizontal_sep {
+    visibility: hidden;
+    clear: both;
 }
 
 #warning_info {
