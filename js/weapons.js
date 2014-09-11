@@ -57,10 +57,10 @@ $(function() {
             $(this).children().prop("checked", false);
         }
         else {
-            if ($(this).closest('form').attr('id') !== ('greform' || 'equipform'))
+//            if ($(this).closest('form').attr('id') !== ('greform' || 'equipform'))
                 $(this).closest('li').addClass('selected').siblings().removeClass('selected');
-            else
-                $(this).closest('li').addClass('selected');
+//            else
+//                $(this).closest('li').addClass('selected');
         }
         generate();
     });
