@@ -9,7 +9,6 @@
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
         <script type="text/javascript" src="js/keyboard.js"></script>
         <script type="text/javascript" src="js/weapons.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
