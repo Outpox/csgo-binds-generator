@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
         <title>CS:GO Binds Generator</title>
-	<link rel="icon" type="image/png" href="img/weapon_elite.png" />
+        <link rel="icon" type="image/png" href="img/weapon_elite.png" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <link rel="stylesheet" type="text/css" href="css/weapons.css" />
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -13,21 +13,23 @@
     </head>
     <body>
         <h1>CS:GO BINDS GENERATOR</h1>
-	<div id="version">
-	    <h1 id="version_title">WORK IN PROGRESS</h1>
-	    <p id="version_text">
-		This project is a work in progress, use it at your own risk.<br/>
-		There is a (known) bug with rifles/smgs/heavy selection. I'm still working on multiple equipment and multiple grenades.<br/>
-		Last weapons are on the way. Feedbacks are greatly appreciated.
-	    </p>
-	</div>
-	<div id="warning_info">
-	    <img src="img/icons/exclamation.png" />
-	    <br/>
-	    <span>
-		The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.
-	    </span>
-	</div>
+        <div id="version">
+            <h1 id="version_title">WORK IN PROGRESS</h1>
+            <p id="version_text">
+                This project is a work in progress, use it at your own risk.<br/>
+                There is a (known) bug with rifles/smgs/heavy selection. I'm still working on multiple equipment and multiple grenades.<br/>
+            </p>
+            <p style="text-align: center; font-size: 20px;">
+                The source code was just released on <a href="https://github.com/Outpox/csgo-binds-generator">Github</a> !
+            </p>
+        </div>
+        <div id="warning_info">
+            <img src="img/icons/exclamation.png" />
+            <br/>
+            <span>
+                The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.
+            </span>
+        </div>
         <div id="container">
             <textarea id="write" rows="6" cols="60"></textarea>
             <ul id="keyboard">
@@ -164,10 +166,10 @@
                     <div id="rifles">
                         <ul class='img-list'>
                             <li>
-                                <input id="galil" type="radio" name='primaryradio' value="buy galilar; buy famas;">
-                                    <label for="galil">
-                                        <img  src="img/weapon_galilar.png"/>
-                                    </label>
+                                <input id="galil" type="radio" name='primaryradio' value="buy galilar; buy famas;"/>
+                                <label for="galil">
+                                    <img  src="img/weapon_galilar.png"/>
+                                </label>
                                 </input>
                             </li>
                             <li>
@@ -239,10 +241,10 @@
                     <div id="smgs">
                         <ul class='img-list'>
                             <li>
-                                <input id="mac10" type="radio" name='primaryradio' value="buy mac10; buy mp9;">
-                                    <label for="mac10">
-                                        <img  src="img/weapon_mac10.png"/>
-                                    </label>
+                                <input id="mac10" type="radio" name='primaryradio' value="buy mac10; buy mp9;"/>
+                                <label for="mac10">
+                                    <img  src="img/weapon_mac10.png"/>
+                                </label>
                                 </input>
                             </li>
                             <li>
@@ -276,23 +278,23 @@
                     <p>Heavy : <button id="heavybut">Show/Hide</button></p>
                     <div id="heavy">
                         <ul class='img-list'>
-			    <li>
+                            <li>
                                 <input id="nova" type="radio" name='primaryradio' value="buy nova;"/>
                                 <label for="nova">
                                     <img src="img/weapon_nova.png"/>
                                 </label>
                             </li>
-			    <li>
+                            <li>
                                 <input id="xm1014" type="radio" name='primaryradio' value="buy xm1014;"/>
                                 <label for="xm1014">
                                     <img src="img/weapon_xm1014.png"/>
                                 </label>
                             </li>
                             <li>
-                                <input id="saw" type="radio" name='primaryradio' value="buy sawedoff; buy mag7;">
-                                    <label for="saw">
-                                        <img  src="img/weapon_sawedoff.png"/>
-                                    </label>
+                                <input id="saw" type="radio" name='primaryradio' value="buy sawedoff; buy mag7;"/>
+                                <label for="saw">
+                                    <img  src="img/weapon_sawedoff.png"/>
+                                </label>
                                 </input>
                             </li>
                             <li>
@@ -302,13 +304,13 @@
                                 </label>
                             </li>
                             <li>
-                                <input id="m249" type="radio" name='primaryradio' value="buy m249; buy negev;"/>
+                                <input id="m249" type="radio" name='primaryradio' value="buy m249;"/>
                                 <label for="m249">
                                     <img src="img/weapon_m249.png" title="M249"/>
                                 </label>
                             </li>
                             <li>
-                                <input id="negev" type="radio" name='primaryradio' value="buy negev;buy m249;"/>
+                                <input id="negev" type="radio" name='primaryradio' value="buy negev;"/>
                                 <label for="negev">
                                     <img src="img/weapon_negev.png" title="Negev"/>
                                 </label>
@@ -323,10 +325,10 @@
                 <div id="gun">
                     <ul class='img-list'>
                         <li>
-                            <input id="p250" type="radio" name='secondary' value="buy p250;">
-                                <label for="p250">
-                                    <img  src="img/weapon_p250.png"/>
-                                </label>
+                            <input id="p250" type="radio" name='secondary' value="buy p250;"/>
+                            <label for="p250">
+                                <img  src="img/weapon_p250.png"/>
+                            </label>
                             </input>
                         </li>
                         <li>
@@ -370,10 +372,10 @@
                 <div id="grenades">
                     <ul class='img-list'>
                         <li>
-                            <input id="hegrenade" type="radio" name='grenade' value="buy hegrenade;">
-                                <label for="hegrenade">
-                                    <img  src="img/weapon_hegrenade.png"/>
-                                </label>
+                            <input id="hegrenade" type="radio" name='grenade' value="buy hegrenade;"/>
+                            <label for="hegrenade">
+                                <img  src="img/weapon_hegrenade.png"/>
+                            </label>
                             </input>
                         </li>
                         <li>
@@ -418,24 +420,24 @@
                 <div id="equipment">
                     <ul class='img-list'>
                         <li>
-                            <input id="kevlar" type="radio" name='other' value="buy vest;">
-                                <label for="kevlar">
-                                    <img src="img/equipment_kevlar.png"/>
-                                </label>
+                            <input id="kevlar" type="radio" name='other' value="buy vest;"/>
+                            <label for="kevlar">
+                                <img src="img/equipment_kevlar.png"/>
+                            </label>
                             </input>
                         </li>
                         <li>
-                            <input id="helmet" type="radio" name='other' value="buy vesthelm;">
-                                <label for="helmet">
-                                    <img src="img/equipment_helmet.png"/>
-                                </label>
+                            <input id="helmet" type="radio" name='other' value="buy vesthelm;"/>
+                            <label for="helmet">
+                                <img src="img/equipment_helmet.png"/>
+                            </label>
                             </input>
                         </li>
                         <li>
-                            <input id="kevlarhelm" type="radio" name='other' value="buy vesthelm;buy vest;">
-                                <label for="kevlarhelm">
-                                    <img src="img/equipment_kevlarhelmet.png"/>
-                                </label>
+                            <input id="kevlarhelm" type="radio" name='other' value="buy vesthelm;buy vest;"/>
+                            <label for="kevlarhelm">
+                                <img src="img/equipment_kevlarhelmet.png"/>
+                            </label>
                             </input>
                         </li>
                         <li>
@@ -457,22 +459,22 @@
             </form>
         </div>
     </body>
-    <footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &#149; 2014 (All right reserved at the moment)</footer>
+    <footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &#149; 2014 (Released on <a href="https://github.com/Outpox/csgo-binds-generator">Github</a>)</footer>
     <script>
-	(function(i, s, o, g, r, a, m) {
-	    i['GoogleAnalyticsObject'] = r;
-	    i[r] = i[r] || function() {
-		(i[r].q = i[r].q || []).push(arguments)
-	    }, i[r].l = 1 * new Date();
-	    a = s.createElement(o),
-		    m = s.getElementsByTagName(o)[0];
-	    a.async = 1;
-	    a.src = g;
-	    m.parentNode.insertBefore(a, m)
-	})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-	ga('create', 'UA-50661645-2', 'auto');
-	ga('send', 'pageview');
+        ga('create', 'UA-50661645-2', 'auto');
+        ga('send', 'pageview');
 
     </script>
 </html>
