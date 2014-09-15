@@ -33,8 +33,8 @@ Browsers
 These are the known and working browsers  
 
 * **Chrome**  
-* **Firefox**
-* **Safari** - *seems to work* 
+* **Firefox**  
+* **Safari** - *seems to work*  
 
 *  **Others** - please report
 
