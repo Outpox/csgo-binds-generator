@@ -6,7 +6,7 @@
     <title>CS:GO Binds Generator</title>
     <link rel="icon" type="image/png" href="img/weapon_elite.png"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="css/weapons.css"/>
+    <link rel="stylesheet" type="text/css" href="css/weapon.css"/>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="js/keyboard.js"></script>
     <script type="text/javascript" src="js/weapons.js"></script>
@@ -28,7 +28,7 @@
     </p>
 </div>
 <div id="warning_info">
-    <img src="img/icons/exclamation.png"/>
+    <img src="img/icons/exclamation.png" alt="Warning !"/>
     <br/>
             <span>
                 The CZ75 was recently moved from the p250 slot to the TEC-9/FiveSeven slot.
@@ -164,13 +164,10 @@
 <p id="pselect">Selected key : <span id="selectedkey"></span></p>
 <hr/>
 <p>Primary weapons :
-    <button id="primwepbut">Show/Hide</button>
 </p>
 <div id="primary">
     <form id="primaryform">
-        <p>Rifles :
-            <button id="riflesbut">Show/Hide</button>
-        </p>
+        <span>Rifles :</span>
         <div id="rifles">
             <ul class='img-list'>
                 <li>
@@ -244,9 +241,9 @@
                 </li>
             </ul>
         </div>
-        <p>SMGs :
+        <span>SMGs :
             <button id="smgsbut">Show/Hide</button>
-        </p>
+        </span>
         <div id="smgs">
             <ul class='img-list'>
                 <li>
@@ -384,39 +381,39 @@
     <div id="grenades">
         <ul class='img-list'>
             <li>
-                <input id="hegrenade" type="radio" name='grenade' value="buy hegrenade;"/>
+                <input id="hegrenade" type="checkbox" name='grenade' value="buy hegrenade;"/>
                 <label for="hegrenade">
                     <img src="img/weapon_hegrenade.png" alt="HE Grenade"/>
                 </label>
             </li>
             <li>
-                <input id="flash" type="radio" name='grenade' value="buy flashbang;"/>
+                <input id="flash" type="checkbox" name='grenade' value="buy flashbang;"/>
                 <label for="flash">
                     <img src="img/weapon_flashbang.png" title="Flashbang" alt="Flashbang"/>
                 </label>
 
             </li>
             <li>
-                <input id="smoke" type="radio" name='grenade' value="buy smokegrenade;"/>
+                <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
                 <label for="smoke">
                     <img src="img/weapon_smokegrenade.png" alt="Smoke grenade"/>
                 </label>
             </li>
             <li>
-                <input id="decoy" type="radio" name='grenade' value="buy decoy;"/>
+                <input id="decoy" type="checkbox" name='grenade' value="buy decoy;"/>
                 <label for="decoy">
                     <img src="img/weapon_decoy.png" title="Decoy" alt="Decoy"/>
                 </label>
 
             </li>
             <li>
-                <input id="molotov" type="radio" name='grenade' value="buy molotov; buy incgrenade;"/>
+                <input id="molotov" type="checkbox" name='grenade' value="buy molotov; buy incgrenade;"/>
                 <label for="molotov">
                     <img src="img/weapon_molotov.png" alt="Molotov"/>
                 </label>
             </li>
             <li>
-                <input id="incendiary" type="radio" name='grenade' value="buy incgrenade; buy molotov;"/>
+                <input id="incendiary" type="checkbox" name='grenade' value="buy incgrenade; buy molotov;"/>
                 <label for="incendiary">
                     <img src="img/weapon_incgrenade.png" alt="Incendiary grenade"/>
                 </label>
@@ -433,32 +430,32 @@
     <div id="equipment">
         <ul class='img-list'>
             <li>
-                <input id="kevlar" type="radio" name='other' value="buy vest;"/>
+                <input id="kevlar" type="checkbox" name='other' value="buy vest;"/>
                 <label for="kevlar">
                     <img src="img/equipment_kevlar.png" alt="Kevlar"/>
                 </label>
             </li>
             <li>
-                <input id="helmet" type="radio" name='other' value="buy vesthelm;"/>
+                <input id="helmet" type="checkbox" name='other' value="buy vesthelm;"/>
                 <label for="helmet">
                     <img src="img/equipment_helmet.png" alt="Helmet"/>
                 </label>
             </li>
             <li>
-                <input id="kevlarhelm" type="radio" name='other' value="buy vesthelm;buy vest;"/>
+                <input id="kevlarhelm" type="checkbox" name='other' value="buy vesthelm;buy vest;"/>
                 <label for="kevlarhelm">
                     <img src="img/equipment_kevlarhelmet.png" alt="Kevlar + Helmet"/>
                 </label>
             </li>
             <li>
-                <input id="defuse" type="radio" name='other' value="buy defuser;"/>
+                <input id="defuse" type="checkbox" name='other' value="buy defuser;"/>
                 <label for="defuse">
                     <img src="img/equipment_defusekit.png" alt="Defuse kit"/>
                 </label>
 
             </li>
             <li>
-                <input id="taser" type="radio" name='other' value="buy taser;"/>
+                <input id="taser" type="checkbox" name='other' value="buy taser;"/>
                 <label for="taser">
                     <img src="img/weapon_taser.png" alt="Taser"/>
                 </label>
@@ -468,8 +465,7 @@
     </div>
 </form>
 </div>
-</body>
-<footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &#149; 2014 (Released on <a
+<footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &bull; 2014 (Released on <a
         href="https://github.com/Outpox/csgo-binds-generator">Github</a>)
 </footer>
 <script>
@@ -489,4 +485,5 @@
     ga('send', 'pageview');
 
 </script>
+</body>
 </html>
