@@ -1,0 +1,21 @@
+#menu {
+  display: inline-block; }
+  #menu input + label > img {
+    height: 112.5px;
+    width: 150px;
+    display: table;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 5px; }
+  #menu input:checked + label > img {
+    background-color: gray; }
+  #menu input {
+    display: none; }
+  #menu ul {
+    list-style-type: none; }
+  #menu li {
+    display: inline-block; }
+  #menu .img-list {
+    text-align: center; }
+
+/*# sourceMappingURL=weapon.css.map */
