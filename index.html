@@ -162,8 +162,6 @@
 <div id="menu">
 <p id="pselect">Selected key : <span id="selectedkey"></span></p>
 <hr/>
-<p>Primary weapons :
-</p>
 <div id="primary">
     <form id="primaryform">
         <span>Rifles :</span>
@@ -241,7 +239,6 @@
             </ul>
         </div>
         <span>SMGs :
-            <button id="smgsbut">Show/Hide</button>
         </span>
         <div id="smgs">
             <ul class='img-list'>
@@ -280,7 +277,6 @@
             </ul>
         </div>
         <p>Heavy :
-            <button id="heavybut">Show/Hide</button>
         </p>
         <div id="heavy">
             <ul class='img-list'>
@@ -326,7 +322,6 @@
 </div>
 <hr/>
 <p>Secondary weapons :
-    <button id="secondwepbut">Show/Hide</button>
 </p>
 <form id="secondaryform">
     <div id="gun">
@@ -374,7 +369,6 @@
 </form>
 <hr/>
 <p>Grenades :
-    <button id="grebut">Show/Hide</button>
 </p>
 <form id="greform">
     <div id="grenades">
@@ -390,7 +384,12 @@
                 <label for="flash">
                     <img src="img/weapons/weapon_flashbang.png" title="Flashbang" alt="Flashbang"/>
                 </label>
-
+            </li>
+            <li>
+                <input id="flash2" type="checkbox" name='grenade' value="buy flashbang;"/>
+                <label for="flash2">
+                    <img src="img/weapons/weapon_flashbang.png" title="Flashbang" alt="Flashbang"/>
+                </label>
             </li>
             <li>
                 <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
@@ -403,7 +402,6 @@
                 <label for="decoy">
                     <img src="img/weapons/weapon_decoy.png" title="Decoy" alt="Decoy"/>
                 </label>
-
             </li>
             <li>
                 <input id="molotov" type="checkbox" name='grenade' value="buy molotov; buy incgrenade;"/>
@@ -417,13 +415,11 @@
                     <img src="img/weapons/weapon_incgrenade.png" alt="Incendiary grenade"/>
                 </label>
             </li>
-
         </ul>
     </div>
 </form>
 <hr/>
 <p>Equipment :
-    <button id="equipbut">Show/Hide</button>
 </p>
 <form id="equipform">
     <div id="equipment">
