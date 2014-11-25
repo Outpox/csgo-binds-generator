@@ -1,0 +1,52 @@
+$mainwidth: 700px
+.keyboard
+	display: inline
+	text-align: left
+	width: 55%
+	height: 100%
+	font-size: 1rem
+	.arrow, .numpad, .arrow_home, .main, .result
+		display: inline-block
+	.kb_up, .main
+		margin: 0.5% 1%
+	.arrow_home, .numpad, .result
+		margin-left: 4%
+	table
+		//border-spacing: 1px
+		//border: solid 1px black
+		td
+			text-align: center
+			width: 50px
+			height: 50px
+			border: solid 1px black
+			//border-radius: 5px
+			cursor: pointer
+			background-color: #27ae60
+			color: #EEEEEE
+			&:hover
+				background-color: grey
+			span
+				display: none
+		.fkey
+			td
+				width: 8.33%
+	.kb_down
+		text-align: center
+		width: 98%
+		.main
+			table
+				border-spacing: 2px 1px
+				width: $mainwidth
+				#space
+					width: $mainwidth/2.2
+	.empty
+		border: none
+		background-color: #ecf0f1
+		cursor: default
+		&:hover
+			background-color: #ecf0f1
+			cursor: default
+	.result
+		width: 50%
+		height: 100%
+		background-color: grey

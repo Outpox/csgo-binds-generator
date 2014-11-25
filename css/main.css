@@ -1,0 +1,82 @@
+head, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Exo";
+  background-color: #ecf0f1;
+  min-width: 1100px; }
+
+@font-face {
+  font-family: "Bellota";
+  src: url("../font/Bellota-Regular.otf"); }
+@font-face {
+  font-family: "Franchise";
+  src: url("../font/Franchise-Free-Bold.otf"); }
+@font-face {
+  font-family: "Onramp";
+  src: url("../font/ONRAMP.ttf"); }
+@font-face {
+  font-family: "Exo";
+  src: url("../font/Exo-Regular.otf"); }
+header {
+  width: 100%;
+  font-family: "Exo"; }
+  header #title {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 1%; }
+  header #home_msg {
+    text-align: center;
+    margin-bottom: 2%; }
+
+#container {
+  width: 100%;
+  height: 100%; }
+
+.keyboard {
+  display: inline;
+  text-align: left;
+  width: 55%;
+  height: 100%;
+  font-size: 1rem; }
+  .keyboard .arrow, .keyboard .numpad, .keyboard .arrow_home, .keyboard .main, .keyboard .result {
+    display: inline-block; }
+  .keyboard .kb_up, .keyboard .main {
+    margin: 0.5% 1%; }
+  .keyboard .arrow_home, .keyboard .numpad, .keyboard .result {
+    margin-left: 4%; }
+  .keyboard table td {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: solid 1px black;
+    cursor: pointer;
+    background-color: #27ae60;
+    color: #EEEEEE; }
+    .keyboard table td:hover {
+      background-color: grey; }
+    .keyboard table td span {
+      display: none; }
+  .keyboard table .fkey td {
+    width: 8.33%; }
+  .keyboard .kb_down {
+    text-align: center;
+    width: 98%; }
+    .keyboard .kb_down .main table {
+      border-spacing: 2px 1px;
+      width: 700px; }
+      .keyboard .kb_down .main table #space {
+        width: 318.18182px; }
+  .keyboard .empty {
+    border: none;
+    background-color: #ecf0f1;
+    cursor: default; }
+    .keyboard .empty:hover {
+      background-color: #ecf0f1;
+      cursor: default; }
+  .keyboard .result {
+    width: 50%;
+    height: 100%;
+    background-color: grey; }
+
+/*# sourceMappingURL=main.css.map */
