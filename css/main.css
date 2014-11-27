@@ -1,3 +1,4 @@
+@charset "UTF-8";
 head, body {
   width: 100%;
   height: 100%;
@@ -43,7 +44,7 @@ header {
     display: inline-block; }
   .keyboard .kb_up, .keyboard .main {
     margin: 0.5% 1%; }
-  .keyboard .arrow_home, .keyboard .numpad, .keyboard .result {
+  .keyboard .numpad, .keyboard .output {
     margin-left: 4%; }
   .keyboard table td {
     text-align: center;
@@ -51,17 +52,19 @@ header {
     height: 50px;
     border: solid 1px black;
     cursor: pointer;
-    background-color: #27ae60;
+    background-color: #7f8c8d;
     color: #EEEEEE; }
     .keyboard table td:hover {
-      background-color: grey; }
+      background-color: #27ae60; }
     .keyboard table td span {
       display: none; }
-  .keyboard table .fkey td {
-    width: 8.33%; }
+  .keyboard .kb_up {
+    text-align: center;
+    height: 55%;
+    width: 99%; }
   .keyboard .kb_down {
     text-align: center;
-    width: 98%; }
+    width: 100%; }
     .keyboard .kb_down .main table {
       border-spacing: 2px 1px;
       width: 700px; }
@@ -74,9 +77,124 @@ header {
     .keyboard .empty:hover {
       background-color: #ecf0f1;
       cursor: default; }
-  .keyboard .result {
+  .keyboard .output {
+    display: inline-block;
+    width: 50%; }
+    .keyboard .output span {
+      float: left;
+      display: block;
+      width: 65%;
+      text-align: left;
+      margin: 1%;
+      margin-left: 4%; }
+    .keyboard .output #test {
+      width: 25%;
+      text-align: center;
+      float: left;
+      margin-left: 0;
+      border: solid 1px black;
+      padding: 0.5% 0;
+      cursor: pointer;
+      background-color: #bdc3c7; }
+    .keyboard .output .result {
+      width: 90%;
+      height: 250px;
+      background-color: grey;
+      border: solid 1px black;
+      margin-bottom: 0.5%;
+      color: #ffffff; }
+
+@media (min-width: 1500px) {
+  .kb_down {
+    width: 50% !important;
+    float: left;
+    margin-top: 5%; } }
+#menu {
+  display: inline-block; }
+  #menu .img-list {
+    min-width: 200px;
+    max-width: 85%;
+    margin: 0 auto; }
+  #menu input + label > img {
+    height: 112.5px;
+    width: 150px;
+    display: table;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: solid 2px lightgray;
+    opacity: 0.7; }
+  #menu img {
+    /*http://stackoverflow.com/a/17945428/3560404 */
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0, url("../img/others/workbench.jpg") repeat 0 0;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.7)), color-stop(100%, rgba(255, 255, 255, 0.7))), url("../img/others/workbench.jpg") repeat 0 0;
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+    -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=25)";
+    /* Hack IE8 */
+    filter: alpha(opacity=25);
+    /* Hack IE 5-7 */
+    -webkit-transition: opacity 0.5s ease-in-out;
+    /* transition pour Chrome et Safari */
+    -moz-transition: opacity 0.5s ease-in-out;
+    /* transition pour Firefox */
+    -o-transition: opacity 0.5s ease-in-out;
+    /* transition pour Opéra */
+    transition: opacity 0.5s ease-in-out; }
+  #menu input {
+    display: none; }
+    #menu input + label > img:hover {
+      border: solid 2px #7f8c8d;
+      opacity: 0.8;
+      /* opacite au survol */
+      -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+      /* Hack IE 8 */
+      filter: alpha(opacity=90);
+      /* Hack IE 5-7 */
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0, url("../img/others/workbench.jpg") repeat 0 0;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.1))), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0; }
+    #menu input:checked + label > img {
+      border: solid 2px #27ae60;
+      opacity: 1;
+      /* opacite au survol */
+      -ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+      /* Hack IE 8 */
+      filter: alpha(opacity=90);
+      /* Hack IE 5-7 */
+      background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0, url("../img/others/workbench.jpg") repeat 0 0;
+      background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0.1))), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0;
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0; }
+  #menu ul {
+    list-style-type: none; }
+  #menu li {
+    display: inline-block; }
+  #menu .img-list {
+    text-align: center; }
+  #menu form {
+    width: auto; }
+  #menu span, #menu p {
+    margin-left: 5%; }
+  #menu #selectedkey {
+    margin: 0; }
+
+@media (min-width: 1500px) {
+  #menu {
     width: 50%;
-    height: 100%;
-    background-color: grey; }
+    float: right; } }
+footer {
+  width: 100%;
+  text-align: center;
+  margin: 3% 0; }
 
 /*# sourceMappingURL=main.css.map */

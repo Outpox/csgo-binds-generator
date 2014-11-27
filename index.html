@@ -6,9 +6,7 @@
     <title>CS:GO Binds Generator</title>
     <link rel="icon" type="image/png" href="img/weapons/weapon_elite.png"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link rel="stylesheet" type="text/css" href="css/weapon.css"/>
-    <script type="text/javascript" src="js/keyboard.js"></script>
-    <script type="text/javascript" src="js/weapons.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </head>
 <body>
 <header>
@@ -35,14 +33,14 @@
                 <div class="home">
                     <table>
                         <tr>
-                            <td>Insert</td>
+                            <td>Insert<span>ins</span></td>
                             <td>Home</td>
-                            <td>Pg Up</td>
+                            <td>Pg Up<span>pgup</span></td>
                         </tr>
                         <tr>
-                            <td>Delete</td>
+                            <td>Delete<span>del</span></td>
                             <td>End</td>
-                            <td>Pg Down</td>
+                            <td>Pg Down<span>pgdn</span></td>
                         </tr>
                         <tr>
                             <td class="empty"></td>
@@ -97,7 +95,10 @@
                     </tr>
                 </table>
             </div>
-            <div class="result"> bla</div>
+            <div class="output">
+                <span>Output:</span><span id="test">Copy to clipboard</span>
+                <textarea id="text-result" class="result"></textarea>
+            </div>
         </div>
 
         <div class="kb_down">
