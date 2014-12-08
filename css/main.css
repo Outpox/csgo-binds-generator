@@ -103,6 +103,8 @@ header {
       border: solid 1px black;
       margin-bottom: 0.5%;
       color: #ffffff; }
+  .keyboard .savedKey {
+    color: red; }
 
 @media (min-width: 1500px) {
   .kb_down {
