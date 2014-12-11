@@ -28,7 +28,8 @@ header {
     margin-bottom: 1%; }
   header #home_msg {
     text-align: center;
-    margin-bottom: 2%; }
+    margin-bottom: 2%;
+    font-size: 1.2em; }
 
 #container {
   width: 100%;
@@ -86,7 +87,8 @@ header {
       width: 65%;
       text-align: left;
       margin: 1%;
-      margin-left: 4%; }
+      margin-left: 4%;
+      font-size: 1.1em; }
     .keyboard .output .span-btn {
       width: 22%;
       text-align: center;
@@ -198,7 +200,8 @@ header {
   #menu form {
     width: auto; }
   #menu span, #menu p {
-    margin-left: 5%; }
+    margin-left: 5%;
+    font-size: 1.2em; }
   #menu #selectedkey {
     margin: 0; }
   #menu .toggle-btn {
