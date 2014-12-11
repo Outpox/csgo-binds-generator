@@ -39,7 +39,7 @@ header {
   text-align: left;
   width: 55%;
   height: 100%;
-  font-size: 1rem; }
+  font-size: 1.1rem; }
   .keyboard .arrow, .keyboard .numpad, .keyboard .arrow_home, .keyboard .main, .keyboard .result {
     display: inline-block; }
   .keyboard .kb_up, .keyboard .main {
