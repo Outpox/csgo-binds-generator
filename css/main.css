@@ -96,6 +96,10 @@ header {
       padding: 0.5% 0;
       cursor: pointer;
       background-color: #bdc3c7; }
+      .keyboard .output #test:active {
+        position: relative;
+        top: 1px;
+        left: 1px; }
     .keyboard .output .result {
       width: 90%;
       height: 250px;
