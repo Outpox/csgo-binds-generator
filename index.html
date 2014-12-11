@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+    <title>CS:GO Binds Generator</title>
+    <link rel="icon" type="image/png" href="img/weapons/weapon_elite.png"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/KeyHandler.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</head>
+<body>
+<header>
+    <p id="title">CS:GO BINDS GENERATOR</p>
+
+    <div id="version">
+
+        <p id="home_msg">
+            This tool help you bind commands to rapidly buy weapons in CS:GO.<br/>
+        </p>
+
+        <!--<p style="text-align: center; font-size: 20px;">-->
+        <!--The source code was just released on <a href="https://github.com/Outpox/csgo-binds-generator">Github</a> !-->
+        <!--</p>-->
+
+    </div>
+</header>
+
+<div id="container">
+
+    <div class="keyboard">
+        <div class="kb_up">
+            <div class="arrow_home">
+                <div class="home">
+                    <table>
+                        <tr>
+                            <td>Insert<span>ins</span></td>
+                            <td>Home</td>
+                            <td>Pg Up<span>pgup</span></td>
+                        </tr>
+                        <tr>
+                            <td>Delete<span>del</span></td>
+                            <td>End</td>
+                            <td>Pg Down<span>pgdn</span></td>
+                        </tr>
+                        <tr>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                            <td class="empty"></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="arrow">
+                    <table>
+                        <tr>
+                            <td class="empty"></td>
+                            <td>↑<span>uparrow</span></td>
+                            <td class="empty"></td>
+                        </tr>
+                        <tr>
+                            <td>←<span>leftarrow</span></td>
+                            <td>↓<span>downarrow</span></td>
+                            <td>→<span>rightarrow</span></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="numpad">
+                <table>
+                    <tr>
+                        <td>Num Lock</td>
+                        <td>/<span>kp_slash</span></td>
+                        <td>*<span>kp_multiply</span></td>
+                        <td>-<span>kp_minus</span></td>
+                    </tr>
+                    <tr>
+                        <td>7<span>kp_home</span></td>
+                        <td>8<span>kp_uparrow8</span></td>
+                        <td>9<span>kp_pgup</span></td>
+                        <td rowspan="2">+<span>kp_plus</span></td>
+                    </tr>
+                    <tr>
+                        <td>4<span>kp_leftarrow</span></td>
+                        <td>5<span>kp_5</span></td>
+                        <td>6<span>kp_rightarrow</span></td>
+                    </tr>
+                    <tr>
+                        <td>1<span>kp_end</span></td>
+                        <td>2<span>kp_downarrow</span></td>
+                        <td>3<span>kp_pgdn</span></td>
+                        <td rowspan="2">Enter<span>kp_enter</span></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">0<span>kp_ins</span></td>
+                        <td>.<span>kp_del</span></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="output">
+                <span>Output:</span><span id="test">Copy to clipboard</span>
+                <textarea id="text-result" class="result"></textarea>
+            </div>
+        </div>
+
+        <div class="kb_down">
+            <div class="main">
+                <table>
+                    <tr>
+                        <td>F1</td>
+                        <td>F2</td>
+                        <td>F3</td>
+                        <td>F4</td>
+                        <td>F5</td>
+                        <td>F6</td>
+                        <td>F7</td>
+                        <td>F8</td>
+                        <td>F9</td>
+                        <td>F10</td>
+                        <td>F11</td>
+                        <td>F12</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>`</td>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>=</td>
+                        <td>Backspace</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Tab</td>
+                        <td>Q</td>
+                        <td>W</td>
+                        <td>E</td>
+                        <td>R</td>
+                        <td>T</td>
+                        <td>Y</td>
+                        <td>U</td>
+                        <td>I</td>
+                        <td>O</td>
+                        <td>P</td>
+                        <td>[</td>
+                        <td>]</td>
+                        <td>\</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>CapsLock</td>
+                        <td>A</td>
+                        <td>S</td>
+                        <td>D</td>
+                        <td>F</td>
+                        <td>G</td>
+                        <td>H</td>
+                        <td>J</td>
+                        <td>K</td>
+                        <td>L</td>
+                        <td>;</td>
+                        <td>'</td>
+                        <td>Enter</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Shift</td>
+                        <td>Z</td>
+                        <td>X</td>
+                        <td>C</td>
+                        <td>V</td>
+                        <td>B</td>
+                        <td>N</td>
+                        <td>M</td>
+                        <td>,</td>
+                        <td>.</td>
+                        <td>/</td>
+                        <td>Shift</td>
+                    </tr>
+                </table>
+                <table>
+                    <tr>
+                        <td>Ctrl</td>
+                        <td class="empty"></td>
+                        <td>Alt</td>
+                        <td id="space">Space</td>
+                        <td>Alt</td>
+                        <td class="empty"></td>
+                        <td>Ctrl</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+
+<!--TABS : http://codepen.io/wallaceerick/pen/ojtal?editors=110-->
+<div id="menu">
+    <p id="pselect">Selected key : <span id="selectedkey"></span></p>
+    <hr/>
+    <div id="primary">
+        <form id="primaryform">
+            <span>Rifles :</span>
+            <button id="disrifle">Show</button>
+            <div id="rifles">
+                <ul class='img-list'>
+                    <li>
+                        <input id="galil" type="radio" name='primaryradio' value="buy galilar; buy famas;"/>
+                        <label for="galil">
+                            <img src="img/weapons/weapon_galilar.png" alt="Galil AR"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="ak47" type="radio" name='primaryradio' value="buy ak47; buy m4a1;"/>
+                        <label for="ak47">
+                            <img src="img/weapons/weapon_ak47.png" alt="Ak-47"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="sg556" type="radio" name='primaryradio' value="buy sg556; buy aug;"/>
+                        <label for="sg556">
+                            <img src="img/weapons/weapon_sg556.png" alt="SG 556"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="awp" type="radio" name='primaryradio' value="buy awp;"/>
+                        <label for="awp">
+                            <img src="img/weapons/weapon_awp.png" alt="AWP"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="famas" type="radio" name='primaryradio' value="buy famas; buy galilar;"/>
+                        <label for="famas">
+                            <img src="img/weapons/weapon_famas.png" alt="Famas"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="m4a1s" type="radio" name='primaryradio' value="buy m4a1; buy ak47;"/>
+                        <label for="m4a1s">
+                            <img src="img/weapons/weapon_m4a1_silencer.png" alt="M4A1-S"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="m4a4" type="radio" name='primaryradio' value="buy m4a1; buy ak47;"/>
+                        <label for="m4a4">
+                            <img src="img/weapons/weapon_m4a1.png" alt="M4A1"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="aug" type="radio" name='primaryradio' value="buy aug; buy sg556;"/>
+                        <label for="aug">
+                            <img src="img/weapons/weapon_aug.png" alt="AUG"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="scout" type="radio" name='primaryradio' value="buy ssg08;"/>
+                        <label for="scout">
+                            <img src="img/weapons/weapon_ssg08.png" alt="SSG 08"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="g3sg1" type="radio" name='primaryradio' value="buy g3sg1; buy scar20;"/>
+                        <label for="g3sg1">
+                            <img src="img/weapons/weapon_g3sg1.png" alt="G3SG1"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="scar20" type="radio" name='primaryradio' value="buy scar20; buy g3sg1;"/>
+                        <label for="scar20">
+                            <img src="img/weapons/weapon_scar20.png" alt="SCAR 20"/>
+                        </label>
+
+                    </li>
+                </ul>
+            </div>
+        <span>SMGs :
+        </span>
+
+            <div id="smgs">
+                <ul class='img-list'>
+                    <li>
+                        <input id="mac10" type="radio" name='primaryradio' value="buy mac10; buy mp9;"/>
+                        <label for="mac10">
+                            <img src="img/weapons/weapon_mac10.png" alt="MAC 10"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="mp9" type="radio" name='primaryradio' value="buy mp9; buy mac10;"/>
+                        <label for="mp9">
+                            <img src="img/weapons/weapon_mp9.png" alt="MP9"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="mp7" type="radio" name='primaryradio' value="buy mp7;"/>
+                        <label for="mp7">
+                            <img src="img/weapons/weapon_mp7.png" alt="MP7"/>
+                        </label>
+
+                    </li>
+                    <li>
+                        <input id="bizon" type="radio" name='primaryradio' value="buy bizon;"/>
+                        <label for="bizon">
+                            <img src="img/weapons/weapon_bizon.png" alt="Bizon"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="p90" type="radio" name='primaryradio' value="buy p90;"/>
+                        <label for="p90">
+                            <img src="img/weapons/weapon_p90.png" alt="P90"/>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <p>Heavy :
+            </p>
+
+            <div id="heavy">
+                <ul class='img-list'>
+                    <li>
+                        <input id="nova" type="radio" name='primaryradio' value="buy nova;"/>
+                        <label for="nova">
+                            <img src="img/weapons/weapon_nova.png" alt="Nova"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="xm1014" type="radio" name='primaryradio' value="buy xm1014;"/>
+                        <label for="xm1014">
+                            <img src="img/weapons/weapon_xm1014.png" alt="XM-1014"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="saw" type="radio" name='primaryradio' value="buy sawedoff; buy mag7;"/>
+                        <label for="saw">
+                            <img src="img/weapons/weapon_sawedoff.png" alt="Sawed-Off"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="mag7" type="radio" name='primaryradio' value="buy mag7; buy sawedoff;"/>
+                        <label for="mag7">
+                            <img src="img/weapons/weapon_mag7.png" alt="Swag-7"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="m249" type="radio" name='primaryradio' value="buy m249;"/>
+                        <label for="m249">
+                            <img src="img/weapons/weapon_m249.png" title="M249" alt="M249"/>
+                        </label>
+                    </li>
+                    <li>
+                        <input id="negev" type="radio" name='primaryradio' value="buy negev;"/>
+                        <label for="negev">
+                            <img src="img/weapons/weapon_negev.png" title="Negev" alt="Negev"/>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </form>
+    </div>
+    <hr/>
+    <p>Secondary weapons :
+    </p>
+
+    <form id="secondaryform">
+        <div id="gun">
+            <ul class='img-list'>
+                <li>
+                    <input id="p250" type="radio" name='secondary' value="buy p250;"/>
+                    <label for="p250">
+                        <img src="img/weapons/weapon_p250.png" alt="P250"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="cz" type="radio" name='secondary' value="buy tec9; buy fiveseven;"/>
+                    <label for="cz">
+                        <img src="img/weapons/weapon_cz75a.png" alt="CZ-75a"/>
+                    </label>
+
+                </li>
+                <li>
+                    <input id="tec9" type="radio" name='secondary' value="buy tec9; buy fiveseven;"/>
+                    <label for="tec9">
+                        <img src="img/weapons/weapon_tec9.png" alt="TEC-9"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="fiveseven" type="radio" name='secondary' value="buy fiveseven; buy tec9;"/>
+                    <label for="fiveseven">
+                        <img src="img/weapons/weapon_fiveseven.png" alt="Five-Seven"/>
+                    </label>
+
+                </li>
+                <li>
+                    <input id="dual" type="radio" name='secondary' value="buy elite;"/>
+                    <label for="dual">
+                        <img src="img/weapons/weapon_elite.png" alt="Dual elite"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="deagle" type="radio" name='secondary' value="buy deagle;"/>
+                    <label for="deagle">
+                        <img src="img/weapons/weapon_deagle.png" alt="Desert eagle"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <hr/>
+    <p>Grenades :
+    </p>
+
+    <form id="greform">
+        <div id="grenades">
+            <ul class='img-list'>
+                <li>
+                    <input id="hegrenade" type="checkbox" name='grenade' value="buy hegrenade;"/>
+                    <label for="hegrenade">
+                        <img src="img/weapons/weapon_hegrenade.png" alt="HE Grenade"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="flash" type="checkbox" name='grenade' value="buy flashbang;"/>
+                    <label for="flash">
+                        <img src="img/weapons/weapon_flashbang.png" title="Flashbang" alt="Flashbang"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="flash2" type="checkbox" name='grenade' value="buy flashbang;"/>
+                    <label for="flash2">
+                        <img src="img/weapons/weapon_flashbang.png" title="Flashbang" alt="Flashbang"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="smoke" type="checkbox" name='grenade' value="buy smokegrenade;"/>
+                    <label for="smoke">
+                        <img src="img/weapons/weapon_smokegrenade.png" alt="Smoke grenade"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="decoy" type="checkbox" name='grenade' value="buy decoy;"/>
+                    <label for="decoy">
+                        <img src="img/weapons/weapon_decoy.png" title="Decoy" alt="Decoy"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="molotov" type="checkbox" name='grenade' value="buy molotov; buy incgrenade;"/>
+                    <label for="molotov">
+                        <img src="img/weapons/weapon_molotov.png" alt="Molotov"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="incendiary" type="checkbox" name='grenade' value="buy incgrenade; buy molotov;"/>
+                    <label for="incendiary">
+                        <img src="img/weapons/weapon_incgrenade.png" alt="Incendiary grenade"/>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </form>
+    <hr/>
+    <p>Equipment :
+    </p>
+
+    <form id="equipform">
+        <div id="equipment">
+            <ul class='img-list'>
+                <li>
+                    <input id="kevlar" type="checkbox" name='other' value="buy vest;"/>
+                    <label for="kevlar">
+                        <img src="img/weapons/equipment_kevlar.png" alt="Kevlar"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="helmet" type="checkbox" name='other' value="buy vesthelm;"/>
+                    <label for="helmet">
+                        <img src="img/weapons/equipment_helmet.png" alt="Helmet"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="kevlarhelm" type="checkbox" name='other' value="buy vesthelm; buy vest;"/>
+                    <label for="kevlarhelm">
+                        <img src="img/weapons/equipment_kevlarhelmet.png" alt="Kevlar + Helmet"/>
+                    </label>
+                </li>
+                <li>
+                    <input id="defuse" type="checkbox" name='other' value="buy defuser;"/>
+                    <label for="defuse">
+                        <img src="img/weapons/equipment_defusekit.png" alt="Defuse kit"/>
+                    </label>
+
+                </li>
+                <li>
+                    <input id="taser" type="checkbox" name='other' value="buy taser;"/>
+                    <label for="taser">
+                        <img src="img/weapons/weapon_taser.png" alt="Taser"/>
+                    </label>
+
+                </li>
+            </ul>
+        </div>
+    </form>
+</div>
+<footer>Created by <a href="http://www.reddit.com/user/Outpox/">/u/Outpox</a> &bull; 2014 (Released on <a
+        href="https://github.com/Outpox/csgo-binds-generator">Github</a>)
+</footer>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-50661645-2', 'auto');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>

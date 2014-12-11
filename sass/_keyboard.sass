@@ -1,0 +1,91 @@
+$mainwidth: 700px
+.keyboard
+	display: inline
+	text-align: left
+	width: 55%
+	height: 100%
+	font-size: 1rem
+	.arrow, .numpad, .arrow_home, .main, .result
+		display: inline-block
+	.kb_up, .main
+		margin: 0.5% 1%
+	.numpad, .output
+		margin-left: 4%
+	table
+		//border-spacing: 1px
+		//border: solid 1px black
+		td
+			text-align: center
+			width: 50px
+			height: 50px
+			border: solid 1px black
+			cursor: pointer
+			background-color: #7f8c8d
+			color: #EEEEEE
+			&:hover
+				background-color: #27ae60
+			span
+				display: none
+	.kb_up
+		text-align: center
+		height: 55%
+		width: 99%
+	.kb_down
+		text-align: center
+		width: 100%
+		.main
+			table
+				border-spacing: 2px 1px
+				width: $mainwidth
+				#space
+					width: $mainwidth/2.2
+	.empty
+		border: none
+		background-color: #ecf0f1
+		cursor: default
+		&:hover
+			background-color: #ecf0f1
+			cursor: default
+	.output
+		display: inline-block
+		width: 50%
+
+		span
+			float: left
+			display: block
+			width: 65%
+			text-align: left
+			margin: 1%
+			margin-left: 4%
+		#test
+			width: 25%
+			text-align: center
+			float: left
+			margin-left: 0
+			border: solid 1px black
+			padding: 0.5% 0
+			cursor: pointer
+			background-color: #bdc3c7
+			&:active
+				position: relative
+				top: 1px
+				left: 1px
+			//&:hover
+			//	-moz-box-shadow: 3px 3px 2px 0px #656565
+			//	-webkit-box-shadow: 3px 3px 2px 0px #656565
+			//	-o-box-shadow: 3px 3px 2px 0px #656565
+			//	box-shadow: 3px 3px 2px 0px #656565
+		.result
+			width: 90%
+			height: 250px
+			background-color: grey
+			border: solid 1px black
+			margin-bottom: 0.5%
+			color: #ffffff
+	.savedKey
+		color: red
+@media (min-width: 1500px)
+	.kb_down
+		width: 50% !important
+		float: left
+		margin-top: 5%
