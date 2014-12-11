@@ -15,9 +15,6 @@ KeyList.list = ->
 
 class ItemKey
   constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = []) ->
-    if selected
-      ref.classList.add("savedKey")
-
     if !KeyList.contains(ref)
       KeyList.push(this)
 
@@ -39,14 +36,6 @@ class ItemKey
     return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;"
     # &#10; = new line
 
-  select: ->
-    this.selected = true
-    this.ref.classList.add("savedKey")
-
-  deSelect: ->
-    this.selected = false
-    this.ref.classList.remove("savedKey")
-
   containsArr: (arr, ref) ->
     x = 0;
     while x < arr.length
@@ -64,6 +53,16 @@ class ItemKey
       while y--
         if arr[y] == ref
           arr.splice(y, 1)
+
+  focus: ->
+    console.log("focus")
+    x = 0;
+    while x < KeyList.length
+      console.log(KeyList[x])
+      KeyList[x].ref.classList.remove("focus")
+      x++
+    this.ref.classList.add("focus")
+
 
 
 

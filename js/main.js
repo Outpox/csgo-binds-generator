@@ -7,64 +7,32 @@ window.onload = function () {
 	var keys = document.querySelectorAll(".keyboard table tbody tr td");
 	var textArea = document.getElementById("text-result");
 	var defaultBgColor = keys[0].style.backgroundColor;
-	var selectedBgColor = "#16a085";
-	var output = {};
-	output.p = output.s = output.g = output.o = "";
+	window.defaultBgColor = defaultBgColor;
 
 	function selectKey(key) {
 		if (key.ref.className != "empty") {
-
-			//if (key.selected) {
-			//	key.deSelect()
-			//	key.style.backgroundColor = defaultBgColor;
-		}
-		else {
-			//k.select()
-			//console.log(k.getString());
-			//console.log(k.getValue());
-			//console.log(k);
-			//deselectAllKey();
-			//key.s = true;
-			//key.style.backgroundColor = selectedBgColor;
+			selectedkey.innerText = key.getValue();
 		}
 	}
 
 	function selectWep(wep) {
-		if (wep.s) {
-			wep.s = false;
-			wep.checked = false;
-			switch (wep.name) {
-				case "primaryradio":
-					output.p = "";
-					break;
-				case "secondary":
-					output.s = "";
-					break;
-				case "grenade":
-					output.g = "";
-					break;
-				case "other":
-					output.o = "";
-					break;
-			}
-		}
-		else {
-			wep.s = true;
-			wep.checked = true;
-			switch (wep.name) {
-				case "primaryradio":
-					output.p = ' ' + wep.value;
-					break;
-				case "secondary":
-					output.s = ' ' + wep.value;
-					break;
-				case "grenade":
-					output.g = ' ' + wep.value;
-					break;
-				case "other":
-					output.o = ' ' + wep.value;
-					break;
-			}
+		switch (wep.name) {
+			case "primaryradio":
+				currentKey.primary = wep.value;
+				update();
+				break;
+			case "secondary":
+				currentKey.secondary = wep.value;
+				update();
+				break;
+			case "grenade":
+				currentKey.addInArray(currentKey.grenade, wep);
+				update();
+				break;
+			case "other":
+				currentKey.addInArray(currentKey.other, wep);
+				update();
+				break;
 		}
 	}
 
@@ -93,6 +61,7 @@ window.onload = function () {
 			}
 			console.log("------------------------------------------------");
 			KeyList.list();
+			selectKey(currentKey);
 		}
 	}
 //Weapons
@@ -101,32 +70,53 @@ window.onload = function () {
 		var allRadios = document.getElementsByName(radioList[list]);
 		for (var x = 0; x < allRadios.length; x++) {
 			allRadios[x].onclick = function () {
-				//console.log(this);
-				//console.log(currentKey.grenade);
-				switch (this.name)	 {
-					case "primaryradio":
-						currentKey.primary = this.value;
-						update();
-						break;
-					case "secondary":
-						currentKey.secondary = this.value;
-						update();
-						break;
-					case "grenade":
-						currentKey.addInArray(currentKey.grenade, this);
-						update();
-						break;
-					case "other":
-						currentKey.addInArray(currentKey.other, this);
-						update();
-						break;
-				}
+				selectWep(this)
+
 			}
 		}
 	}
-	var btn = document.getElementById("disrifle");
-	btn.onclick = function () {
-		document.getElementById("rifles").style.display = "none";
+
+	function reset() {
+		currentKey = {};
+		textArea.innerHTML = "";
+		KeyList.length = 0;
+	}
+
+	document.getElementById("reset").onclick = function () {
+		reset();
+	};
+
+	document.getElementById("copy").onclick = function () {
+		console.log("copy");
+		ZeroClipboard.setData("text/plain", textArea.innerText);
+	}
+
+	function toggleDisplay(div) {
+		div.style.display != "none" ? div.style.display = "none" : div.style.display = "block";
+	}
+
+	document.getElementById("disrifle").onclick = function () {
+		toggleDisplay(document.getElementById("rifles"));
 		return false;
 	};
-}
+	document.getElementById("dissmg").onclick = function () {
+		toggleDisplay(document.getElementById("smgs"));
+		return false;
+	};
+	document.getElementById("disheavy").onclick = function () {
+		toggleDisplay(document.getElementById("heavy"));
+		return false;
+	};
+	document.getElementById("dissecondary").onclick = function () {
+		toggleDisplay(document.getElementById("gun"));
+		return false;
+	};
+	document.getElementById("disgre").onclick = function () {
+		toggleDisplay(document.getElementById("grenades"));
+		return false;
+	};
+	document.getElementById("disother").onclick = function () {
+		toggleDisplay(document.getElementById("equipment"));
+		return false;
+	};
+};

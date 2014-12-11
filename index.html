@@ -6,6 +6,7 @@
     <title>CS:GO Binds Generator</title>
     <link rel="icon" type="image/png" href="img/weapons/weapon_elite.png"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <script type="text/javascript" src="js/ZeroClipboard.Core.min.js"></script>
     <script type="text/javascript" src="js/KeyHandler.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
 </head>
@@ -97,7 +98,7 @@
                 </table>
             </div>
             <div class="output">
-                <span>Output:</span><span id="test">Copy to clipboard</span>
+                <span id="reset" class="span-btn">Reset</span><span id="copy" class="span-btn">Copy to clipboard</span>
                 <textarea id="text-result" class="result"></textarea>
             </div>
         </div>
@@ -214,8 +215,10 @@
     <hr/>
     <div id="primary">
         <form id="primaryform">
-            <span>Rifles :</span>
-            <button id="disrifle">Show</button>
+            <div class="toggle-btn">
+                <span>Rifles: </span>
+                <button id="disrifle">Toggle</button>
+            </div>
             <div id="rifles">
                 <ul class='img-list'>
                     <li>
@@ -289,8 +292,10 @@
                     </li>
                 </ul>
             </div>
-        <span>SMGs :
-        </span>
+            <div class="toggle-btn">
+                <span>SMGs: </span>
+                <button id="dissmg">Toggle</button>
+            </div>
 
             <div id="smgs">
                 <ul class='img-list'>
@@ -328,8 +333,10 @@
                     </li>
                 </ul>
             </div>
-            <p>Heavy :
-            </p>
+            <div class="toggle-btn">
+                <span>Heavy: </span>
+                <button id="disheavy">Toggle</button>
+            </div>
 
             <div id="heavy">
                 <ul class='img-list'>
@@ -374,8 +381,10 @@
         </form>
     </div>
     <hr/>
-    <p>Secondary weapons :
-    </p>
+    <div class="toggle-btn">
+        <span>Secondary: </span>
+        <button id="dissecondary">Toggle</button>
+    </div>
 
     <form id="secondaryform">
         <div id="gun">
@@ -422,8 +431,10 @@
         </div>
     </form>
     <hr/>
-    <p>Grenades :
-    </p>
+    <div class="toggle-btn">
+        <span>Grenades: </span>
+        <button id="disgre">Toggle</button>
+    </div>
 
     <form id="greform">
         <div id="grenades">
@@ -474,8 +485,10 @@
         </div>
     </form>
     <hr/>
-    <p>Equipment :
-    </p>
+    <div class="toggle-btn">
+        <span>Equipment: </span>
+        <button id="disother">Toggle</button>
+    </div>
 
     <form id="equipform">
         <div id="equipment">

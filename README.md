@@ -10,7 +10,7 @@ CS:Go Binds Generator is an online tool that helps you to create your binds on C
 Version
 ----
 
-0.5
+0.9
 
 Give it a try
 -----------
@@ -20,13 +20,11 @@ Give it a try
 What's planed
 -----------
 *In no particular order*
-- Button to copy to clipboard
 - Mouse button support
 - Support different layout
 - Select keys by pressing them on keyboard
 - Mac ctrl key support
 - Chat binds
-- Improved design
 
 Browsers
 --------------
@@ -34,15 +32,16 @@ These are the known and working browsers
 
 * **Chrome**  
 * **Firefox**  
-* **Safari** - *seems to work*  
-
+* **Safari**
 *  **Others** - please report
 
 Tools used
 ----------
-* Standard HTML
-* CSS
-* [jQuery](http://jquery.com)
+* HTML5
+* [Sass](http://sass-lang.com/)
+* JS
+* [Coffee](http://coffeescript.org/)
+* [ZeroClipboard](http://zeroclipboard.org/)
 
 License
 ----

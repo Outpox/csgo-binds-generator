@@ -87,26 +87,34 @@ header {
       text-align: left;
       margin: 1%;
       margin-left: 4%; }
-    .keyboard .output #test {
-      width: 25%;
+    .keyboard .output .span-btn {
+      width: 22%;
       text-align: center;
-      float: left;
-      margin-left: 0;
+      float: right;
       border: solid 1px black;
       padding: 0.5% 0;
       cursor: pointer;
-      background-color: #bdc3c7; }
-      .keyboard .output #test:active {
+      background-color: #bdc3c7;
+      margin-right: 4.6%; }
+      .keyboard .output .span-btn:active {
         position: relative;
         top: 1px;
         left: 1px; }
+    .keyboard .output #reset {
+      width: 10%;
+      float: left;
+      margin-left: 4.6%;
+      margin-right: 0; }
     .keyboard .output .result {
       width: 90%;
       height: 250px;
       background-color: grey;
       border: solid 1px black;
       margin-bottom: 0.5%;
+      margin-left: 0;
       color: #ffffff; }
+      .keyboard .output .result:focus {
+        outline: none; }
   .keyboard .savedKey {
     color: red; }
 
@@ -193,6 +201,9 @@ header {
     margin-left: 5%; }
   #menu #selectedkey {
     margin: 0; }
+  #menu .toggle-btn {
+    width: 100%;
+    margin-bottom: 1%; }
 
 @media (min-width: 1500px) {
   #menu {

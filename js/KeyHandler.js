@@ -36,9 +36,6 @@
       this.secondary = secondary != null ? secondary : "";
       this.grenade = grenade != null ? grenade : [];
       this.other = other != null ? other : [];
-      if (selected) {
-        ref.classList.add("savedKey");
-      }
       if (!KeyList.contains(ref)) {
         KeyList.push(this);
       }
@@ -73,16 +70,6 @@
       return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;";
     };
 
-    ItemKey.prototype.select = function() {
-      this.selected = true;
-      return this.ref.classList.add("savedKey");
-    };
-
-    ItemKey.prototype.deSelect = function() {
-      this.selected = false;
-      return this.ref.classList.remove("savedKey");
-    };
-
     ItemKey.prototype.containsArr = function(arr, ref) {
       var x;
       x = 0;
@@ -112,6 +99,18 @@
         }
         return _results;
       }
+    };
+
+    ItemKey.prototype.focus = function() {
+      var x;
+      console.log("focus");
+      x = 0;
+      while (x < KeyList.length) {
+        console.log(KeyList[x]);
+        KeyList[x].ref.classList.remove("focus");
+        x++;
+      }
+      return this.ref.classList.add("focus");
     };
 
     return ItemKey;
