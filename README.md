@@ -41,7 +41,6 @@ Tools used
 * [Sass](http://sass-lang.com/)
 * JS
 * [Coffee](http://coffeescript.org/)
-* [ZeroClipboard](http://zeroclipboard.org/)
 
 License
 ----
