@@ -114,7 +114,8 @@ header {
       border: solid 1px black;
       margin-bottom: 0.5%;
       margin-left: 0;
-      color: #ffffff; }
+      color: #ffffff;
+      cursor: default; }
       .keyboard .output .result:focus {
         outline: none; }
   .keyboard .savedKey {

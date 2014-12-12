@@ -87,12 +87,17 @@ window.onload = function () {
 	};
 
 	document.getElementById("copy").onclick = function () {
-		console.log("copy");
-		ZeroClipboard.setData("text/plain", textArea.innerText);
+		console.log("select");
+		textArea.select();
 	}
 
 	function toggleDisplay(div) {
-		div.style.display != "none" ? div.style.display = "none" : div.style.display = "block";
+		if (div.style.display != "none") {
+			div.style.display = "none";
+		}
+		else {
+			div.style.display = "block";
+		}
 	}
 
 	document.getElementById("disrifle").onclick = function () {
