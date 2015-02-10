@@ -6,8 +6,7 @@ window.onload = function () {
 	var selectedkey = document.getElementById("selectedkey");
 	var keys = document.querySelectorAll(".keyboard table tbody tr td");
 	var textArea = document.getElementById("text-result");
-	var defaultBgColor = keys[0].style.backgroundColor;
-	window.defaultBgColor = defaultBgColor;
+	window.defaultBgColor = keys[0].style.backgroundColor;
 
 	function selectKey(key) {
 		if (key.ref.className != "empty") {
@@ -52,7 +51,7 @@ window.onload = function () {
 
 //Keys
 	for (var key = 0; key < keys.length; key++) {
-		keys[key].onclick = function () {
+		keys[key].addEventListener('click', function () {
 			if (KeyList.contains(this)) {
 				currentKey = this;
 			}
@@ -62,7 +61,7 @@ window.onload = function () {
 			console.log("------------------------------------------------");
 			KeyList.list();
 			selectKey(currentKey);
-		}
+		})
 	}
 //Weapons
 	var wep;
@@ -82,14 +81,13 @@ window.onload = function () {
 		KeyList.length = 0;
 	}
 
-	document.getElementById("reset").onclick = function () {
+	document.getElementById("reset").addEventListener('click', function () {
 		reset();
-	};
+	});
 
-	document.getElementById("copy").onclick = function () {
-		console.log("select");
+	document.getElementById("copy").addEventListener('click', function () {
 		textArea.select();
-	}
+	});
 
 	function toggleDisplay(div) {
 		if (div.style.display != "none") {
@@ -100,28 +98,28 @@ window.onload = function () {
 		}
 	}
 
-	document.getElementById("disrifle").onclick = function () {
+	document.getElementById("disrifle").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("rifles"));
 		return false;
-	};
-	document.getElementById("dissmg").onclick = function () {
+	});
+	document.getElementById("dissmg").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("smgs"));
 		return false;
-	};
-	document.getElementById("disheavy").onclick = function () {
+	});
+	document.getElementById("disheavy").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("heavy"));
 		return false;
-	};
-	document.getElementById("dissecondary").onclick = function () {
+	});
+	document.getElementById("dissecondary").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("gun"));
 		return false;
-	};
-	document.getElementById("disgre").onclick = function () {
+	});
+	document.getElementById("disgre").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("grenades"));
 		return false;
-	};
-	document.getElementById("disother").onclick = function () {
+	});
+	document.getElementById("disother").addEventListener('click', function () {
 		toggleDisplay(document.getElementById("equipment"));
 		return false;
-	};
+	});
 };
