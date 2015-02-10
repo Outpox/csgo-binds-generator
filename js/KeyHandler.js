@@ -28,6 +28,16 @@
     return _results;
   };
 
+  KeyList.get = function(ref) {
+    var x;
+    x = 0;
+    while (x < KeyList.length) {
+      if (KeyList[x].ref === ref) {
+        return KeyList[x];
+      }
+    }
+  };
+
   ItemKey = (function() {
     function ItemKey(ref, selected, primary, secondary, grenade, other) {
       this.ref = ref;
@@ -67,7 +77,11 @@
           otherS += " " + o.value;
         }
       }
-      return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;";
+      if (this.primary + this.secondary + grenadeS + otherS !== "") {
+        return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;";
+      } else {
+        return false;
+      }
     };
 
     ItemKey.prototype.containsArr = function(arr, ref) {

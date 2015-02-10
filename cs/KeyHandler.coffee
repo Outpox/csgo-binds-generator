@@ -7,11 +7,18 @@ KeyList.contains = (ref) ->
     else
       x++
   return false
+
 KeyList.list = ->
   y = 0
   while y < KeyList.length
     console.log(KeyList[y])
     y++
+
+KeyList.get = (ref) ->
+  x = 0;
+  while x < KeyList.length
+    if KeyList[x].ref == ref
+      return KeyList[x]
 
 class ItemKey
   constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = []) ->
@@ -33,7 +40,10 @@ class ItemKey
     if this.other.length > 0
       for o in this.other
         otherS += " " + o.value
-    return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;"
+    if this.primary + this.secondary + grenadeS + otherS != ""
+      return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;"
+    else
+      return false
     # &#10; = new line
 
   containsArr: (arr, ref) ->
