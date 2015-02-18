@@ -19,6 +19,9 @@ KeyList.get = (ref) ->
   while x < KeyList.length
     if KeyList[x].ref == ref
       return KeyList[x]
+    else
+      x++
+
 
 class ItemKey
   constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = []) ->

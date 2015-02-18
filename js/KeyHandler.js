@@ -34,6 +34,8 @@
     while (x < KeyList.length) {
       if (KeyList[x].ref === ref) {
         return KeyList[x];
+      } else {
+        x++;
       }
     }
   };
