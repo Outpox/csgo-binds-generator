@@ -22,6 +22,11 @@ KeyList.get = (ref) ->
     else
       x++
 
+KeyList.removeKey = (ref) ->
+  y = KeyList.length
+  while y--
+    if KeyList[y] == ref
+      KeyList.splice(y, 1)
 
 class ItemKey
   constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = [], @itemsRef = []) ->

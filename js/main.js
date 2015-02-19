@@ -125,6 +125,18 @@ window.onload = function () {
         deselectAllWep();
     }
 
+    function resetKey(key) {
+        currentKey = {};
+        KeyList.removeKey(key);
+        update();
+        deselectAllWep();
+        deselectAllKey();
+    }
+
+    document.getElementById("resetkey").addEventListener('click', function () {
+        resetKey(currentKey)
+    });
+
     document.getElementById("reset").addEventListener('click', function () {
         reset();
     });

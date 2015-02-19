@@ -205,6 +205,11 @@ header {
     font-size: 1.2em; }
   #menu #selectedkey {
     margin: 0; }
+  #menu #selectdiv {
+    width: 65%;
+    display: inline-block; }
+  #menu #resetdiv {
+    display: inline-block; }
   #menu .toggle-btn {
     width: 100%;
     margin-bottom: 1%; }

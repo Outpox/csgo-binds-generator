@@ -40,6 +40,20 @@
     }
   };
 
+  KeyList.removeKey = function(ref) {
+    var y, _results;
+    y = KeyList.length;
+    _results = [];
+    while (y--) {
+      if (KeyList[y] === ref) {
+        _results.push(KeyList.splice(y, 1));
+      } else {
+        _results.push(void 0);
+      }
+    }
+    return _results;
+  };
+
   ItemKey = (function() {
     function ItemKey(ref, selected, primary, secondary, grenade, other, itemsRef) {
       this.ref = ref;
