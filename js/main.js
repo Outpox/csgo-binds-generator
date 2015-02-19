@@ -128,6 +128,7 @@ window.onload = function () {
     function resetKey(key) {
         currentKey = {};
         KeyList.removeKey(key);
+        selectedkey.innerText = "";
         update();
         deselectAllWep();
         deselectAllKey();
