@@ -17,6 +17,8 @@ window.onload = function () {
     }
 
     function selectWep(wep) {
+        if (typeof currentKey.primary === "undefined")
+            return false;
         switch (wep.name) {
             case "primaryradio":
                 currentKey.itemsRef["primary"] = wep;
@@ -108,9 +110,9 @@ window.onload = function () {
     for (var list in radioList) {
         var allRadios = document.getElementsByName(radioList[list]);
         for (var x = 0; x < allRadios.length; x++) {
-            allRadios[x].onclick = function () {
-                selectWep(this)
-            }
+            allRadios[x].addEventListener('click', function () {
+                selectWep(this);
+            })
         }
     }
 
