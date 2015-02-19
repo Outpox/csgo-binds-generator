@@ -41,13 +41,14 @@
   };
 
   ItemKey = (function() {
-    function ItemKey(ref, selected, primary, secondary, grenade, other) {
+    function ItemKey(ref, selected, primary, secondary, grenade, other, itemsRef) {
       this.ref = ref;
       this.selected = selected != null ? selected : false;
       this.primary = primary != null ? primary : "";
       this.secondary = secondary != null ? secondary : "";
       this.grenade = grenade != null ? grenade : [];
       this.other = other != null ? other : [];
+      this.itemsRef = itemsRef != null ? itemsRef : [];
       if (!KeyList.contains(ref)) {
         KeyList.push(this);
       }

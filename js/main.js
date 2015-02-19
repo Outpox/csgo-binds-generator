@@ -1,5 +1,6 @@
 var radioList = ["primaryradio", "secondary", "grenade", "other"];
 var currentKey = {};
+var BGCUSEDKEY = "#16a085";
 
 
 window.onload = function () {
@@ -11,16 +12,19 @@ window.onload = function () {
     function selectKey(key) {
         selectedkey.innerText = key.getValue();
         deselectAllKey();
+        deselectAllWep();
         key.ref.style.backgroundColor = "darkgreen";
     }
 
     function selectWep(wep) {
         switch (wep.name) {
             case "primaryradio":
+                currentKey.itemsRef["primary"] = wep;
                 currentKey.primary = wep.value;
                 update();
                 break;
             case "secondary":
+                currentKey.itemsRef["secondary"] = wep;
                 currentKey.secondary = wep.value;
                 update();
                 break;
@@ -35,10 +39,43 @@ window.onload = function () {
         }
     }
 
+    function showUsedKey() {
+        for (var i = 0; i < KeyList.length; i++) {
+            if (KeyList[i].getString() != false) {
+                KeyList[i].ref.style.backgroundColor = BGCUSEDKEY;
+            }
+        }
+    }
+
     function deselectAllKey() {
         for (var key = 0; key < keys.length; key++) {
             keys[key].s = false;
             keys[key].style.backgroundColor = defaultBgColor;
+        }
+        showUsedKey()
+    }
+
+    function deselectAllWep() {
+        for (var radio in radioList) {
+            var ele = document.getElementsByName(radioList[radio]);
+            for (var i = 0; i < ele.length; i++)
+                ele[i].checked = false;
+        }
+        if (currentKey.itemsRef != undefined) {
+            if (currentKey.itemsRef["primary"] != undefined)
+                currentKey.itemsRef["primary"].checked = true;
+            if (currentKey.itemsRef["secondary"] != undefined)
+                currentKey.itemsRef["secondary"].checked = true;
+        }
+        if (currentKey.grenade != undefined) {
+            for (var g in currentKey.grenade) {
+                currentKey.grenade[g].checked = true;
+            }
+        }
+        if (currentKey.other != undefined) {
+            for (var o in currentKey.other) {
+                currentKey.other[o].checked = true;
+            }
         }
     }
 
@@ -81,6 +118,9 @@ window.onload = function () {
         currentKey = {};
         textArea.innerHTML = "";
         KeyList.length = 0;
+        selectedkey.innerText = "";
+        deselectAllKey();
+        deselectAllWep();
     }
 
     document.getElementById("reset").addEventListener('click', function () {
@@ -100,28 +140,34 @@ window.onload = function () {
         }
     }
 
-    document.getElementById("disrifle").addEventListener('click', function () {
+    document.getElementById("disrifle").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("rifles"));
+        e.preventDefault();
         return false;
     });
-    document.getElementById("dissmg").addEventListener('click', function () {
+    document.getElementById("dissmg").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("smgs"));
+        e.preventDefault();
         return false;
     });
-    document.getElementById("disheavy").addEventListener('click', function () {
+    document.getElementById("disheavy").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("heavy"));
+        e.preventDefault();
         return false;
     });
-    document.getElementById("dissecondary").addEventListener('click', function () {
+    document.getElementById("dissecondary").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("gun"));
+        e.preventDefault();
         return false;
     });
-    document.getElementById("disgre").addEventListener('click', function () {
+    document.getElementById("disgre").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("grenades"));
+        e.preventDefault();
         return false;
     });
-    document.getElementById("disother").addEventListener('click', function () {
+    document.getElementById("disother").addEventListener('click', function (e) {
         toggleDisplay(document.getElementById("equipment"));
+        e.preventDefault();
         return false;
     });
 };

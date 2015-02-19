@@ -24,7 +24,7 @@ KeyList.get = (ref) ->
 
 
 class ItemKey
-  constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = []) ->
+  constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = [], @itemsRef = []) ->
     if !KeyList.contains(ref)
       KeyList.push(this)
 
