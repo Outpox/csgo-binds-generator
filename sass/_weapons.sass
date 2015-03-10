@@ -24,7 +24,7 @@
 		background: linear-gradient(to bottom, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.7) 100%), url("../img/others/workbench.jpg") repeat 0 0
 		-ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=25)"
 		/* Hack IE8
-		filter: alpha(opacity = 25)
+		filter: alpha(opacity=25)
 		/* Hack IE 5-7
 		-webkit-transition: opacity 0.5s ease-in-out
 		/* transition pour Chrome et Safari
@@ -40,7 +40,7 @@
 			/* opacite au survol
 			-ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)"
 			/* Hack IE 8
-			filter: alpha(opacity = 90)
+			filter: alpha(opacity=90)
 			/* Hack IE 5-7
 			background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0, url("../img/others/workbench.jpg") repeat 0 0
 			background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0
@@ -55,7 +55,7 @@
 			/* opacite au survol
 			-ms-filter: "prodig:DXImageTransform.Microsoft.Alpha(Opacity=90)"
 			/* Hack IE 8
-			filter: alpha(opacity = 90)
+			filter: alpha(opacity=90)
 			/* Hack IE 5-7
 			background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0, url("../img/others/workbench.jpg") repeat 0 0
 			background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%), url("../img/others/workbench.jpg") repeat 0 0
@@ -86,6 +86,11 @@
 	.toggle-btn
 		width: 100%
 		margin-bottom: 1%
+	#customText
+		span, #customTextArea
+			display: inline
+			vertical-align: middle
+
 @media (min-width: 1500px)
 	#menu
 		width: 50%

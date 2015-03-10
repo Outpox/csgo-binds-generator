@@ -29,7 +29,7 @@ KeyList.removeKey = (ref) ->
       KeyList.splice(y, 1)
 
 class ItemKey
-  constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = [], @itemsRef = []) ->
+  constructor: (@ref, @selected = false, @primary = "", @secondary = "", @grenade = [], @other = [], @custom = "", @itemsRef = []) ->
     if !KeyList.contains(ref)
       KeyList.push(this)
 
@@ -48,8 +48,8 @@ class ItemKey
     if this.other.length > 0
       for o in this.other
         otherS += " " + o.value
-    if this.primary + this.secondary + grenadeS + otherS != ""
-      return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;"
+    if this.primary + this.secondary + grenadeS + otherS + this.custom != ""
+      return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + this.custom + "\"&#10;"
     else
       return false
     # &#10; = new line

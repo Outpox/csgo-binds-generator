@@ -7,12 +7,14 @@ window.onload = function () {
     var selectedkey = document.getElementById("selectedkey");
     var keys = document.querySelectorAll(".keyboard table tbody tr td");
     var textArea = document.getElementById("text-result");
+	var customText = document.getElementById("customTextArea");
     window.defaultBgColor = keys[0].style.backgroundColor;
 
     function selectKey(key) {
         selectedkey.innerText = key.getValue();
         deselectAllKey();
         deselectAllWep();
+		loadCurrentKey();
         key.ref.style.backgroundColor = "darkgreen";
     }
 
@@ -63,23 +65,30 @@ window.onload = function () {
             for (var i = 0; i < ele.length; i++)
                 ele[i].checked = false;
         }
-        if (currentKey.itemsRef != undefined) {
-            if (currentKey.itemsRef["primary"] != undefined)
-                currentKey.itemsRef["primary"].checked = true;
-            if (currentKey.itemsRef["secondary"] != undefined)
-                currentKey.itemsRef["secondary"].checked = true;
-        }
-        if (currentKey.grenade != undefined) {
-            for (var g in currentKey.grenade) {
-                currentKey.grenade[g].checked = true;
-            }
-        }
-        if (currentKey.other != undefined) {
-            for (var o in currentKey.other) {
-                currentKey.other[o].checked = true;
-            }
-        }
+		customText.value = '';
     }
+
+	function loadCurrentKey() {
+		if (currentKey.itemsRef != undefined) {
+			if (currentKey.itemsRef["primary"] != undefined)
+				currentKey.itemsRef["primary"].checked = true;
+			if (currentKey.itemsRef["secondary"] != undefined)
+				currentKey.itemsRef["secondary"].checked = true;
+		}
+		if (currentKey.grenade != undefined) {
+			for (var g in currentKey.grenade) {
+				currentKey.grenade[g].checked = true;
+			}
+		}
+		if (currentKey.other != undefined) {
+			for (var o in currentKey.other) {
+				currentKey.other[o].checked = true;
+			}
+		}
+		if (currentKey.custom != undefined) {
+			customText.value = currentKey.custom;
+		}
+	}
 
     function update() {
         textArea.innerHTML = "";
@@ -119,6 +128,7 @@ window.onload = function () {
     function reset() {
         currentKey = {};
         textArea.innerHTML = "";
+		customText.value = "";
         KeyList.length = 0;
         selectedkey.innerText = "";
         deselectAllKey();
@@ -129,6 +139,7 @@ window.onload = function () {
         currentKey = {};
         KeyList.removeKey(key);
         selectedkey.innerText = "";
+		customText.value = "";
         update();
         deselectAllWep();
         deselectAllKey();
@@ -145,6 +156,12 @@ window.onload = function () {
     document.getElementById("copy").addEventListener('click', function () {
         textArea.select();
     });
+
+	customText.addEventListener("keyup", function () {
+		currentKey.custom = customText.value;
+		update();
+		//TODO Reset et rechargement lors du changement de touche
+	});
 
     function toggleDisplay(div) {
         if (div.style.display != "none") {

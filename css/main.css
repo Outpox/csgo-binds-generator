@@ -213,6 +213,9 @@ header {
   #menu .toggle-btn {
     width: 100%;
     margin-bottom: 1%; }
+  #menu #customText span, #menu #customText #customTextArea {
+    display: inline;
+    vertical-align: middle; }
 
 @media (min-width: 1500px) {
   #menu {

@@ -55,13 +55,14 @@
   };
 
   ItemKey = (function() {
-    function ItemKey(ref, selected, primary, secondary, grenade, other, itemsRef) {
+    function ItemKey(ref, selected, primary, secondary, grenade, other, custom, itemsRef) {
       this.ref = ref;
       this.selected = selected != null ? selected : false;
       this.primary = primary != null ? primary : "";
       this.secondary = secondary != null ? secondary : "";
       this.grenade = grenade != null ? grenade : [];
       this.other = other != null ? other : [];
+      this.custom = custom != null ? custom : "";
       this.itemsRef = itemsRef != null ? itemsRef : [];
       if (!KeyList.contains(ref)) {
         KeyList.push(this);
@@ -94,8 +95,8 @@
           otherS += " " + o.value;
         }
       }
-      if (this.primary + this.secondary + grenadeS + otherS !== "") {
-        return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + "\"&#10;";
+      if (this.primary + this.secondary + grenadeS + otherS + this.custom !== "") {
+        return "bind " + "\"" + this.getValue() + "\" \"" + this.primary + this.secondary + grenadeS + otherS + this.custom + "\"&#10;";
       } else {
         return false;
       }
