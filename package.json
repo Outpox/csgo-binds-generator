@@ -6,13 +6,19 @@
   "repository": "https://github.com/outpox/csgobindsgenerator",
   "license": "GPLv2",
   "devDependencies": {
-    "bower": "^1.3.1",
-    "http-server": "^0.6.1"
+    "http-server": "^0.6.1",
+    "parallelshell": "^1.1.1"
   },
   "scripts": {
-    "prestart": "npm update",
+    "prestart": "npm update && bower update",
     "dev": "parallelshell 'cd ./app && http-server -a localhost -p 8000' 'npm run livereload'",
     "server": "cd ./app && http-server -a localhost -p 8000",
-    "livereload": "live-reload --port 35727 app/"
+    "livereload": "live-reload --port 35727 app/",
+    "start": "npm run server"
+
+  },
+  "dependencies": {
+    "bower": "^1.4.1",
+    "live-reload": "^1.1.0"
   }
 }

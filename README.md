@@ -1,5 +1,14 @@
-CS:GO Binds Generator
+CS:GO Binds Generator - Angular Branch
 =========
+
+This branch is dedicated to the rework of the app with Angular. It may take time to be usable.  
+Anyway if you want to see what's up, clone the repo, checkout the ``angular`` branch and then run  
+  
+``npm start``  
+  
+Remember that it may take some times to download the necessary libs.  
+
+If you've got any problem open an issue but keep in mind that it is a dev branch.
 
 CS:Go Binds Generator is an online tool that helps you to create your binds on CS:GO easily.
 
@@ -25,22 +34,6 @@ What's planed
 - Select keys by pressing them on keyboard
 - Mac ctrl key support
 - Chat binds
-
-Browsers
---------------
-These are the known and working browsers  
-
-* **Chrome**  
-* **Firefox**  
-* **Safari**
-*  **Others** - please report
-
-Tools used
-----------
-* HTML5
-* [Sass](http://sass-lang.com/)
-* JS
-* [Coffee](http://coffeescript.org/)
 
 License
 ----
