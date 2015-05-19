@@ -8,13 +8,13 @@
     <script src="//localhost:35727"></script>
     <meta name="viewport" content="width=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 </head>
-<body ng-app="csgoBinds">
+<body ng-app="csgoBinds" ng-controller="WeaponsCtrl as wc">
 <header>
     <nav class="indigo">
         <!--<div class="center" style="font-size: 2rem;">CS:GO Binds Generator</div>-->
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </nav>
-    <div id="slide-out" class="side-nav fixed" ng-controller="WeaponsCtrl as wc">
+    <div id="slide-out" class="side-nav fixed">
         <div class="input-field">
             <i class="mdi-action-search prefix"></i>
             <input id="icon_prefix" type="text" style="margin-bottom: 0;" ng-model="query">
@@ -40,7 +40,11 @@
         </ul>
     </div>
 </header>
-
+<main>
+    <div class="input-field">
+        <textarea class="materialize-textarea">{{cfg}}</textarea>
+    </div>
+</main>
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
 <script src="./bower_components/angular-animate/angular-animate.min.js"></script>

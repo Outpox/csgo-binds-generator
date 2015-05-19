@@ -14,9 +14,12 @@
         };
 
         $scope.bla = function (weapon) {
-            console.log(weapon);
             Materialize.toast('You clicked on the ' + weapon.name, 2000);
+            $scope.cfg += weapon.name;
+            console.log($scope.cfg);
         };
+
+        $scope.cfg = "lalal";
     }]);
 })();
 
