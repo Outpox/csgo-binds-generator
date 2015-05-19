@@ -1,0 +1,38 @@
+.listWeapon {
+    height: 22px !important;
+    line-height: 22px !important;
+    cursor: pointer;
+}
+
+.ng-hide-add, .ng-hide-remove {
+    /* ensure visibility during the transition */
+    display: block !important; /* yes, important */
+}
+
+.cssSlideUp {
+    transition: .2s linear all;
+    height: 22px;
+    overflow: hidden;
+}
+.cssSlideUp.ng-hide {
+    height:0;
+}
+
+.cssSlideUp.ng-enter,
+.cssSlideUp.ng-leave,
+.cssSlideUp.ng-move {
+    -webkit-transition: 0s;
+    transition: 0s;
+    height: 22px;
+    opacity: 1;
+}
+
+header, main, footer {
+    padding-left: 240px;
+}
+
+@media only screen and (max-width : 992px) {
+    header, main, footer {
+        padding-left: 0;
+    }
+}

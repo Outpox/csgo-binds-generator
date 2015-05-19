@@ -1,0 +1,349 @@
+[
+  {
+    "name": "Pistols",
+    "data": [
+      {
+        "name": "Glock-18",
+        "value": "glock",
+        "equivalent": "usp",
+        "img": "weapon_glock.png",
+        "team": "Terrorist",
+        "price": 300
+      },
+      {
+        "name": "Tec-9",
+        "value": "tec9",
+        "equivalent": "fiveseven",
+        "img": "weapon_tec9.png",
+        "team": "Terrorist",
+        "price": 500
+      },
+      {
+        "name": "USP",
+        "value": "usp",
+        "equivalent": "glock",
+        "img": "weapon_usp_silencer.png",
+        "team": "Counter-Terrorist",
+        "price": 300
+      },
+      {
+        "name": "Five Seven",
+        "value": "fiveseven",
+        "equivalent": "tec9",
+        "img": "weapon_fiveseven.png",
+        "team": "Counter-Terrorist",
+        "price": 500
+      },
+      {
+        "name": "P250",
+        "value": "p250",
+        "equivalent": null,
+        "img": "weapon_p250.png",
+        "team": "Both",
+        "price": 500
+      },
+      {
+        "name": "CZ-75a",
+        "value": "cz75a",
+        "equivalent": null,
+        "img": "weapon_cz75a.png",
+        "team": "Both",
+        "price": 500
+      },
+      {
+        "name": "Dual Elite",
+        "value": "elite",
+        "equivalent": null,
+        "img": "weapon_elite.png",
+        "team": "Both",
+        "price": 600
+      },
+      {
+        "name": "Desert Eagle",
+        "value": "deagle",
+        "equivalent": null,
+        "img": "weapon_deagle.png",
+        "team": "Both",
+        "price": 700
+      }
+    ]
+  },
+  {
+    "name": "Rifles",
+    "data": [
+      {
+        "name": "Galil AR",
+        "value": "galilar",
+        "equivalent": "famas",
+        "img": "weapon_galilar.png",
+        "team": "Terrorist",
+        "price": 2000
+      },
+      {
+        "name": "AK-47",
+        "value": "ak47",
+        "equivalent": "m4a1",
+        "img": "weapon_ak47.png",
+        "team": "Terrorist",
+        "price": 2700
+      },
+      {
+        "name": "SG 556",
+        "value": "sg556",
+        "equivalent": "aug",
+        "img": "weapon_sg556.png",
+        "team": "Terrorist",
+        "price": 3500
+      },
+      {
+        "name": "G3SG1",
+        "value": "g3sg1",
+        "equivalent": "scar20",
+        "img": "weapon_g3sg1.png",
+        "team": "Terrorist",
+        "price": 5000
+      },
+      {
+        "name": "Famas",
+        "value": "famas",
+        "equivalent": "galilar",
+        "img": "weapon_famas.png",
+        "team": "Counter-Terrorist",
+        "price": 2250
+      },
+      {
+        "name": "M4A1-S",
+        "value": "m4a1",
+        "equivalent": "ak47",
+        "img": "weapon_m4a1_silencer.png",
+        "team": "Counter-Terrorist",
+        "price": 3100
+      },
+      {
+        "name": "M4A1",
+        "value": "m4a1",
+        "equivalent": "ak47",
+        "img": "weapon_m4a1.png",
+        "team": "Counter-Terrorist",
+        "price": 3100
+      },
+      {
+        "name": "SCAR-20",
+        "value": "scar20",
+        "equivalent": "g3sg1",
+        "img": "weapon_scar20.png",
+        "team": "Counter-Terrorist",
+        "price": 5000
+      },
+      {
+        "name": "SSG 08",
+        "value": "ssg08",
+        "equivalent": null,
+        "img": "weapon_ssg08.png",
+        "team": "Counter-Terrorist",
+        "price": 2500
+      },
+      {
+        "name": "AWP",
+        "value": "awp",
+        "equivalent": null,
+        "img": "weapon_awp.png",
+        "team": "Both",
+        "price": 4750
+      }
+    ]
+  },
+  {
+    "name": "SMGs",
+    "data": [
+      {
+        "name": "MAC-10",
+        "value": "mac10",
+        "equivalent": "mp9",
+        "img": "weapon_mac10.png",
+        "team": "Terrorist",
+        "price": 4750
+      },
+      {
+        "name": "MP9",
+        "value": "mp9",
+        "equivalent": "mac10",
+        "img": "weapon_mp9.png",
+        "team": "Counter-Terrorist",
+        "price": 4750
+      },
+      {
+        "name": "MP7",
+        "value": "mp7",
+        "equivalent": null,
+        "img": "weapon_mp7.png",
+        "team": "Both",
+        "price": 4750
+      },
+      {
+        "name": "UMP-45",
+        "value": "ump45",
+        "equivalent": null,
+        "img": "weapon_ump45.png",
+        "team": "Both",
+        "price": 1500
+      },
+      {
+        "name": "PP-Bizon",
+        "value": "bizon",
+        "equivalent": null,
+        "img": "weapon_bizon.png",
+        "team": "Both",
+        "price": 1400
+      },
+      {
+        "name": "P90",
+        "value": "p90",
+        "equivalent": null,
+        "img": "weapon_p90.png",
+        "team": "Both",
+        "price": 2350
+      }
+    ]
+  },
+  {
+    "name": "Heavies",
+    "data": [
+      {
+        "name": "Sawed off",
+        "value": "sawedoff",
+        "equivalent": "mag7",
+        "img": "weapon_sawedoff.png",
+        "team": "Terrorist",
+        "price": 1500
+      },
+      {
+        "name": "Mag-7",
+        "value": "mag7",
+        "equivalent": "sawedoff",
+        "img": "weapon_mag7.png",
+        "team": "Counter-Terrorist",
+        "price": 2000
+      },
+      {
+        "name": "Nova",
+        "value": "nova",
+        "equivalent": null,
+        "img": "weapon_nova.png",
+        "team": "Both",
+        "price": 1500
+      },
+      {
+        "name": "XM1014",
+        "value": "xm1014",
+        "equivalent": null,
+        "img": "weapon_xm1014.png",
+        "team": "Both",
+        "price": 2500
+      },
+      {
+        "name": "M249",
+        "value": "m249",
+        "equivalent": null,
+        "img": "weapon_m249.png",
+        "team": "Both",
+        "price": 5200
+      },
+      {
+        "name": "Negev",
+        "value": "negev",
+        "equivalent": null,
+        "img": "weapon_negev.png",
+        "team": "Both",
+        "price": 5700
+      }
+    ]
+  },
+  {
+    "name": "Grenades",
+    "data": [
+      {
+        "name": "Molotov",
+        "value": "molotov",
+        "equivalent": "incgrenade",
+        "img": "weapon_molotov.png",
+        "team": "Terrorist",
+        "price": 850
+      },
+      {
+        "name": "Incendiary",
+        "value": "incgrenade",
+        "equivalent": "molotov",
+        "img": "weapon_incgrenade.png",
+        "team": "Counter-Terrorist",
+        "price": 850
+      },
+      {
+        "name": "High Explosive",
+        "value": "hegrenade",
+        "equivalent": null,
+        "img": "weapon_hegrenade.png",
+        "team": "Both",
+        "price": 300
+      },
+      {
+        "name": "Flashbang",
+        "value": "flashbang",
+        "equivalent": null,
+        "img": "weapon_flashbang.png",
+        "team": "Both",
+        "price": 200
+      },
+      {
+        "name": "Smoke",
+        "value": "smokegrenade",
+        "equivalent": null,
+        "img": "weapon_smokegrenade.png",
+        "team": "Both",
+        "price": 300
+      },
+      {
+        "name": "Decoy",
+        "value": "decoy",
+        "equivalent": null,
+        "img": "weapon_decoy.png",
+        "team": "Both",
+        "price": 50
+      }
+    ]
+  },
+  {
+    "name": "Equipment",
+    "data": [
+      {
+        "name": "Kevlar",
+        "value": "vest",
+        "equivalent": null,
+        "img": "equipment_kevlar.png",
+        "team": "Both",
+        "price": 650
+      },
+      {
+        "name": "Defuse kit",
+        "value": "defuser",
+        "equivalent": null,
+        "img": "equipment_defusekit.png",
+        "team": "Counter-Terrorist",
+        "price": 400
+      },
+      {
+        "name": "Zeus x27",
+        "value": "taser",
+        "equivalent": null,
+        "img": "weapon_taser.png",
+        "team": "Both",
+        "price": 1000
+      }
+    ]
+  },
+  {
+    "img_path": "/img/weapons/",
+    "version": 0.8,
+    "author": "Outpox"
+  }
+]

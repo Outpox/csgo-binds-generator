@@ -4,6 +4,7 @@ Additions :
 - Support different layout
 - Select keys by pressing them on keyboard
 - Mac ctrl key support
+- Load a .cfg file
 
 Changes :
 - Better design

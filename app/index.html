@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CS:GO Binds Generator</title>
+    <link rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css"/>
+    <link rel="stylesheet" href="./css/index.css"/>
+    <script src="//localhost:35727"></script>
+    <meta name="viewport" content="width=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+</head>
+<body ng-app="csgoBinds">
+<header>
+    <nav class="indigo">
+        <!--<div class="center" style="font-size: 2rem;">CS:GO Binds Generator</div>-->
+        <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+    </nav>
+    <div id="slide-out" class="side-nav fixed" ng-controller="WeaponsCtrl as wc">
+        <div class="input-field">
+            <i class="mdi-action-search prefix"></i>
+            <input id="icon_prefix" type="text" style="margin-bottom: 0;" ng-model="query">
+            <label for="icon_prefix">Search a weapon</label>
+        </div>
+        <ul ng-repeat="type in weapons" ng-if="!$last">
+            <li class="black-text">
+                <div class="switch">
+                    <strong>{{type.name}}</strong>
+                    <label style="float: right;">
+                        <input type="checkbox" ng-model="checkbox">
+                        <span class="lever"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="cssSlideUp" ng-repeat="weapon in type.data | filter:search" ng-hide="!checkbox">
+                <a class="listWeapon waves-effect" ng-click="bla(weapon)">
+                    <img ng-src="{{imgPath + weapon.img}}" alt="{{weapon.value}}" style="width: 20px;"/>
+                    {{weapon.name}}
+                </a>
+            </li>
+            <hr/>
+        </ul>
+    </div>
+</header>
+
+<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+<script src="./bower_components/angular/angular.min.js"></script>
+<script src="./bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="./js/app.js"></script>
+</body>
+</html>
