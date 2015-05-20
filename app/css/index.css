@@ -48,7 +48,7 @@ header, main, footer {
 }
 
 table {
-    border-spacing: 2px 1px;
+    border-spacing: 4px 2px;
     border-collapse: separate;
     margin-bottom: 0;
 }
@@ -62,12 +62,37 @@ th, td {
     /*background-color: #7f8c8d;*/
     /*color: #EEEEEE;*/
     border-radius: 0 !important;
+
+}
+
+table.fixed-width {
+    border-spacing: 4px !important;
+}
+
+table.fixed-width th, table.fixed-width td {
+    width: 50px;
 }
 
 td.empty, td.empty:hover {
     border: none;
     background-color: transparent;
     cursor: default;
+}
+
+tr td span {
+    display: none;
+}
+
+tr.row2 td {
+    width: 50% !important;
+}
+
+tr.row3 td {
+    width: calc(100% / 3) !important;
+}
+
+tr.row4 td {
+    width: 25% !important;
 }
 
 /* 7 columns row with 1 big col of size 5 */
