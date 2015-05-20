@@ -16,7 +16,6 @@
         $scope.bla = function (weapon) {
             Materialize.toast('You clicked on the ' + weapon.name, 2000);
             $scope.cfg += weapon.name;
-            console.log($scope.cfg);
         };
 
         $scope.cfg = "lalal";
@@ -29,6 +28,11 @@
 
 $(function () {
     $(".button-collapse").sideNav();
+    $('#loadCfgTrigger').leanModal({
+        ready: function () {
+            $("#cfgContent").focus();
+        }
+    });
     var modal = $("#widthWarning");
     var modalContent = $("#widthWarningContent");
     var width = window.innerWidth;
