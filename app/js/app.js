@@ -20,6 +20,10 @@
         };
 
         $scope.cfg = "lalal";
+
+        $scope.template = {
+            url: "./template/keyboard.html"
+        };
     }]);
 })();
 
