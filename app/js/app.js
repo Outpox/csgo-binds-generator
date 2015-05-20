@@ -29,4 +29,19 @@
 
 $(function () {
     $(".button-collapse").sideNav();
+    var modal = $("#widthWarning");
+    var modalContent = $("#widthWarningContent");
+    var width = window.innerWidth;
+    $(window).resize(function () {
+        width = window.innerWidth;
+        if (width < 420) {
+            modalContent.html();
+            modal.openModal();
+        }
+    });
+
+    if (width < 420) {
+        modalContent.html();
+        modal.openModal();
+    }
 });
