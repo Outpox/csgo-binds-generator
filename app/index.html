@@ -41,9 +41,16 @@
     </div>
 </header>
 <main>
-    <div class="input-field">
-        <textarea class="materialize-textarea">{{cfg}}</textarea>
+    <div style="height: 250px; padding: 1%; background-color: grey; color: white;">
+        {{cfg}}
     </div>
+    <section class="row center">
+        <a href="#" class="btn waves-effect col s4">use</a>
+        <a href="#" class="btn waves-effect col s4">bind</a>
+        <a href="#" class="btn waves-effect col s4">load cfg</a>
+        </ul>
+    </section>
+    <div ng-include="template.url" class="row"></div>
 </main>
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
