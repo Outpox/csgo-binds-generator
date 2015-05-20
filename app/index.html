@@ -10,7 +10,7 @@
 </head>
 <body ng-app="csgoBinds" ng-controller="WeaponsCtrl as wc">
 <header>
-    <nav class="indigo center">
+    <nav class="grey darken-3 center">
         <span class="center" style="font-size: 2rem;">CS:GO Binds Generator</span>
         <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
     </nav>
@@ -26,7 +26,7 @@
                     <strong>{{type.name}}</strong>
                     <label style="float: right;">
                         <input type="checkbox" ng-model="checkbox">
-                        <span class="lever"></span>
+                        <span class="lever grey"></span>
                     </label>
                 </div>
             </li>
@@ -45,10 +45,12 @@
         {{cfg}}
     </div>
     <section class="row center">
-        <a href="#" class="btn waves-effect col s4">use</a>
-        <a href="#" class="btn waves-effect col s4">bind</a>
-        <a href="#" class="btn waves-effect col s4">load cfg</a>
-        </ul>
+        <a href="#" class="waves-effect btn-flat">use</a>
+        <a href="#" class="waves-effect btn-flat">bind</a>
+        <a href="#" class="waves-effect btn-flat">say</a>
+        <a href="#" class="waves-effect btn-flat">select all</a>
+        <a href="#loadCfg" class="waves-effect btn-flat modal-trigger" id="loadCfgTrigger">load cfg</a>
+        <a href="#" class="waves-effect btn-flat">reset</a>
     </section>
     <div ng-include="template.url" class="row"></div>
 </main>
@@ -68,7 +70,15 @@
         <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">OK !</a>
     </div>
 </div>
-
+<div id="loadCfg" class="modal bottom-sheet">
+    <div class="modal-content">
+        <h4>Paste your CFG below</i></h4>
+        <textarea id="cfgContent" class="materialize-textarea" placeholder="The content of your CFG, not the file itself."></textarea>
+    </div>
+    <div class="modal-footer">
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Load my cfg !</a>
+    </div>
+</div>
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
 <script src="./bower_components/angular/angular.min.js"></script>
 <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
