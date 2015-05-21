@@ -9,51 +9,63 @@
       "keys": [
         {
           "class": null,
-          "value": "F1"
+          "value": "F1",
+          "display": "F1"
         },
         {
           "class": null,
-          "value": "F2"
+          "value": "F2",
+          "display": "F2"
         },
         {
           "class": null,
-          "value": "F3"
+          "value": "F3",
+          "display": "F3"
         },
         {
           "class": null,
-          "value": "F4"
+          "value": "F4",
+          "display": "F4"
         },
         {
           "class": null,
-          "value": "F5"
+          "value": "F5",
+          "display": "F5"
         },
         {
           "class": null,
-          "value": "F6"
+          "value": "F6",
+          "display": "F6"
         },
         {
           "class": null,
-          "value": "F7"
+          "value": "F7",
+          "display": "F7"
         },
         {
           "class": null,
-          "value": "F8"
+          "value": "F8",
+          "display": "F8"
         },
         {
           "class": null,
-          "value": "F9"
+          "value": "F9",
+          "display": "F9"
         },
         {
           "class": null,
-          "value": "F10"
+          "value": "F10",
+          "display": "F10"
         },
         {
           "class": null,
-          "value": "F11"
+          "value": "F11",
+          "display": "F11"
         },
         {
           "class": null,
-          "value": "F12"
+          "value": "F12",
+          "display": "F12"
         }
       ]
     },
@@ -63,63 +75,73 @@
       "keys": [
         {
           "class": null,
-          "value": "²"
+          "value": "²",
+          "display": "²"
         },
         {
           "class": null,
-          "value": "&"
+          "value": "&",
+          "display": "&"
         },
         {
           "class": null,
-          "value": "é"
+          "value": "é",
+          "display": "é"
         },
         {
           "class": null,
-          "value": "\""
+          "value": "\"",
+          "display": "\""
         },
         {
           "class": null,
-          "value": "'"
+          "value": "'",
+          "display": "'"
         },
         {
           "class": null,
-          "value": "("
+          "value": "(",
+          "display": "("
         },
         {
           "class": null,
-          "value": "-"
+          "value": "-",
+          "display": "-"
         },
         {
           "class": null,
-          "value": "è"
+          "value": "è",
+          "display": "è"
         },
         {
           "class": null,
-          "value": "_"
+          "value": "_",
+          "display": "_"
         },
         {
           "class": null,
-          "value": "ç"
+          "value": "ç",
+          "display": "ç"
         },
         {
           "class": null,
-          "value": "à"
+          "value": "à",
+          "display": "à"
         },
         {
           "class": null,
-          "value": ")"
+          "value": ")",
+          "display": ")"
         },
         {
           "class": null,
-          "value": "="
-        },
-        {
-          "class": null,
-          "value": "="
+          "value": "=",
+          "display": "="
         },
         {
           "class": "bigcol",
-          "value": "backspace"
+          "value": "backspace",
+          "display": "retour"
         }
       ]
     },
@@ -129,59 +151,73 @@
       "keys": [
         {
           "class": "bigcol",
-          "value": "tab"
+          "value": "tab",
+          "display": "tab"
         },
         {
           "class": null,
-          "value": "a"
+          "value": "a",
+          "display": "a"
         },
         {
           "class": null,
-          "value": "z"
+          "value": "z",
+          "display": "z"
         },
         {
           "class": null,
-          "value": "e"
+          "value": "e",
+          "display": "e"
         },
         {
           "class": null,
-          "value": "r"
+          "value": "r",
+          "display": "r"
         },
         {
           "class": null,
-          "value": "t"
+          "value": "t",
+          "display": "t"
         },
         {
           "class": null,
-          "value": "y"
+          "value": "y",
+          "display": "y"
         },
         {
           "class": null,
-          "value": "u"
+          "value": "u",
+          "display": "u"
         },
         {
           "class": null,
-          "value": "i"
+          "value": "i",
+          "display": "i"
         },
         {
           "class": null,
-          "value": "o"
+          "value": "o",
+          "display": "o"
         },
         {
           "class": null,
-          "value": "p"
+          "value": "p",
+          "display": "p"
         },
         {
           "class": null,
-          "value": "^"
+          "value": "^",
+          "display": "^"
         },
         {
           "class": null,
-          "value": "$"
+          "value": "$",
+          "display": "$"
         },
         {
           "class": null,
-          "value": "*"
+          "value": "*",
+          "display": "*"
         }
       ]
     },
@@ -191,55 +227,68 @@
       "keys": [
         {
           "class": "bigcol",
-          "value": "capslock"
+          "value": "capslock",
+          "display": "ver maj"
         },
         {
           "class": null,
-          "value": "a"
+          "value": "q",
+          "display": "q"
         },
         {
           "class": null,
-          "value": "s"
+          "value": "s",
+          "display": "s"
         },
         {
           "class": null,
-          "value": "d"
+          "value": "d",
+          "display": "d"
         },
         {
           "class": null,
-          "value": "f"
+          "value": "f",
+          "display": "f"
         },
         {
           "class": null,
-          "value": "g"
+          "value": "g",
+          "display": "g"
         },
         {
           "class": null,
-          "value": "h"
+          "value": "h",
+          "display": "h"
         },
         {
           "class": null,
-          "value": "j"
+          "value": "j",
+          "display": "j"
         },
         {
           "class": null,
-          "value": "k"
+          "value": "k",
+          "display": "k"
         },
         {
           "class": null,
-          "value": "l"
+          "value": "l",
+          "display": "l"
         },
         {
           "class": null,
-          "value": ";"
+          "value": "m",
+          "display": "m"
         },
         {
           "class": null,
-          "value": "'"
+          "value": "ù",
+          "display": "ù"
         },
         {
           "class": "bigcol",
-          "value": "enter"
+          "value": "enter",
+          "display": "entrée"
         }
       ]
     },
@@ -249,51 +298,63 @@
       "keys": [
         {
           "class": "bigcol",
-          "value": "shift"
+          "value": "shift",
+          "display": "maj"
         },
         {
           "class": null,
-          "value": "z"
+          "value": "w",
+          "display": "w"
         },
         {
           "class": null,
-          "value": "x"
+          "value": "x",
+          "display": "x"
         },
         {
           "class": null,
-          "value": "c"
+          "value": "c",
+          "display": "c"
         },
         {
           "class": null,
-          "value": "v"
+          "value": "v",
+          "display": "v"
         },
         {
           "class": null,
-          "value": "b"
+          "value": "b",
+          "display": "b"
         },
         {
           "class": null,
-          "value": "n"
+          "value": "n",
+          "display": "n"
         },
         {
           "class": null,
-          "value": "m"
+          "value": ",",
+          "display": ","
         },
         {
           "class": null,
-          "value": ","
+          "value": ";",
+          "display": ";"
         },
         {
           "class": null,
-          "value": "."
+          "value": ":",
+          "display": ":"
         },
         {
           "class": null,
-          "value": "/"
+          "value": "!",
+          "display": "!"
         },
         {
           "class": "bigcol",
-          "value": "shift"
+          "value": "shift",
+          "display": "maj"
         }
       ]
     },
@@ -303,31 +364,38 @@
       "keys": [
         {
           "class": null,
-          "value": "ctrl"
+          "value": "ctrl",
+          "display": "ctrl"
         },
         {
           "class": "empty",
-          "value": ""
+          "value": "",
+          "display": ""
         },
         {
           "class": null,
-          "value": "alt"
+          "value": "alt",
+          "display": "alt"
         },
         {
           "class": "bigcol",
-          "value": "space"
+          "value": "space",
+          "display": "espace"
         },
         {
           "class": null,
-          "value": "alt"
+          "value": "alt",
+          "display": "alt"
         },
         {
           "class": "empty",
-          "value": ""
+          "value": "",
+          "display": ""
         },
         {
           "class": null,
-          "value": "ctrl"
+          "value": "ctrl",
+          "display": "ctrl"
         }
       ]
     }
