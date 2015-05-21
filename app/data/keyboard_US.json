@@ -1,5 +1,6 @@
 {
   "description": "US ANSI keyboard",
+  "img": "http://en.academic.ru/pictures/enwiki/75/KB_United_States-NoAltGr.svg",
   "row_number": 6,
   "keyboard": [
     {
