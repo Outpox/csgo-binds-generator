@@ -29,7 +29,7 @@
 }
 
 .switch label input[type=checkbox]:checked + .lever:after {
-    background-color: #808080 !important;;
+    background-color: #9e9e9e !important;;
 }
 
 #slide-out {
