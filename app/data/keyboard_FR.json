@@ -1,0 +1,335 @@
+{
+  "description": "FR ANSI keyboard",
+  "img": "http://i.imgur.com/xtswy.jpg",
+  "row_number": 6,
+  "keyboard": [
+    {
+      "col_number": 12,
+      "class": "row12",
+      "keys": [
+        {
+          "class": null,
+          "value": "F1"
+        },
+        {
+          "class": null,
+          "value": "F2"
+        },
+        {
+          "class": null,
+          "value": "F3"
+        },
+        {
+          "class": null,
+          "value": "F4"
+        },
+        {
+          "class": null,
+          "value": "F5"
+        },
+        {
+          "class": null,
+          "value": "F6"
+        },
+        {
+          "class": null,
+          "value": "F7"
+        },
+        {
+          "class": null,
+          "value": "F8"
+        },
+        {
+          "class": null,
+          "value": "F9"
+        },
+        {
+          "class": null,
+          "value": "F10"
+        },
+        {
+          "class": null,
+          "value": "F11"
+        },
+        {
+          "class": null,
+          "value": "F12"
+        }
+      ]
+    },
+    {
+      "col_number": 14,
+      "class": "row14-1-2",
+      "keys": [
+        {
+          "class": null,
+          "value": "²"
+        },
+        {
+          "class": null,
+          "value": "&"
+        },
+        {
+          "class": null,
+          "value": "é"
+        },
+        {
+          "class": null,
+          "value": "\""
+        },
+        {
+          "class": null,
+          "value": "'"
+        },
+        {
+          "class": null,
+          "value": "("
+        },
+        {
+          "class": null,
+          "value": "-"
+        },
+        {
+          "class": null,
+          "value": "è"
+        },
+        {
+          "class": null,
+          "value": "_"
+        },
+        {
+          "class": null,
+          "value": "ç"
+        },
+        {
+          "class": null,
+          "value": "à"
+        },
+        {
+          "class": null,
+          "value": ")"
+        },
+        {
+          "class": null,
+          "value": "="
+        },
+        {
+          "class": null,
+          "value": "="
+        },
+        {
+          "class": "bigcol",
+          "value": "backspace"
+        }
+      ]
+    },
+    {
+      "col_number": 14,
+      "class": "row14-1-1_5",
+      "keys": [
+        {
+          "class": "bigcol",
+          "value": "tab"
+        },
+        {
+          "class": null,
+          "value": "a"
+        },
+        {
+          "class": null,
+          "value": "z"
+        },
+        {
+          "class": null,
+          "value": "e"
+        },
+        {
+          "class": null,
+          "value": "r"
+        },
+        {
+          "class": null,
+          "value": "t"
+        },
+        {
+          "class": null,
+          "value": "y"
+        },
+        {
+          "class": null,
+          "value": "u"
+        },
+        {
+          "class": null,
+          "value": "i"
+        },
+        {
+          "class": null,
+          "value": "o"
+        },
+        {
+          "class": null,
+          "value": "p"
+        },
+        {
+          "class": null,
+          "value": "^"
+        },
+        {
+          "class": null,
+          "value": "$"
+        },
+        {
+          "class": null,
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "col_number": 13,
+      "class": "row14-1-2",
+      "keys": [
+        {
+          "class": "bigcol",
+          "value": "capslock"
+        },
+        {
+          "class": null,
+          "value": "a"
+        },
+        {
+          "class": null,
+          "value": "s"
+        },
+        {
+          "class": null,
+          "value": "d"
+        },
+        {
+          "class": null,
+          "value": "f"
+        },
+        {
+          "class": null,
+          "value": "g"
+        },
+        {
+          "class": null,
+          "value": "h"
+        },
+        {
+          "class": null,
+          "value": "j"
+        },
+        {
+          "class": null,
+          "value": "k"
+        },
+        {
+          "class": null,
+          "value": "l"
+        },
+        {
+          "class": null,
+          "value": ";"
+        },
+        {
+          "class": null,
+          "value": "'"
+        },
+        {
+          "class": "bigcol",
+          "value": "enter"
+        }
+      ]
+    },
+    {
+      "col_number": 12,
+      "class": "row12-2-1",
+      "keys": [
+        {
+          "class": "bigcol",
+          "value": "shift"
+        },
+        {
+          "class": null,
+          "value": "z"
+        },
+        {
+          "class": null,
+          "value": "x"
+        },
+        {
+          "class": null,
+          "value": "c"
+        },
+        {
+          "class": null,
+          "value": "v"
+        },
+        {
+          "class": null,
+          "value": "b"
+        },
+        {
+          "class": null,
+          "value": "n"
+        },
+        {
+          "class": null,
+          "value": "m"
+        },
+        {
+          "class": null,
+          "value": ","
+        },
+        {
+          "class": null,
+          "value": "."
+        },
+        {
+          "class": null,
+          "value": "/"
+        },
+        {
+          "class": "bigcol",
+          "value": "shift"
+        }
+      ]
+    },
+    {
+      "col_number": 7,
+      "class": "row7-1-5",
+      "keys": [
+        {
+          "class": null,
+          "value": "ctrl"
+        },
+        {
+          "class": "empty",
+          "value": ""
+        },
+        {
+          "class": null,
+          "value": "alt"
+        },
+        {
+          "class": "bigcol",
+          "value": "space"
+        },
+        {
+          "class": null,
+          "value": "alt"
+        },
+        {
+          "class": "empty",
+          "value": ""
+        },
+        {
+          "class": null,
+          "value": "ctrl"
+        }
+      ]
+    }
+  ]
+}
