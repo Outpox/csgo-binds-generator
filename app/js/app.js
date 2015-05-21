@@ -1,5 +1,5 @@
 (function () {
-    var app = angular.module('csgoBinds', ['ngAnimate']);
+    var app = angular.module('csgoBinds', ['ngAnimate', 'ngStorage']);
 
     app.controller('WeaponsCtrl', ['$scope', '$http', function ($scope, $http) {
         $http.get('../data/weapons.json').success(function (data) {
@@ -24,10 +24,43 @@
             url: "./template/keyboard.html"
         };
     }]);
-})();
+
+    app.controller('keyboardCtrl', ['$scope', '$http', '$localStorage', function ($scope, $http, $localStorage) {
+        $scope.keyboard = $localStorage.$default({
+            file: "keyboard_US"
+        });
+
+        $scope.keyboardList = [
+            {
+                "file": "keyboard_US",
+                "lang": "QWERTY"
+            },
+            {
+                "file": "keyboard_FR",
+                "lang": "AZERTY"
+            }
+        ];
+
+        $scope.bla = function (key) {
+            Materialize.toast('You clicked on the "' + key.value + '" key', 2000);
+        };
+
+        $scope.updateKeyboard = function () {
+            $http.get('../keyboard/' + $scope.keyboard.file + '.json').success(function (data) {
+                $scope.keyboardData = data;
+                console.info("Keyboard layout changed");
+            });
+        };
+
+        $scope.updateKeyboard();
+
+    }]);
+})
+();
 
 $(function () {
     $(".button-collapse").sideNav();
+    $('select').material_select();
     $('#loadCfgTrigger').leanModal({
         ready: function () {
             $("#cfgContent").focus();
