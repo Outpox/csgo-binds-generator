@@ -32,9 +32,8 @@
     }]);
 
     app.controller('keyboardCtrl', ['$scope', '$http', '$localStorage', function ($scope, $http, $localStorage) {
-        $scope.keyboard = $localStorage.$default({
-            file: "keyboard_US"
-        });
+        $scope.keyboard = $localStorage.$default({file: "keyboard_US"});
+        toolGlobal = $localStorage.$default({tool: "use"});
 
         $scope.keyboardList = [];
         $http.get('../keyboard/keyboardList.json').success(function (data) {
@@ -50,12 +49,12 @@
         };
 
         $scope.selectTool = function (tool) {
-            toolGlobal = tool;
+            toolGlobal.tool = tool;
         };
 
         $scope.toolIsSelected = function (tool) {
-            console.log(toolGlobal === tool);
-            return toolGlobal === tool;
+            console.log(toolGlobal.tool === tool);
+            return toolGlobal.tool === tool;
         };
 
         /**
