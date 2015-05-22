@@ -51,8 +51,10 @@
         <a href="#" class="waves-effect btn-flat col s1">select all</a>
         <a href="#loadCfg" class="waves-effect btn-flat col s1 modal-trigger" id="loadCfgTrigger">load cfg</a>
         <a href="#" class="waves-effect btn-flat col s1">reset</a>
-        <select ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
-            <option ng-repeat="opt in keyboardList" ng-selected="keyboard.file === opt.file" value="{{opt.file}}">{{opt.lang}}</option>
+        <select class="browser-default col s1" id="kbList" ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
+            <option ng-repeat="opt in keyboardList" ng-selected="keyboard.file === opt.file" value="{{opt.file}}">
+                {{opt.lang}}
+            </option>
         </select>
     </section>
     <div class="row">
@@ -63,6 +65,7 @@
                 </tr>
             </table>
         </div>
+    </div>
 </main>
 
 <div id="widthWarning" class="modal">
