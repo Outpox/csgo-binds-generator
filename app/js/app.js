@@ -3,6 +3,7 @@
 
     var keyGlobal = {};
     var weaponGlobal = {};
+    var toolGlobal = "use";
 
     app.controller('WeaponsCtrl', ['$scope', '$http', function ($scope, $http) {
         $http.get('../data/weapons.json').success(function (data) {
@@ -41,11 +42,6 @@
             console.info("Keyboard layout list loaded");
         });
 
-        $scope.bla = function (key) {
-            Materialize.toast('You clicked on the "' + key.value + '" key', 2000);
-            keyGlobal = key;
-        };
-
         $scope.updateKeyboard = function () {
             $http.get('../keyboard/' + $scope.keyboard.file + '.json').success(function (data) {
                 $scope.keyboardData = data;
@@ -53,12 +49,42 @@
             });
         };
 
-        $scope.updateKeyboard();
+        $scope.selectTool = function (tool) {
+            toolGlobal = tool;
+        };
 
-        $scope.giveKey = function () {
-            console.log(keyGlobal);
-            console.log(weaponGlobal);
-        }
+        $scope.toolIsSelected = function (tool) {
+            console.log(toolGlobal === tool);
+            return toolGlobal === tool;
+        };
+
+        /**
+         * Src: http://stackoverflow.com/a/987376/3560404
+         */
+        $scope.selectTextArea = function () {
+            var element = "textArea";
+            var doc = document
+                , text = doc.getElementById(element)
+                , range, selection
+                ;
+            if (doc.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(text);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(text);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+        };
+
+        $scope.updateKeyboard();
+    }]);
+
+    app.controller('textAreaCtrl', ['$scope', function ($scope) {
+        $scope.cfg = "lallalal";
     }]);
 })
 ();
