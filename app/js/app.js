@@ -30,16 +30,12 @@
             file: "keyboard_US"
         });
 
-        $scope.keyboardList = [
-            {
-                "file": "keyboard_US",
-                "lang": "QWERTY"
-            },
-            {
-                "file": "keyboard_FR",
-                "lang": "AZERTY"
-            }
-        ];
+        $scope.keyboardList = [];
+        $http.get('../keyboard/keyboardList.json').success(function (data) {
+            $scope.keyboardList = data;
+            console.log(data);
+            console.info("Keyboard layout list loaded");
+        });
 
         $scope.bla = function (key) {
             Materialize.toast('You clicked on the "' + key.value + '" key', 2000);
@@ -60,7 +56,6 @@
 
 $(function () {
     $(".button-collapse").sideNav();
-    $('select').material_select();
     $('#loadCfgTrigger').leanModal({
         ready: function () {
             $("#cfgContent").focus();
