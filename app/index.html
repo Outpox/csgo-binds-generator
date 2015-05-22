@@ -41,16 +41,16 @@
     </div>
 </header>
 <main ng-controller="keyboardCtrl as kb">
-    <div style="height: 250px; padding: 1%; background-color: grey; color: white;">
+    <div id="textArea" style="height: 250px; padding: 1%; background-color: grey; color: white;" ng-controller="textAreaCtrl as ta">
         {{cfg}}
     </div>
     <section class="row center">
-        <a href="#" class="waves-effect btn-flat col s1" ng-click="giveKey()">use</a>
-        <a href="#" class="waves-effect btn-flat col s1">bind</a>
-        <a href="#" class="waves-effect btn-flat col s1">say</a>
-        <a href="#" class="waves-effect btn-flat col s1">select all</a>
+        <a class="waves-effect btn-flat col s1" ng-click="selectTool('use')" ng-class="{'toolActive':toolIsSelected('use')}">use</a>
+        <a class="waves-effect btn-flat col s1" ng-click="selectTool('bind')" ng-class="{'toolActive':toolIsSelected('bind')}">bind</a>
+        <a class="waves-effect btn-flat col s1" ng-click="selectTool('say')" ng-class="{'toolActive':toolIsSelected('say')}">say</a>
+        <a class="waves-effect btn-flat col s1" ng-click="selectTextArea()">select all</a>
         <a href="#loadCfg" class="waves-effect btn-flat col s1 modal-trigger" id="loadCfgTrigger">load cfg</a>
-        <a href="#" class="waves-effect btn-flat col s1">reset</a>
+        <a class="waves-effect btn-flat col s1">reset</a>
         <select class="browser-default col s1" id="kbList" ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
             <option ng-repeat="opt in keyboardList" ng-selected="keyboard.file === opt.file" value="{{opt.file}}">
                 {{opt.lang}}
