@@ -1,6 +1,9 @@
 (function () {
     var app = angular.module('csgoBinds', ['ngAnimate', 'ngStorage']);
 
+    var keyGlobal = {};
+    var weaponGlobal = {};
+
     app.controller('WeaponsCtrl', ['$scope', '$http', function ($scope, $http) {
         $http.get('../data/weapons.json').success(function (data) {
             $scope.weapons = data;
@@ -13,15 +16,17 @@
             return (angular.lowercase(item.value).indexOf($scope.query || '') !== -1 || angular.lowercase(item.value).indexOf($scope.query || '') !== -1);
         };
 
-        $scope.bla = function (weapon) {
-            Materialize.toast('You clicked on the ' + weapon.name, 2000);
-            $scope.cfg += weapon.name;
+        $scope.selectWeapon = function (weapon, type) {
+            if ($scope.weaponIsSelected(weapon, type)) {
+                keyGlobal[type] = {};
+            } else {
+                keyGlobal[type] = weapon;
+            }
+            console.log(keyGlobal);
         };
 
-        $scope.cfg = "lalal";
-
-        $scope.template = {
-            url: "./template/keyboard.html"
+        $scope.weaponIsSelected = function (weapon, type) {
+            return keyGlobal[type] === weapon;
         };
     }]);
 
@@ -33,12 +38,12 @@
         $scope.keyboardList = [];
         $http.get('../keyboard/keyboardList.json').success(function (data) {
             $scope.keyboardList = data;
-            console.log(data);
             console.info("Keyboard layout list loaded");
         });
 
         $scope.bla = function (key) {
             Materialize.toast('You clicked on the "' + key.value + '" key', 2000);
+            keyGlobal = key;
         };
 
         $scope.updateKeyboard = function () {
@@ -50,6 +55,10 @@
 
         $scope.updateKeyboard();
 
+        $scope.giveKey = function () {
+            console.log(keyGlobal);
+            console.log(weaponGlobal);
+        }
     }]);
 })
 ();

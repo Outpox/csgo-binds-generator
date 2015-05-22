@@ -31,7 +31,7 @@
                 </div>
             </li>
             <li class="cssSlideUp" ng-repeat="weapon in type.data | filter:search" ng-hide="!checkbox">
-                <a class="listWeapon waves-effect" ng-click="bla(weapon)">
+                <a class="listWeapon waves-effect" ng-class="{weaponActive:weaponIsSelected(weapon, type.name)}" ng-click="selectWeapon(weapon, type.name)">
                     <img ng-src="{{imgPath + weapon.img}}" alt="{{weapon.value}}" style="width: 20px;"/>
                     {{weapon.name}}
                 </a>
@@ -45,7 +45,7 @@
         {{cfg}}
     </div>
     <section class="row center">
-        <a href="#" class="waves-effect btn-flat col s1">use</a>
+        <a href="#" class="waves-effect btn-flat col s1" ng-click="giveKey()">use</a>
         <a href="#" class="waves-effect btn-flat col s1">bind</a>
         <a href="#" class="waves-effect btn-flat col s1">say</a>
         <a href="#" class="waves-effect btn-flat col s1">select all</a>
