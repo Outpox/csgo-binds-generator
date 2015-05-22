@@ -1,0 +1,10 @@
+[
+  {
+    "file": "keyboard_US",
+    "lang": "QWERTY"
+  },
+  {
+    "file": "keyboard_FR",
+    "lang": "AZERTY"
+  }
+]
