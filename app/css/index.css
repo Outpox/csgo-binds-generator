@@ -1,3 +1,4 @@
+/* WEAPONS */
 .listWeapon {
     height: 22px !important;
     line-height: 22px !important;
@@ -28,6 +29,14 @@
     opacity: 1;
 }
 
+.weaponActive {
+    background-color: #808080;
+    color: white !important;
+    font-weight: bold;
+}
+/* END WEAPONS */
+
+/* KEYBOARD */
 .key {
     text-transform: uppercase;
 }
