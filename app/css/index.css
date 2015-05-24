@@ -69,14 +69,14 @@ header, main, footer {
     padding-left: 240px;
 }
 
-nav {
-    position: fixed;
-    width: 100%;
-    z-index: 9999;
-}
-main {
-    padding-top: 64px;
-}
+/*nav {*/
+    /*position: fixed;*/
+    /*width: 100%;*/
+    /*z-index: 9999;*/
+/*}*/
+/*main {*/
+    /*padding-top: 64px;*/
+/*}*/
 
 @media only screen and (max-width: 992px) {
     header, main, footer {
