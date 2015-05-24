@@ -8,7 +8,7 @@
     <script src="//localhost:35727"></script>
     <meta name="viewport" content="width=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 </head>
-<body ng-app="csgoBinds">
+<body ng-app="csgoBinds" ng-controller="appCtrl">
 <header>
     <nav class="grey darken-3 center">
         <span class="center" style="font-size: 2rem;">CS:GO Binds Generator</span>
@@ -42,15 +42,16 @@
 </header>
 <main ng-controller="keyboardCtrl as kb">
     <div id="textArea" style="height: 250px; padding: 1%; background-color: grey; color: white;" ng-controller="textAreaCtrl as ta">
-        {{cfg}}
+        {{dataGlobal.bind}}
     </div>
     <section class="row center">
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('use')" ng-class="{'toolActive':toolIsSelected('use')}">use</a>
-        <a class="waves-effect btn-flat col s1" ng-click="selectTool('bind')" ng-class="{'toolActive':toolIsSelected('bind')}">bind</a>
+        <a class="waves-effect btn-flat col s1" ng-click="selectTool('buy')" ng-class="{'toolActive':toolIsSelected('buy')}">buy</a>
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('say')" ng-class="{'toolActive':toolIsSelected('say')}">say</a>
         <a class="waves-effect btn-flat col s1" ng-click="selectTextArea()">select all</a>
-        <a href="#loadCfg" class="waves-effect btn-flat col s1 modal-trigger" id="loadCfgTrigger">load cfg</a>
-        <a class="waves-effect btn-flat col s1">reset</a>
+        <a href="#loadCfg" class="waves-effect btn-flat col s1 modal-trigger disabled" id="loadCfgTrigger">load cfg</a>
+        <a class="waves-effect btn-flat col s1 modal-trigger disabled" id="saveCfg">save cfg</a>
+        <a class="waves-effect btn-flat col s1 disabled" >reset</a>
         <select class="browser-default col s1" id="kbList" ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
             <option ng-repeat="opt in keyboardList" ng-selected="keyboard.file === opt.file" value="{{opt.file}}">
                 {{opt.lang}}
@@ -61,7 +62,7 @@
         <div class="main col s12 l8 center">
             <table ng-repeat="keyboard in keyboardData.keyboard">
                 <tr class="{{keyboard.class}}">
-                    <td ng-repeat="k in keyboard.keys" class="{{k.class}} key" ng-click="bla(k)">{{k.display}}</td>
+                    <td ng-repeat="k in keyboard.keys" class="{{k.class}} key" ng-click="selectKey(k)" ng-class="{'keyActive':keyIsSelected(k)}">{{k.display}}</td>
                 </tr>
             </table>
         </div>
@@ -85,12 +86,13 @@
 </div>
 <div id="loadCfg" class="modal bottom-sheet">
     <div class="modal-content">
+        <h4 style="color: red">NOT WORKING</h4>
         <h4>Paste your CFG below</i></h4>
         <textarea id="cfgContent" class="materialize-textarea"
                   placeholder="The content of your CFG, not the file itself."></textarea>
     </div>
     <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Load my cfg !</a>
+        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat disabled">Load my cfg !</a>
     </div>
 </div>
 <script src="./bower_components/jquery/dist/jquery.min.js"></script>
