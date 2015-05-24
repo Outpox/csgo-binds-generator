@@ -49,6 +49,10 @@
     text-transform: uppercase;
 }
 
+.keyActive {
+    background-color: #616161;
+    font-weight: 500;
+}
 .switch label input[type=checkbox]:checked + .lever:after {
     background-color: #9e9e9e !important;;
 }
@@ -65,7 +69,7 @@ header, main, footer {
     padding-left: 240px;
 }
 
-header {
+nav {
     position: fixed;
     width: 100%;
     z-index: 9999;

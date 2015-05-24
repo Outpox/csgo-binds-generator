@@ -1,12 +1,24 @@
 (function () {
     var app = angular.module('csgoBinds', ['ngAnimate', 'ngStorage']);
 
-    var keyGlobal = {};
-    var weaponGlobal = {};
-    var toolGlobal = "use";
+
+    app.controller('appCtrl', ['$scope', function ($scope) {
+        $scope.dataGlobal = {
+            key: {value: ""},
+            weapon: {
+                "Pistols": {},
+                "Rifles": {},
+                "SMGs": {},
+                "Heavies": {},
+                "Grenades": {},
+                "Equipment": {}
+            },
+            tool: "buy"
+        };
+    }]);
 
     app.controller('WeaponsCtrl', ['$scope', '$http', function ($scope, $http) {
-        $http.get('../data/weapons.json').success(function (data) {
+        $http.get('data/weapons.json').success(function (data) {
             $scope.weapons = data;
             $scope.imgPath = data[data.length - 1].img_path;
         });
@@ -19,42 +31,50 @@
 
         $scope.selectWeapon = function (weapon, type) {
             if ($scope.weaponIsSelected(weapon, type)) {
-                keyGlobal[type] = {};
+                $scope.dataGlobal.weapon[type] = {};
             } else {
-                keyGlobal[type] = weapon;
+                $scope.dataGlobal.weapon[type] = weapon;
             }
-            console.log(keyGlobal);
         };
 
         $scope.weaponIsSelected = function (weapon, type) {
-            return keyGlobal[type] === weapon;
+            return $scope.dataGlobal.weapon[type] === weapon;
         };
     }]);
 
     app.controller('keyboardCtrl', ['$scope', '$http', '$localStorage', function ($scope, $http, $localStorage) {
         $scope.keyboard = $localStorage.$default({file: "keyboard_US"});
-        toolGlobal = $localStorage.$default({tool: "use"});
-
         $scope.keyboardList = [];
-        $http.get('../keyboard/keyboardList.json').success(function (data) {
+        $http.get('keyboard/keyboardList.json').success(function (data) {
             $scope.keyboardList = data;
-            console.info("Keyboard layout list loaded");
         });
 
         $scope.updateKeyboard = function () {
-            $http.get('../keyboard/' + $scope.keyboard.file + '.json').success(function (data) {
+            $http.get('keyboard/' + $scope.keyboard.file + '.json').success(function (data) {
                 $scope.keyboardData = data;
                 console.info("Keyboard layout changed");
             });
         };
 
+        $scope.selectKey = function (key) {
+            if ($scope.keyIsSelected(key)) {
+                $scope.dataGlobal.key = {};
+            }
+            else {
+                $scope.dataGlobal.key = key;
+            }
+        };
+
+        $scope.keyIsSelected = function (key) {
+            return $scope.dataGlobal.key === key;
+        };
+
         $scope.selectTool = function (tool) {
-            toolGlobal.tool = tool;
+            $scope.dataGlobal.tool = tool;
         };
 
         $scope.toolIsSelected = function (tool) {
-            console.log(toolGlobal.tool === tool);
-            return toolGlobal.tool === tool;
+            return $scope.dataGlobal.tool === tool;
         };
 
         /**
@@ -83,7 +103,18 @@
     }]);
 
     app.controller('textAreaCtrl', ['$scope', function ($scope) {
-        $scope.cfg = "lallalal";
+        //bind "F12" "buy galilar; buy famas;"
+        $scope.$watch(function () {
+            var loadout = "";
+            for (var type in $scope.dataGlobal.weapon) {
+                var equivalent = "";
+                if ($scope.dataGlobal.weapon[type].equivalent !== undefined && $scope.dataGlobal.weapon[type].equivalent !== null)
+                    equivalent = "; " + $scope.dataGlobal.tool + ' ' + $scope.dataGlobal.weapon[type].equivalent;
+                if ($scope.dataGlobal.weapon[type].value !== undefined)
+                    loadout += $scope.dataGlobal.tool + ' ' + $scope.dataGlobal.weapon[type].value + equivalent + "; ";
+            }
+            $scope.dataGlobal.bind = 'bind "' + $scope.dataGlobal.key.value + '" "' + loadout + '"';
+        })
     }]);
 })
 ();
