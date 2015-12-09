@@ -1,25 +1,30 @@
 angular.module('weapons', [])
-.controller('WeaponsCtrl', ['$scope', '$http', function ($scope, $http) {
-	$http.get('data/weapons.json').success(function (data) {
-		$scope.weapons = data;
-		$scope.imgPath = data[data.length - 1].img_path;
-	});
+    .controller('WeaponsCtrl', ['$scope', '$http', 'globalData', function ($scope, $http, globalData) {
 
-	$scope.checkbox = true;
+        $scope.globalData = globalData.data;
 
-	$scope.search = function (item) {
-		return (angular.lowercase(item.value).indexOf($scope.query || '') !== -1 || angular.lowercase(item.value).indexOf($scope.query || '') !== -1);
-	};
+        $http.get('data/weapons.json').success(function (data) {
+            $scope.weapons = data;
+            $scope.imgPath = data[data.length - 1].img_path;
+        });
 
-	$scope.selectWeapon = function (weapon, type) {
-		if ($scope.weaponIsSelected(weapon, type)) {
-			$scope.dataGlobal.weapon[type] = {};
-		} else {
-			$scope.dataGlobal.weapon[type] = weapon;
-		}
-	};
+        $scope.checkbox = true;
 
-	$scope.weaponIsSelected = function (weapon, type) {
-		return $scope.dataGlobal.weapon[type] === weapon;
-	};
-}]);
+        $scope.search = function (item) {
+            return (angular.lowercase(item.value).indexOf($scope.query || '') !== -1 || angular.lowercase(item.value).indexOf($scope.query || '') !== -1);
+        };
+
+        $scope.selectWeapon = function (weapon, type) {
+            if ($scope.dataGlobal.currentBind.key !== undefined) {
+                if ($scope.weaponIsSelected(weapon, type)) {
+                    $scope.dataGlobal.weapon[type] = {};
+                } else {
+                    $scope.dataGlobal.weapon[type] = weapon;
+                }
+            }
+        };
+
+        $scope.weaponIsSelected = function (weapon, type) {
+            return $scope.dataGlobal.weapon[type] === weapon;
+        };
+    }]);

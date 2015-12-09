@@ -1,5 +1,5 @@
 angular.module('keyboard', [])
-.controller('keyboardCtrl', ['$scope', '$http', '$localStorage', function ($scope, $http, $localStorage) {
+.controller('keyboardCtrl', ['$scope', '$http', '$localStorage' , 'globalData', function ($scope, $http, $localStorage, globalData) {
     // $scope.keyboard = $localStorage.$default({file: "keyboard_US"});
     // $scope.keyboardList = [];
     // $http.get('keyboard/keyboardList.json').success(function (data) {
@@ -12,6 +12,17 @@ angular.module('keyboard', [])
     //         console.info("Keyboard layout changed");
     //     });
     // };
+
+	console.log(globalData);
+	$scope.globalData = globalData.data;
+
+	var canvas = document.getElementById("keyboard");
+	canvas.addEventListener("keyClick", function (e) {
+		//console.log(e.detail);
+		$scope.globalData.currentBind = new Bind(e.detail);
+		$scope.$apply();
+		console.log($scope.globalData);
+	});
 
     $scope.selectKey = function (key) {
     	if ($scope.keyIsSelected(key)) {
