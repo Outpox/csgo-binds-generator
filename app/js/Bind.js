@@ -4,7 +4,7 @@ var bindsArray = [];
 function Bind(key, loadout, tool) {
 	this.id = idBind++;
 	this.key = key;
-	this.loadout = loadout || {"pistol": "", "rifle": "smg": "", "heavy": "", "grenades": [], "equipment": []};
+	this.loadout = loadout || {"pistol": "", "rifle": "", "smg": "", "heavy": "", "grenades": [], "equipment": []};
 	this.tool = tool || "buy";
 	this.saveBind();
 }
@@ -13,15 +13,15 @@ Bind.prototype.saveBind = function () {
 	if (!this.existBind()) {
 		bindsArray.push(this);
 	}
-}
+};
 
 Bind.prototype.removeBind = function () {
 	for (var i = 0; i < bindsArray.length; i++) {
 		if (this.id === bindsArray[i].id) {
 			bindsArray.splice(i, 1);
 		}
-	};
-}
+	}
+};
 
 Bind.prototype.existBind = function () {
 	for (var i = 0; i < bindsArray.length; i++) {
@@ -30,4 +30,4 @@ Bind.prototype.existBind = function () {
 		}
 	}
 	return false;
-}
+};
