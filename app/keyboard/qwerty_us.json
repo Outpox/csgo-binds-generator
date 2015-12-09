@@ -1,0 +1,326 @@
+{
+  "description": "US ANSI keyboard",
+  "img": "http://en.academic.ru/pictures/enwiki/75/KB_United_States-NoAltGr.svg",
+  "rows": [
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 18.5,
+      "spaceY": 0,
+      "keys": [
+        {
+          "content": "F1"
+        },
+        {
+          "content": "F2"
+        },
+        {
+          "content": "F3"
+        },
+        {
+          "content": "F4"
+        },
+        {
+          "content": "F5"
+        },
+        {
+          "content": "F6"
+        },
+        {
+          "content": "F7"
+        },
+        {
+          "content": "F8"
+        },
+        {
+          "content": "F9"
+        },
+        {
+          "content": "F10"
+        },
+        {
+          "content": "F11"
+        },
+        {
+          "content": "F12"
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "`"
+        },
+        {
+          "content": "1"
+        },
+        {
+          "content": "2"
+        },
+        {
+          "content": "3"
+        },
+        {
+          "content": "4"
+        },
+        {
+          "content": "5"
+        },
+        {
+          "content": "6"
+        },
+        {
+          "content": "7"
+        },
+        {
+          "content": "8"
+        },
+        {
+          "content": "9"
+        },
+        {
+          "content": "0"
+        },
+        {
+          "content": "-"
+        },
+        {
+          "content": "="
+        },
+        {
+          "content": "backspace",
+          "type": "backspace",
+          "data": {
+            "widthFactor": 2.5
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "tab",
+          "type": "tab",
+          "data": {
+            "widthFactor": 1.7
+          }
+        },
+        {
+          "content": "q"
+        },
+        {
+          "content": "w"
+        },
+        {
+          "content": "e"
+        },
+        {
+          "content": "r"
+        },
+        {
+          "content": "t"
+        },
+        {
+          "content": "y"
+        },
+        {
+          "content": "u"
+        },
+        {
+          "content": "i"
+        },
+        {
+          "content": "o"
+        },
+        {
+          "content": "p"
+        },
+        {
+          "content": "["
+        },
+        {
+          "content": "]"
+        },
+        {
+          "content": "\\",
+          "type": "tab",
+          "data": {
+            "widthFactor": 1.8
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "capslock",
+          "type": "capslock",
+          "data": {
+            "widthFactor": 2
+          }
+        },
+        {
+          "content": "a"
+        },
+        {
+          "content": "s"
+        },
+        {
+          "content": "d"
+        },
+        {
+          "content": "f"
+        },
+        {
+          "content": "g"
+        },
+        {
+          "content": "h"
+        },
+        {
+          "content": "j"
+        },
+        {
+          "content": "k"
+        },
+        {
+          "content": "l"
+        },
+        {
+          "content": ";"
+        },
+        {
+          "content": "'"
+        },
+        {
+          "content": "enter",
+          "type": "enter",
+          "data": {
+            "widthFactor": 2.63
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "shift",
+          "type": "shift",
+          "data": {
+            "widthFactor": 2.5
+          }
+        },
+        {
+          "content": "z"
+        },
+        {
+          "content": "x"
+        },
+        {
+          "content": "c"
+        },
+        {
+          "content": "v"
+        },
+        {
+          "content": "b"
+        },
+        {
+          "content": "n"
+        },
+        {
+          "content": "m"
+        },
+        {
+          "content": ","
+        },
+        {
+          "content": "."
+        },
+        {
+          "content": "/"
+        },
+        {
+          "content": "shift",
+          "type": "shift",
+          "data": {
+            "widthFactor": 3.25
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "ctrl",
+          "type": "ctrl",
+          "data": {
+            "widthFactor": 1.5
+          }
+        },
+        {
+          "content": "Win",
+          "type": "win",
+          "data": {
+            "widthFactor": 1.2
+          }
+        },
+        {
+          "content": "alt",
+          "type": "alt",
+          "data": {
+            "widthFactor": 1.2
+          }
+        },
+        {
+          "content": "space",
+          "type": "space",
+          "data": {
+            "widthFactor": 8.57
+          }
+        },
+        {
+          "content": "alt",
+          "type": "shift",
+          "data": {
+            "widthFactor": 1.2
+          }
+        },
+        {
+          "content": "Win",
+          "type": "shift",
+          "data": {
+            "widthFactor": 1.2
+          }
+        },
+        {
+          "content": "ctrl",
+          "type": "ctrl",
+          "data": {
+            "widthFactor": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}

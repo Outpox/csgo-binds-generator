@@ -5,7 +5,6 @@
     <title>CS:GO Binds Generator</title>
     <link rel="stylesheet" href="./bower_components/materialize/dist/css/materialize.min.css"/>
     <link rel="stylesheet" href="./css/index.css"/>
-    <script src="//localhost:35727"></script>
     <meta name="viewport" content="width=1, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
 </head>
 <body ng-app="csgoBinds" ng-controller="appCtrl">
@@ -53,19 +52,20 @@
         <a class="waves-effect btn-flat col s2 l1 disabled">load cfg</a>
         <a class="waves-effect btn-flat col s2 l1 modal-trigger disabled" id="saveCfg">save cfg</a>
         <a class="waves-effect btn-flat col s1 disabled" >reset</a>
-        <select class="browser-default col s2 l1" id="kbList" ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
+        <!-- <select class="browser-default col s2 l1" id="kbList" ng-model="keyboard.file" ng-change="updateKeyboard()" class="col s2">
             <option ng-repeat="opt in keyboardList" ng-selected="keyboard.file === opt.file" value="{{opt.file}}">
                 {{opt.lang}}
             </option>
-        </select>
+        </select> -->
     </section>
     <div class="row">
         <div class="main col s12 l8 center">
-            <table ng-repeat="keyboard in keyboardData.keyboard">
-                <tr class="{{keyboard.class}}">
-                    <td ng-repeat="k in keyboard.keys" class="{{k.class}} key" ng-click="selectKey(k)" ng-class="{'keyActive':keyIsSelected(k)}">{{k.display}}</td>
-                </tr>
-            </table>
+            <!--<table ng-repeat="keyboard in keyboardData.keyboard">-->
+                <!--<tr class="{{keyboard.class}}">-->
+                    <!--<td ng-repeat="k in keyboard.keys" class="{{k.class}} key" ng-click="selectKey(k)" ng-class="{'keyActive':keyIsSelected(k)}">{{k.display}}</td>-->
+                <!--</tr>-->
+            <!--</table>-->
+            <canvas height="300" width="750" id="keyboard"></canvas>
         </div>
     </div>
 </main>
@@ -101,7 +101,12 @@
 <script src="./bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="./bower_components/ngstorage/ngStorage.min.js"></script>
 <script src="./bower_components/materialize/dist/js/materialize.min.js"></script>
+<script src="./js/Bind.js"></script>
+<script src="./js/controllers/weapons.js"></script>
+<script src="./js/controllers/keyboard.js"></script>
+<script src="./js/controllers/textarea.js"></script>
 <script src="./js/app.js"></script>
+<script src="./js/canvaskeyboard.min.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
