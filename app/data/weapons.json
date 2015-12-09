@@ -61,10 +61,18 @@
       {
         "name": "Desert Eagle",
         "value": "deagle",
-        "equivalent": null,
+        "equivalent": "deagle",
         "img": "weapon_deagle.png",
         "team": "Both",
         "price": 700
+      },
+      {
+        "name": "R8 Revolver",
+        "value": "revolver",
+        "equivalent": "deagle",
+        "img": "weapon_revolver.png",
+        "team": "Both",
+        "price": 850
       }
     ]
   },
