@@ -4,8 +4,7 @@
         .service('globalData', function () {
             this.data = {
                 binds: bindsArray,
-                currentBind: {},
-                tool: "buy"
+                currentBind: new Bind()
             };
         })
 

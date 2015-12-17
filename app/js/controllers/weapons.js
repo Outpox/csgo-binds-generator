@@ -15,11 +15,14 @@ angular.module('weapons', [])
         };
 
         $scope.selectWeapon = function (weapon, type) {
-            if ($scope.dataGlobal.currentBind.key !== undefined) {
+            console.log(weapon);
+            console.log(type);
+            console.log($scope.globalData.currentBind);
+            if ($scope.globalData.currentBind.key !== undefined) {
                 if ($scope.weaponIsSelected(weapon, type)) {
-                    $scope.dataGlobal.weapon[type] = {};
+                    $scope.globalData.currentBind.loadout.setWeapon(weapon, type);
                 } else {
-                    $scope.dataGlobal.weapon[type] = weapon;
+                    $scope.globalData.weapon[type] = weapon;
                 }
             }
         };

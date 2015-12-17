@@ -3,9 +3,9 @@ var bindsArray = [];
 
 function Bind(key, loadout, tool) {
 	this.id = idBind++;
-	this.key = key;
-	this.loadout = loadout || {"pistol": "", "rifle": "", "smg": "", "heavy": "", "grenades": [], "equipment": []};
-	this.tool = tool || "too";
+	this.key = key || undefined;
+	this.loadout = loadout || new Loadout();
+	this.tool = tool || "buy";
 	this.saveBind();
 }
 
@@ -30,6 +30,10 @@ Bind.prototype.existBind = function () {
 		}
 	}
 	return false;
+};
+
+Bind.prototype.setKey = function (key) {
+	this.key = key;
 };
 
 function getBindByKey(key) {

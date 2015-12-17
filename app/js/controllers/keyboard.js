@@ -18,8 +18,13 @@ angular.module('keyboard', [])
 
 	var canvas = document.getElementById("keyboard");
 	canvas.addEventListener("keyClick", function (e) {
-		//console.log(e.detail);
-		$scope.globalData.currentBind = new Bind(e.detail);
+        var key = e.detail.content !== undefined ? e.detail : undefined;
+		if (!$scope.globalData.currentBind.loadout.isEmpty()) {
+			$scope.globalData.currentBind = new Bind(key);
+		}
+		else {
+			$scope.globalData.currentBind.setKey(key);
+		}
 		$scope.$apply();
 		console.log($scope.globalData);
 	});
