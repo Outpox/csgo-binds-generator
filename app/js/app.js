@@ -4,25 +4,12 @@
         .service('globalData', function () {
             this.data = {
                 binds: bindsArray,
-                currentBind: new Bind()
+                currentBind: new Bind(),
+                generatedCode: ""
             };
         })
 
         .controller('appCtrl', ['$scope', function ($scope) {
-            $scope.dataGlobal = {
-                binds: bindsArray,
-                currentBind: {},
-                key: {value: ""},
-                weapon: {
-                    "Pistols": {},
-                    "Rifles": {},
-                    "SMGs": {},
-                    "Heavies": {},
-                    "Grenades": {},
-                    "Equipment": {}
-                },
-                tool: "buy"
-            };
         }])
 })();
 
@@ -64,4 +51,6 @@ $(function () {
         modalContent.html();
         modal.openModal();
     }
+
+
 });

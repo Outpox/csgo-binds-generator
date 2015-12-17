@@ -19,36 +19,38 @@ angular.module('keyboard', [])
 	var canvas = document.getElementById("keyboard");
 	canvas.addEventListener("keyClick", function (e) {
         var key = e.detail.content !== undefined ? e.detail : undefined;
-		if (!$scope.globalData.currentBind.loadout.isEmpty()) {
-			$scope.globalData.currentBind = new Bind(key);
-		}
-		else {
-			$scope.globalData.currentBind.setKey(key);
+
+		if (key !== undefined) {
+			if (isKeyBinded(key)) {
+				$scope.globalData.currentBind = getBindByKey(key);
+			}
+			else {
+				if (!$scope.globalData.currentBind.loadout.isEmpty()) {
+					$scope.globalData.currentBind = new Bind(key);
+				}
+				else {
+					$scope.globalData.currentBind.setKey(key);
+				}
+			}
 		}
 		$scope.$apply();
-		console.log($scope.globalData);
+		console.log($scope.globalData.currentBind);
 	});
 
-    $scope.selectKey = function (key) {
-    	if ($scope.keyIsSelected(key)) {
-    		$scope.dataGlobal.key = {};
-    	}
-    	else {
-    		$scope.dataGlobal.key = key;
-    	}
-    };
-
-    $scope.keyIsSelected = function (key) {
-    	return $scope.dataGlobal.key === key;
-    };
-
     $scope.selectTool = function (tool) {
-    	$scope.dataGlobal.tool = tool;
+    	$scope.globalData.currentBind.tool = tool;
     };
 
     $scope.toolIsSelected = function (tool) {
-    	return $scope.dataGlobal.tool === tool;
+    	return $scope.globalData.currentBind.tool === tool;
     };
+
+	$scope.reset = function () {
+		//$scope.globalData.binds = [];
+		resetBinds();
+		$scope.globalData.currentBind = new Bind();
+		console.log($scope.globalData);
+	};
 
     /**
      * Src: http://stackoverflow.com/a/987376/3560404

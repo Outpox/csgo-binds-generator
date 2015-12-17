@@ -15,19 +15,23 @@ angular.module('weapons', [])
         };
 
         $scope.selectWeapon = function (weapon, type) {
-            console.log(weapon);
-            console.log(type);
-            console.log($scope.globalData.currentBind);
-            if ($scope.globalData.currentBind.key !== undefined) {
-                if ($scope.weaponIsSelected(weapon, type)) {
-                    $scope.globalData.currentBind.loadout.setWeapon(weapon, type);
+            var currentBind = $scope.globalData.currentBind;
+            //console.log(weapon);
+            //console.log(type);
+            //console.log($scope.globalData.currentBind);
+            if (currentBind.key !== undefined) {
+                if (currentBind.loadout.isSelected(weapon, type)) {
+                    //The weapon is supposed to be removed here
+                    currentBind.loadout.setWeapon("", type);
                 } else {
-                    $scope.globalData.weapon[type] = weapon;
+                    currentBind.loadout.setWeapon(weapon, type);
                 }
+                console.log(currentBind);
             }
         };
 
         $scope.weaponIsSelected = function (weapon, type) {
-            return $scope.dataGlobal.weapon[type] === weapon;
+            return $scope.globalData.currentBind.loadout.isSelected(weapon, type);
+            //return $scope.dataGlobal.weapon[type] === weapon;
         };
     }]);
