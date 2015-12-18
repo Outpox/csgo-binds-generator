@@ -54,6 +54,7 @@ angular.module('keyboard', [])
 		//$scope.globalData.binds = [];
 		$scope.globalData.currentBind = new Bind($scope.globalData.currentBind.key);
 		resetBinds();
+		Materialize.toast('Key reset !', 800);
 		console.log($scope.globalData);
 	};
 
