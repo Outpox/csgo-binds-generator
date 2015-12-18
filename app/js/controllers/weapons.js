@@ -16,17 +16,13 @@ angular.module('weapons', [])
 
         $scope.selectWeapon = function (weapon, type) {
             var currentBind = $scope.globalData.currentBind;
-            //console.log(weapon);
-            //console.log(type);
-            //console.log($scope.globalData.currentBind);
             if (currentBind.key !== undefined) {
                 if (currentBind.loadout.isSelected(weapon, type)) {
                     //The weapon is supposed to be removed here
-                    currentBind.loadout.setWeapon("", type);
+                    currentBind.loadout.removeWeapon(weapon, type);
                 } else {
                     currentBind.loadout.setWeapon(weapon, type);
                 }
-                //console.log(currentBind);
             }
         };
 
