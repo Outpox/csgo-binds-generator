@@ -61,7 +61,7 @@
       {
         "name": "Desert Eagle",
         "value": "deagle",
-        "equivalent": "deagle",
+        "equivalent": "revolver",
         "img": "weapon_deagle.png",
         "team": "Both",
         "price": 700
