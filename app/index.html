@@ -40,7 +40,7 @@
     </div>
 </header>
 <main ng-controller="keyboardCtrl as kb">
-    <div id="textArea" style="height: 250px; padding: 1%; background-color: grey; color: white; white-space: pre;" ng-controller="textAreaCtrl as ta">{{globalData.generatedCode}}</div>
+    <div id="textArea" style="height: 250px; padding: 1%; background-color: grey; color: white; white-space: pre; overflow: auto;" ng-controller="textAreaCtrl as ta">{{globalData.generatedCode}}</div>
     <section class="row center">
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('use')" ng-class="{'toolActive':toolIsSelected('use')}">use</a>
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('buy')" ng-class="{'toolActive':toolIsSelected('buy')}">buy</a>

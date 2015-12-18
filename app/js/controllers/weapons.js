@@ -26,7 +26,7 @@ angular.module('weapons', [])
                 } else {
                     currentBind.loadout.setWeapon(weapon, type);
                 }
-                console.log(currentBind);
+                //console.log(currentBind);
             }
         };
 

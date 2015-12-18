@@ -20,6 +20,8 @@ angular.module('keyboard', [])
 	canvas.addEventListener("keyClick", function (e) {
         var key = e.detail.content !== undefined ? e.detail : undefined;
 
+		console.log(key);
+
 		if (key !== undefined) {
 			if (isKeyBinded(key)) {
 				$scope.globalData.currentBind = getBindByKey(key);
@@ -32,6 +34,9 @@ angular.module('keyboard', [])
 					$scope.globalData.currentBind.setKey(key);
 				}
 			}
+		}
+		else {
+			$scope.globalData.currentBind = new Bind();
 		}
 		$scope.$apply();
 		console.log($scope.globalData.currentBind);
@@ -47,8 +52,8 @@ angular.module('keyboard', [])
 
 	$scope.reset = function () {
 		//$scope.globalData.binds = [];
+		$scope.globalData.currentBind = new Bind($scope.globalData.currentBind.key);
 		resetBinds();
-		$scope.globalData.currentBind = new Bind();
 		console.log($scope.globalData);
 	};
 

@@ -25,9 +25,11 @@ Bind.prototype.removeBind = function () {
 
 Bind.prototype.existBind = function () {
     for (var i = 0; i < bindsArray.length; i++) {
-        if (this.id === bindsArray[i].id) {
-            return true;
-        }
+		if (bindsArray[i] !== null) {
+			if (this.id === bindsArray[i].id) {
+				return true;
+			}
+		}
     }
     return false;
 };
@@ -38,18 +40,22 @@ Bind.prototype.setKey = function (key) {
 
 function getBindByKey(key) {
     for (var i = 0; i < bindsArray.length; i++) {
-        if (key === bindsArray[i].key) {
-            return bindsArray[i];
-        }
+		if (bindsArray[i] !== null) {
+			if (key === bindsArray[i].key) {
+				return bindsArray[i];
+			}
+		}
     }
     return new Bind(key);
 }
 
 function isKeyBinded(key) {
     for (var i = 0; i < bindsArray.length; i++) {
-        if (key === bindsArray[i].key) {
-            return true;
-        }
+		if (bindsArray[i] !== null) {
+			if (key === bindsArray[i].key) {
+				return true;
+			}
+		}
     }
     return false;
 }
@@ -64,7 +70,6 @@ Bind.prototype.toString = function () {
 };
 
 function resetBinds() {
-    for (var i = 0; i < bindsArray.length; i++) {
-        bindsArray[i] = null;
-    }
+	bindsArray.splice(0, bindsArray.length);
+	idBind = 0;
 }
