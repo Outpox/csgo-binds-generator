@@ -1,5 +1,5 @@
 angular.module('textarea', [])
-    .controller('textAreaCtrl', ['$scope', 'globalData', '$sce', function ($scope, globalData, $sce) {
+    .controller('textAreaCtrl', ['$scope', function ($scope) {
 
         $scope.$watch(function () {
             var binds = $scope.globalData.binds;
