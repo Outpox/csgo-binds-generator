@@ -26,6 +26,11 @@ $(function () {
     var kb = new Keyboard(canvas, options);
     kb.init();
 
+    var cNumpad = document.getElementById("numpad");
+    var kNumpad = new Keyboard(cNumpad, options);
+    kNumpad.layout = "keyboard/qwerty_us_numpad.json";
+    kNumpad.init();
+
     //canvas.addEventListener("keyClick", function (e) {
     //   console.log(kb.selectedKey);
     //});

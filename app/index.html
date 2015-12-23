@@ -45,7 +45,7 @@
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('use')" ng-class="{'toolActive':toolIsSelected('use')}">use</a>
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('buy')" ng-class="{'toolActive':toolIsSelected('buy')}">buy</a>
         <a class="waves-effect btn-flat col s1" ng-click="selectTool('say')" ng-class="{'toolActive':toolIsSelected('say')}">say</a>
-        <a class="waves-effect btn-flat col s2 l1" ng-click="selectTextArea()">select all</a>
+        <a class="waves-effect btn-flat col s2 l1" ng-click="selectTextArea()">select</a>
         <!--<a href="#loadCfg" class="waves-effect btn-flat col s2 l1 modal-trigger disabled" id="loadCfgTrigger">load cfg</a>-->
         <a class="waves-effect btn-flat col s2 l1 disabled">load cfg</a>
         <a class="waves-effect btn-flat col s2 l1 modal-trigger disabled" id="saveCfg">save cfg</a>
@@ -57,13 +57,9 @@
         </select> -->
     </section>
     <div class="row">
-        <div class="main col s12 l8 center">
-            <!--<table ng-repeat="keyboard in keyboardData.keyboard">-->
-                <!--<tr class="{{keyboard.class}}">-->
-                    <!--<td ng-repeat="k in keyboard.keys" class="{{k.class}} key" ng-click="selectKey(k)" ng-class="{'keyActive':keyIsSelected(k)}">{{k.display}}</td>-->
-                <!--</tr>-->
-            <!--</table>-->
-            <canvas height="300" width="750" id="keyboard"></canvas>
+        <div class="main">
+            <div class="col s12 l7 center"><canvas height="300" width="750" id="keyboard"></canvas></div>
+            <div class="col s4 l4 center"><canvas height="300" width="250" id="numpad"></canvas></div>
         </div>
     </div>
 </main>

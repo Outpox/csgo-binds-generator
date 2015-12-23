@@ -16,11 +16,31 @@ angular.module('keyboard', [])
 	console.log(globalData);
 	$scope.globalData = globalData.data;
 
-	var canvas = document.getElementById("keyboard");
-	canvas.addEventListener("keyClick", function (e) {
-        var key = e.detail.content !== undefined ? e.detail : undefined;
+	var canvas = document.getElementsByTagName("canvas");
+	for (var i = 0; i < canvas.length; i++) {
+		canvas[i].addEventListener("keyClick", function (e) {
+			keyboardEvent(e);
+		});
+	}
 
-		console.log(key);
+    $scope.selectTool = function (tool) {
+    	$scope.globalData.currentBind.tool = tool;
+    };
+
+    $scope.toolIsSelected = function (tool) {
+    	return $scope.globalData.currentBind.tool === tool;
+    };
+
+	$scope.reset = function () {
+		//$scope.globalData.binds = [];
+		$scope.globalData.currentBind = new Bind($scope.globalData.currentBind.key);
+		resetBinds();
+		Materialize.toast('Key reset !', 800);
+		console.log($scope.globalData);
+	};
+
+	function keyboardEvent(event) {
+		var key = event.detail.content !== undefined ? event.detail : undefined;
 
 		if (key !== undefined) {
 			if (isKeyBinded(key)) {
@@ -39,24 +59,7 @@ angular.module('keyboard', [])
 			$scope.globalData.currentBind = new Bind();
 		}
 		$scope.$apply();
-		console.log($scope.globalData.currentBind);
-	});
-
-    $scope.selectTool = function (tool) {
-    	$scope.globalData.currentBind.tool = tool;
-    };
-
-    $scope.toolIsSelected = function (tool) {
-    	return $scope.globalData.currentBind.tool === tool;
-    };
-
-	$scope.reset = function () {
-		//$scope.globalData.binds = [];
-		$scope.globalData.currentBind = new Bind($scope.globalData.currentBind.key);
-		resetBinds();
-		Materialize.toast('Key reset !', 800);
-		console.log($scope.globalData);
-	};
+	}
 
     /**
      * Src: http://stackoverflow.com/a/987376/3560404
