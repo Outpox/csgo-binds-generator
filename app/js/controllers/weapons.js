@@ -11,7 +11,7 @@ angular.module('weapons', [])
         $scope.checkbox = true;
 
         $scope.search = function (item) {
-            return (angular.lowercase(item.value).indexOf($scope.query || '') !== -1 || angular.lowercase(item.value).indexOf($scope.query || '') !== -1);
+            return (angular.lowercase(item.value).indexOf($scope.query || '') !== -1 || angular.lowercase(item.name).indexOf($scope.query || '') !== -1);
         };
 
         $scope.selectWeapon = function (weapon, type) {
