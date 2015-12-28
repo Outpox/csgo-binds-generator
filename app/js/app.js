@@ -18,10 +18,14 @@ $(function () {
     var options = {
         "layout": "keyboard/qwerty_us.json",
         "backgroundColor": "transparent",
-        "keyFontColor": "black",
-        "keyBackgroundColor": "lightgrey",
+        "keyFontColor": "#EEEEEE",
+        "keyFontType": "20px Calibri",
+        "keyBackgroundColor": "#7f8c8d",
+        "keyHoverBackgroundColor": "#27ae60",
+        "keySelectedBackgroundColor": "darkgreen",
         "keyBorderColor": "black",
-        "keyHoverBorderColor": "gray"
+        "keyHoverBorderColor": "black",
+        "keySelectedBorderColor": "black"
     };
     var kb = new Keyboard(canvas, options);
     kb.init();
@@ -30,6 +34,8 @@ $(function () {
     var kNumpad = new Keyboard(cNumpad, options);
     kNumpad.layout = "keyboard/qwerty_us_numpad.json";
     kNumpad.init();
+
+    window.keyboards = [kb, kNumpad];
 
     //canvas.addEventListener("keyClick", function (e) {
     //   console.log(kb.selectedKey);
