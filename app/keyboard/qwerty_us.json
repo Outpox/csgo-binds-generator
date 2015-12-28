@@ -47,8 +47,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -101,8 +101,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -159,8 +159,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -214,8 +214,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -267,8 +267,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
