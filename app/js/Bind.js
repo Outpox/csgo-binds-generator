@@ -62,7 +62,7 @@ function isKeyBinded(key) {
 
 Bind.prototype.toString = function () {
     if (this.key !== undefined && !this.loadout.isEmpty()) {
-        return "bind \"" + this.key.content + "\" " + this.loadout.toString(this.tool);
+        return "bind \"" + this.key.getValue() + "\" " + this.loadout.toString(this.tool);
     }
     else {
         return "";
