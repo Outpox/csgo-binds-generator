@@ -4,7 +4,7 @@
   "rows": [
     {
       "startX": 10,
-      "startY": 10,
+      "startY": 55,
       "spaceX": 5,
       "spaceY": 0,
       "keys": [
@@ -35,8 +35,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -70,8 +70,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -96,8 +96,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
@@ -120,7 +120,7 @@
           }
         },
         {
-          "content": "e",
+          "content": "\u23CE",
           "type": "square",
           "data": {
             "customHeight": 85,
@@ -130,8 +130,8 @@
       ]
     },
     {
-      "startX": 10,
-      "startY": 10,
+      "startX": 0,
+      "startY": 0,
       "spaceX": 5,
       "spaceY": 5,
       "keys": [
