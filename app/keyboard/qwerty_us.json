@@ -260,7 +260,8 @@
           "content": "shift",
           "type": "shift",
           "data": {
-            "widthFactor": 3.25
+            "widthFactor": 3.25,
+            "value": "rshift"
           }
         }
       ]
@@ -279,10 +280,11 @@
           }
         },
         {
-          "content": "Win",
+          "content": "win",
           "type": "win",
           "data": {
-            "widthFactor": 1.2
+            "widthFactor": 1.2,
+            "disabled": true
           }
         },
         {
@@ -301,23 +303,26 @@
         },
         {
           "content": "alt",
-          "type": "shift",
+          "type": "alt",
           "data": {
-            "widthFactor": 1.2
+            "widthFactor": 1.2,
+            "value": "ralt"
           }
         },
         {
-          "content": "Win",
-          "type": "shift",
+          "content": "win",
+          "type": "win",
           "data": {
-            "widthFactor": 1.2
+            "widthFactor": 1.2,
+            "disabled": true
           }
         },
         {
           "content": "ctrl",
           "type": "ctrl",
           "data": {
-            "widthFactor": 1.5
+            "widthFactor": 1.5,
+            "value": "rctrl"
           }
         }
       ]
