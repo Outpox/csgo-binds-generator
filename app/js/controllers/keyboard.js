@@ -13,7 +13,6 @@ angular.module('keyboard', [])
     //     });
     // };
 
-	console.log(globalData);
 	$scope.globalData = globalData.data;
 
 	var canvas = document.getElementsByTagName("canvas");
@@ -40,8 +39,8 @@ angular.module('keyboard', [])
 	};
 
 	function keyboardEvent(event) {
-		var key = event.detail.content !== undefined ? event.detail : undefined;
-
+		var key = event.detail.selectedKey.content !== undefined ? event.detail.selectedKey : undefined;
+        deselectAllOtherKeys(event.detail);
 		if (key !== undefined) {
 			if (isKeyBinded(key)) {
 				$scope.globalData.currentBind = getBindByKey(key);
@@ -61,15 +60,37 @@ angular.module('keyboard', [])
 		$scope.$apply();
 	}
 
+    function deselectAllOtherKeys(detail) {
+        for (var i = 0; i < window.keyboards.length; i++) {
+            for (var j = 0; j < window.keyboards[i].lines.length; j++) {
+                for (var k = 0; k < window.keyboards[i].lines[j].keys.length; k++) {
+                    if (window.keyboards[i].lines[j].keys[k] !== detail.selectedKey){
+                        window.keyboards[i].lines[j].keys[k].selected = false;
+                    }
+                }
+            }
+            //Re-drawing from the library is not optimized but it is necessary because otherwise the keyboard renders weirdly
+            window.keyboards[i].reDraw();
+        }
+    }
+
+    /**
+     * Return the reference of the key which value is the parameter given or null if none
+     * @param value
+     */
+    function getKeyRefByValue(value) {
+        //todo
+    }
+
     /**
      * Src: http://stackoverflow.com/a/987376/3560404
      */
      $scope.selectTextArea = function () {
      	var element = "textArea";
-     	var doc = document
-     	, text = doc.getElementById(element)
-     	, range, selection
-     	;
+     	var doc = document,
+            text = doc.getElementById(element),
+            range,
+            selection;
      	if (doc.body.createTextRange) {
      		range = document.body.createTextRange();
      		range.moveToElementText(text);
