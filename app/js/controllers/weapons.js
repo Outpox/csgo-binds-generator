@@ -23,6 +23,12 @@ angular.module('weapons', [])
                 } else {
                     currentBind.loadout.setWeapon(weapon, type);
                 }
+                if (!currentBind.loadout.isEmpty()) {
+                    currentBind.key.active = true;
+                }
+                else {
+                    currentBind.key.active = false;
+                }
             }
         };
 
