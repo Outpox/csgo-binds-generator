@@ -25,7 +25,8 @@ $(function () {
         "keySelectedBackgroundColor": "darkgreen",
         "keyBorderColor": "black",
         "keyHoverBorderColor": "black",
-        "keySelectedBorderColor": "black"
+        "keySelectedBorderColor": "black",
+        "disabledCursor": "not-allowed"
     };
     var kb = new Keyboard(canvas, options);
     kb.init();
