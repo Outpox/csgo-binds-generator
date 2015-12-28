@@ -1,0 +1,155 @@
+{
+  "description": "US ANSI keyboard Numpad only",
+  "img": "http://en.academic.ru/pictures/enwiki/75/KB_United_States-NoAltGr.svg",
+  "rows": [
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 0,
+      "keys": [
+        {
+          "content": "\uD83D\uDD12",
+          "data": {
+            "disabled": true
+          }
+        },
+        {
+          "content": "/",
+          "data": {
+            "value" : "kp_slash"
+          }
+        },
+        {
+          "content": "*",
+          "data": {
+            "value" : "kp_multiply"
+          }
+        },
+        {
+          "content": "-",
+          "data": {
+            "value" : "kp_minus"
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "7",
+          "data": {
+            "value" : "kp_7"
+          }
+        },
+        {
+          "content": "8",
+          "data": {
+            "value" : "kp_8"
+          }
+        },
+        {
+          "content": "9"
+        ,
+          "data": {
+            "value" : "kp_9"
+          }
+        },
+        {
+          "content": "+",
+          "type": "square",
+          "data": {
+            "customHeight": 85,
+            "value" : "kp_plus"
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "4",
+          "data": {
+            "value" : "kp_4"
+          }
+        },
+        {
+          "content": "5",
+          "data": {
+            "value" : "kp_5"
+          }
+        },
+        {
+          "content": "6",
+          "data": {
+            "value" : "kp_6"
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "1",
+          "data": {
+            "value" : "kp_1"
+          }
+        },
+        {
+          "content": "2",
+          "data": {
+            "value" : "kp_2"
+          }
+        },
+        {
+          "content": "3",
+          "data": {
+            "value" : "kp_3"
+          }
+        },
+        {
+          "content": "e",
+          "type": "square",
+          "data": {
+            "customHeight": 85,
+            "value" : "kp_enter"
+          }
+        }
+      ]
+    },
+    {
+      "startX": 10,
+      "startY": 10,
+      "spaceX": 5,
+      "spaceY": 5,
+      "keys": [
+        {
+          "content": "0",
+          "type": "other",
+          "data": {
+            "widthFactor": 2.14,
+            "value": "kp_ins"
+          }
+        },
+        {
+          "content": ".",
+          "data": {
+            "value" : "kp_del"
+          }
+        }
+      ]
+    }
+  ]
+}
