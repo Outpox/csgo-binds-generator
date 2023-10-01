@@ -154,7 +154,12 @@ window.onload = function () {
     });
 
     document.getElementById("copy").addEventListener('click', function () {
-        textArea.select();
+        var copyBtn = document.getElementById('copy');
+        var textToCopy =  document.getElementById('text-result').value;
+        navigator.clipboard.writeText(textToCopy).then(function() {
+            copyBtn.innerText = 'Copied!';
+            setTimeout(function() { copyBtn.innerText = 'Copy Text'; }, 2000);
+        });
     });
 
 	customText.addEventListener("keyup", function () {
